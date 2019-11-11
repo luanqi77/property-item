@@ -24,9 +24,9 @@
 
         <!--jdbc的数据库连接-->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://127.0.0.1:3306/propertymanager?characterEncoding=utf8"
+                        connectionURL="jdbc:mysql://47.103.212.49:3306/property?characterEncoding=utf8"
                         userId="root"
-                        password="">
+                        password="123456">
         </jdbcConnection>
 
         <!--非必须，类型处理器，在数据库类型和java类型之间的转换控制-->
