@@ -102,4 +102,13 @@
       per_deso = #{perDeso,jdbcType=VARCHAR}
     where per_id = #{perId,jdbcType=INTEGER}
   </update>
+
+  <select id="selectPermissionByStaffNumber" resultMap="BaseResultMap">
+        select p.* from staff s,role r,permission p,staff_role sr,role_permission rp
+        where s.staff_id = sr.staff_id
+        and sr.role_id = r.role_id
+        and r.role_id = rp.role_id
+        and p.per_id = rp.per_id
+        and s.staff_number=#{staffNumber}
+    </select>
 </mapper>
