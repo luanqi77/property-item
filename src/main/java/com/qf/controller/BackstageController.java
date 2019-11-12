@@ -1,11 +1,8 @@
 package com.qf.controller;
 
-import com.qf.dao.StaffMapper;
 import com.qf.domain.Staff;
-import com.qf.utils.Md5Utils;
+import com.qf.service.BackstageService;
 import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,34 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class BackstageController {
     @Autowired
-    private StaffMapper staffMapper;
-    @Autowired
-    private Md5Utils md5Utils;
+    private BackstageService backstageService;
+
 
     @RequestMapping("/login")
     public String login(@RequestBody Staff staff){
-        String staffNumber = staff.getStaffNumber();
-        String password = staff.getPassword();
-        if(staffNumber!=""&&staffNumber!=null&&password!=""&&password!=null) {
-            //System.out.println(staff);
-            try {
-                Subject subject = SecurityUtils.getSubject();
-                UsernamePasswordToken token = new UsernamePasswordToken(staffNumber, password);
-                subject.login(token);
-                if (subject.isAuthenticated()) {
-                    Staff byStaffNumber = staffMapper.findByStaffNumber(staffNumber);
-                    return byStaffNumber.getStaffName();
-                } else {
-                    return null;
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-                System.out.println("登录失败");
-            }
-        }else {
-            return "值不能为空";
-        }
-        return null;
+            return backstageService.login(staff);
     }
 
     @RequestMapping("/logout")
@@ -56,15 +31,7 @@ public class BackstageController {
     }
     @RequestMapping("/updatePassword")
     public String updatePassword(@RequestBody Staff staff){
-        String principal = (String)SecurityUtils.getSubject().getPrincipal();
-        String passwordCode = md5Utils.getPasswordCode(staff.getPassword(), principal);
-        staff.setStaffNumber(principal);
-        staff.setPassword(passwordCode);
-        if (staffMapper.updatePassword(staff)>0){
-            return "修改成功";
-        }
-        return "修改失败";
+        return  backstageService.updatePassword(staff);
     }
-
 
 }

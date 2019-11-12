@@ -65,7 +65,7 @@
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
         <!--表名与生成的包名-->
-        <table tableName="permission" domainObjectName="Permission"
+        <table tableName="deduct" domainObjectName="Deduct"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
