@@ -8,7 +8,7 @@
     <!--   <properties resource="datasource.properties"></properties>-->
 
     <!-- 指定数据库驱动的jdbc驱动jar包的位置 -->
-    <classPathEntry location="D:\maven\mysql\mysql-connector-java\5.1.46\mysql-connector-java-5.1.46.jar" />
+    <classPathEntry location="D:\Software\Maven\mavn_localRepository\mysql\mysql-connector-java\5.1.46\mysql-connector-java-5.1.46.jar" />
 
     <!-- context 是逆向工程的主要配置信息 -->
     <!-- id：起个名字 -->
@@ -19,14 +19,14 @@
         <commentGenerator>
             <property name="suppressDate" value="true" />
             <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
-            <property name="suppressAllComments" value="false" />
+            <property name="suppressAllComments" value="true" />
         </commentGenerator>
 
         <!--jdbc的数据库连接-->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://127.0.0.1:3306/propertymanager?characterEncoding=utf8"
+                        connectionURL="jdbc:mysql://47.103.212.49:3306/property?characterEncoding=utf8"
                         userId="root"
-                        password="">
+                        password="123456">
         </jdbcConnection>
 
         <!--非必须，类型处理器，在数据库类型和java类型之间的转换控制-->
@@ -65,7 +65,7 @@
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
         <!--表名与生成的包名-->
-        <table tableName="permission" domainObjectName="Permission"
+        <table tableName="user" domainObjectName="User"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
