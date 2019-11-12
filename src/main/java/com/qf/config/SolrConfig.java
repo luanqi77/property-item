@@ -10,7 +10,8 @@ public class SolrConfig {
     @Value("${solr.baseUrl}")
     private String baseUrl;
     @Bean
-    public HttpSolrServer getHttpSolrServer(){
+    public HttpSolrServer getHttpSolrServer()
+    {
         return new HttpSolrServer(baseUrl);
     }
 }
