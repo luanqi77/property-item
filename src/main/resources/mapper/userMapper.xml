@@ -16,6 +16,11 @@
       <arg column="open_id" javaType="java.lang.String" jdbcType="VARCHAR" />
     </constructor>
   </resultMap>
+  <resultMap id="mainResultMap" type="com.qf.domain.User">
+    <result property="userId" column="user_id"></result>
+    <result property="realname" column="realname"></result>
+    <result property="tel" column="tel"></result>
+  </resultMap>
   <sql id="Base_Column_List">
     user_id, username, password, realname, tel, pic, live_time, email, statu, code, open_id
   </sql>
@@ -39,7 +44,7 @@
       #{liveTime,jdbcType=DATE}, #{email,jdbcType=VARCHAR}, #{statu,jdbcType=INTEGER}, 
       #{code,jdbcType=VARCHAR}, #{openId,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.qf.domain.User">
+  <insert id="insertSelective" parameterType="com.qf.domain.User" useGeneratedKeys="true" keyProperty="userId">
     insert into user
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="userId != null">
@@ -177,4 +182,18 @@
       open_id = #{openId,jdbcType=VARCHAR}
       where tel=#{tel}
   </update>
+
+  <select id="findUserToPay" resultMap="mainResultMap">
+    SELECT
+    u.user_id,u.tel,u.realname
+    FROM
+    user u,
+    house h,
+    account a
+    WHERE
+    u.user_id = h.user_id
+    AND h.user_id = a.user_id
+    AND a.money &lt; h.hot_fee+a.park_fee+h.property_fee
+  </select>
+
 </mapper>
