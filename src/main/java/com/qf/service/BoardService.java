@@ -13,11 +13,13 @@ import java.util.List;
  */
 
 public interface BoardService {
-    public List<Board> findAll();
+    public List<Board> findAllBoard();
 
-    public Board create(Board board);
+    public Board insertBoard(Board board);
 
-    public void deleteById(Integer boardId);
+    public void deleteBoard(Board board);
 
-    public Board update(Board board);
+    public Board updateBoard(Board board);
+
+    public Board selectBoardById(Integer boardId);
 }

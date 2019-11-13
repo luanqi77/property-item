@@ -12,6 +12,6 @@ import java.util.List;
  * @Date: 2019/11/12
  * @Time: 11:51
  */
-public interface BoardRespority extends JpaRepository<Board,Integer>{
+public interface BoardResponsitory extends JpaRepository<Board,Integer>{
 
 }

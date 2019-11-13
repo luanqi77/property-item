@@ -1,6 +1,7 @@
 package com.qf.domain;
 
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -25,6 +26,7 @@ public class Board {
     private String boardDeso;
 
     @Column(name = "board_time")
+    @DateTimeFormat(pattern = "yyyy/MM/dd")
     private Date boardTime;
 
     private Integer level;
