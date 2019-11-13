@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.InformationMapper">
+    <resultMap id="myInformation" type="com.qf.domain.Information">
+        <id property="inid" column="info_id"/>
+        <result property="description" column="description"/>
+        <result property="tel" column="tel"/>
+        <result property="connname" column="conn_name"/>
+        <result property="servername" column="server_name"/>
+        <result property="company" column="company"/>
+    </resultMap>
+    
+    <select id="findAllInformation" resultMap="myInformation">
+        select * from information
+    </select>
+    
+    <insert id="insertInformation" parameterType="com.qf.domain.Information">
+        insert into information (info_id,description,tel,conn_name,server_name,company)values
+        (#{inid},#{description},#{tel},#{connname},#{servername},#{company})
+    </insert>
+
+    <delete id="deleteInformation" parameterType="com.qf.domain.Information">
+        delete from information where info_id=#{inid}
+    </delete>
+
+    <select id="selectInformationById" resultMap="myInformation" parameterType="Integer">
+        select * from information where info_id=#{inid}
+    </select>
+
+    <update id="updateInformation" parameterType="com.qf.domain.Information" >
+        update information
+        <set>
+            <if test="description!=null and description!=''">
+                description=#{description},
+            </if>
+            <if test="tel!=null and tel!=''">
+                tel=#{tel},
+            </if>
+            <if test="connname!=null and connname!=''">
+                conn_name=#{connname},
+            </if>
+            <if test="servername!=null and servername!=''">
+                server_name=#{servername},
+            </if>
+            <if test="company!=null and company!=''">
+                company=#{company}
+            </if>
+        </set>
+        where info_id=#{inid}
+    </update>
+</mapper>
