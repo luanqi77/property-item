@@ -14,6 +14,7 @@ import com.qf.service.WeixinLoginService;
 import com.qf.util.AesUtil;
 import com.qf.util.DateUtil;
 import com.qf.utils.RedisUtils;
+import javafx.geometry.Pos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.server.Session;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -69,7 +70,7 @@ public class UserController {
     /**
      * 用户注销，存在session里的user注销掉
      */
-    @RequestMapping("/logout")
+    @RequestMapping("/userlogout")
     public String logout(HttpSession session){
         session.removeAttribute("user");
         return "1";
@@ -88,7 +89,7 @@ public class UserController {
     /**
      * 验证用户名是否唯一
      */
-    @RequestMapping("/checkName")
+    @RequestMapping(value = "/checkName",method = RequestMethod.POST)
     public String checkName(@RequestBody User user) {
 
         if (userService.checkName(user.getUsername()) != null) {
@@ -101,7 +102,7 @@ public class UserController {
     /**
      * 验证手机号是否唯一
      */
-    @RequestMapping("/checkTel/{tel}")
+    @RequestMapping(value = "/checkTel/{tel}",method = RequestMethod.GET)
     public String checkName(@PathVariable("tel") String tel) {
         User user = userService.checkTel(tel);
         if (user != null) {
@@ -113,7 +114,7 @@ public class UserController {
     /**
      * 发送手机验证码
      */
-    @RequestMapping("/sendTelMessage/{phone}")
+    @RequestMapping(value = "/sendTelMessage/{phone}",method = RequestMethod.GET)
     public String sendTelMessage(@PathVariable("phone") String tel) {
         String s = registerService.sendTelMessage(tel);
         if (s != null) {
@@ -125,7 +126,7 @@ public class UserController {
     /**
      * 微信扫码登录
      */
-    @RequestMapping("/wxLogin")
+    @RequestMapping("/weixinLogin")
     public String wxLogin() {
         System.out.println("============进来了wxLogin方法");
         String url = weixinLoginService.genLoginUrl();
@@ -136,7 +137,7 @@ public class UserController {
     /**
      * 回调地址处理
      */
-    @RequestMapping(value = "/weixinconnect", method = RequestMethod.GET)
+    @RequestMapping(value = "/weixinconnect")
     public ResponseUserAndError callback(String code, String state) {
 //        System.out.println("===========callback方法");
 //        System.out.println(code+"====="+state);
@@ -168,6 +169,7 @@ public class UserController {
 //                System.out.println(userUnionID.toString());
 
                 User user = userService.checkOpenId(openid);
+                System.out.println(user);
                 ResponseUserAndError responseUserAndError = new ResponseUserAndError();
 
                 if (user != null) {
@@ -176,7 +178,8 @@ public class UserController {
                     return responseUserAndError;
                 }
                 responseUserAndError.setOpenId(openid);
-                return responseUserAndError;
+                //return responseUserAndError;
+                return  null;
             }
         }
         return null;
@@ -186,7 +189,7 @@ public class UserController {
      * openId绑定用户
      * 根据手机号查询openId进行绑定
      */
-    @RequestMapping("/checkOpenIdByTel")
+    @RequestMapping(value = "/checkOpenIdByTel",method = RequestMethod.POST)
     public ResponseUserAndError checkOpenIdByTel(@RequestBody User user) {
         ResponseUserAndError responseUserAndError = new ResponseUserAndError();
 
@@ -198,7 +201,7 @@ public class UserController {
 
                     if (user.getCode().equals(user1.getCode())) {
                         user1.setOpenId(user.getOpenId());
-                        User user2 = userService.updateUser(user);
+                        User user2 = userService.updateUserOpenId(user1);
 
                         if (user2 != null) {
                             responseUserAndError.setUser(user2);
@@ -218,6 +221,13 @@ public class UserController {
         return responseUserAndError;
 
     }
+    /**
+     * 找回密码
+     */
+   /* @RequestMapping(value = "/resetPassword",method =RequestMethod.POST)
+    public String resetPassword(@RequestBody User user){
+
+    }*/
 
 
 

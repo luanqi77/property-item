@@ -26,4 +26,8 @@ public interface UserService {
     Integer updateUser(User user);
 
     Integer selectUserById(Integer userId);
+
+    User checkOpenId(String openId);
+
+    User updateUserOpenId(User user);
 }

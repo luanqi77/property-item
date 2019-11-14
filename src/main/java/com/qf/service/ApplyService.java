@@ -9,6 +9,11 @@ public interface ApplyService {
 
     Apply add(Apply apply);
 
-    List<Applysss> selectApplyByStaff(String status);
+    List<Applysss> selectApplyByStaff(Integer status);
+
+    Apply  selectApplyByApplyId(Integer applyId);
+
+    Apply  updateApplyByStatus(Apply apply);
+
 }
 

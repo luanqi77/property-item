@@ -13,6 +13,7 @@ import java.util.Date;
 @Data
 public class Applysss {
     private String username;
+    private Integer apply_id;
     private String apply_deso;
     private Integer build;
     private Integer floor;

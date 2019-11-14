@@ -104,6 +104,17 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Integer selectUserById(Integer userId) {
+
         return userMapper.selectUserById(userId);
+    }
+
+    @Override
+    public User checkOpenId(String openId) {
+        return userResponsitory.findUserByOpenId(openId);
+    }
+
+    @Override
+    public User updateUserOpenId(User user) {
+        return userResponsitory.saveAndFlush(user);
     }
 }
