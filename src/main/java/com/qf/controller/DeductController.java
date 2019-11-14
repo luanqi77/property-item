@@ -12,21 +12,25 @@ import org.springframework.web.bind.annotation.RestController;
 public class DeductController {
     @Autowired
     private DeductService deductService;
+
     //获得收费策略基本信息
     @RequestMapping("/getDeduct")
     public Deduct getDeduct(){
         Deduct deduct = deductService.getDeduct();
         return deduct;
     }
+
     //更改收费策略基本信息
     @RequestMapping("/updateDeduct")
     public String updateDeduct(@RequestBody Deduct deduct){
         //System.out.println(deduct);
         return deductService.updateDeduct(deduct);
+
     }
 
     @RequestMapping("/warnJob")
     public String warnJob(){
-        return null;
+        return deductService.warnJob();
     }
+
 }
