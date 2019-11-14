@@ -2,6 +2,8 @@ package com.qf.service;
 
 import com.qf.domain.User;
 
+import java.util.List;
+
 /**
  * @PackageName:com.qf.service;
  * @ClassName:UserService;
@@ -11,17 +13,17 @@ import com.qf.domain.User;
 
 public interface UserService {
 
-   User checkName(String username);
+    User checkName(String username);
 
-   User checkTel(String tel);
+    User checkTel(String tel);
 
-   String login(User user);
+    String login(User user);
 
-   String regist(User user);
+    String regist(User user);
 
-   User checkOpenId(String openId);
+    List<User> findUsers();
 
-   User updateUser(User user);
+    Integer updateUser(User user);
 
-
+    Integer selectUserById(Integer userId);
 }
