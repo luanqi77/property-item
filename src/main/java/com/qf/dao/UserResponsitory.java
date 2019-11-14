@@ -10,5 +10,7 @@ public interface UserResponsitory extends JpaRepository<User, Integer> {
 
     User findUserByTel(String tel);
 
+    User findUserByOpenId(String openId);
+
 
 }

@@ -18,15 +18,15 @@ public class RegisterServiceImpl implements RegisterService {
 
     @Override
     public String sendTelMessage(String tel) {
+
         User userByTel = userResponsitory.findUserByTel(tel);
-        if(userByTel!=null){
+
+        if (userByTel != null) {
             String checkCode = telMessageUtils.sendMessage(tel);
-            User user =new User();
-            user.setCode(checkCode);
-            user.setTel(tel);
-            User save = userResponsitory.save(user);
+            userByTel.setCode(checkCode);
+            User save = userResponsitory.saveAndFlush(userByTel);
             return checkCode;
-        }else {
+        } else {
             return null;
         }
 

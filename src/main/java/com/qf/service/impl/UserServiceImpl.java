@@ -3,7 +3,10 @@ package com.qf.service.impl;
 import com.qf.dao.UserMapper;
 import com.qf.dao.UserResponsitory;
 import com.qf.domain.User;
+import com.qf.response.ResponseUserAndError;
 import com.qf.service.UserService;
+import com.qf.utils.JsonUtils;
+import com.qf.utils.RedisUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.crypto.hash.SimpleHash;
@@ -11,6 +14,7 @@ import org.apache.shiro.subject.Subject;
 import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 /**
  * @PackageName:com.qf.service.impl;
@@ -26,6 +30,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private RedisUtils redisUtils;
 
 
 
@@ -74,8 +81,22 @@ public class UserServiceImpl implements UserService {
        }
 
     }
+
+    @Override
+    public User checkOpenId(String openId) {
+
+        return userResponsitory.findUserByOpenId(openId);
+
+    }
+
+    @Override
+    public User updateUser(User user) {
+        return userResponsitory.saveAndFlush(user);
+    }
+
     @Override
     public User checkName(String username) {
+
         return userResponsitory.findUserByUsername(username);
     }
 

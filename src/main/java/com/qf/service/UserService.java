@@ -18,4 +18,10 @@ public interface UserService {
    String login(User user);
 
    String regist(User user);
+
+   User checkOpenId(String openId);
+
+   User updateUser(User user);
+
+
 }
