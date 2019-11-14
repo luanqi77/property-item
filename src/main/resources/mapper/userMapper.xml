@@ -183,6 +183,27 @@
       where tel=#{tel}
   </update>
 
+  <select id="selectUserById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    SELECT park_id FROM user_parking where user_parking.user_id =(SELECT user_id from `user`WHERE user_id = #{userId})
+  </select>
+  <select id="findUsers"  resultMap="BaseResultMap">
+   select * from user
+  </select>
+  <update id="updateUser" parameterType="com.qf.domain.User">
+    update user
+      set
+      username = #{username,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      realname = #{realname,jdbcType=VARCHAR},
+      pic = #{pic,jdbcType=VARCHAR},
+      live_time = #{liveTime,jdbcType=DATE},
+      email = #{email,jdbcType=VARCHAR},
+      statu = #{statu,jdbcType=INTEGER},
+      open_id = #{openId,jdbcType=VARCHAR}
+     where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+
+
   <select id="findUserToPay" resultMap="mainResultMap">
     SELECT
     u.user_id,u.tel,u.realname
@@ -195,5 +216,6 @@
     AND h.user_id = a.user_id
     AND a.money &lt; h.hot_fee+a.park_fee+h.property_fee
   </select>
+
 
 </mapper>
