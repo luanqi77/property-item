@@ -182,7 +182,7 @@
       open_id = #{openId,jdbcType=VARCHAR}
       where tel=#{tel}
   </update>
-<<<<<<< HEAD
+
   <select id="selectUserById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select * from user
     where user_id = #{userId,jdbcType=INTEGER}
@@ -203,7 +203,7 @@
       open_id = #{openId,jdbcType=VARCHAR}
      where user_id = #{userId,jdbcType=INTEGER}
   </update>
-=======
+
 
   <select id="findUserToPay" resultMap="mainResultMap">
     SELECT
@@ -218,5 +218,5 @@
     AND a.money &lt; h.hot_fee+a.park_fee+h.property_fee
   </select>
 
->>>>>>> origin/master
+
 </mapper>
