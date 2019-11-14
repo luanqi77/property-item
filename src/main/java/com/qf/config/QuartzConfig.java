@@ -24,12 +24,14 @@ public class QuartzConfig {
     private DeductMapper deductMapper;
     // 任务内容
     @Bean
-    public MethodInvokingJobDetailFactoryBean payJob(PayJob payJob) {
+    public MethodInvokingJobDetailFactoryBean payJob() {
+
+
         MethodInvokingJobDetailFactoryBean factoryBean = new MethodInvokingJobDetailFactoryBean();
         // 是否并发执行
         factoryBean.setConcurrent(true);
         // 使用哪个对象
-        factoryBean.setTargetObject(payJob);
+        factoryBean.setTargetObject(new PayJob());
         // 使用哪个方法
         factoryBean.setTargetMethod("pay");
 
@@ -38,6 +40,7 @@ public class QuartzConfig {
     // 定义什么时候做，使用 cron 表达式
     @Bean
     public CronTriggerFactoryBean payCron(@Qualifier("payJob") MethodInvokingJobDetailFactoryBean payJob){
+        System.out.println("111111111");
         Deduct deduct = deductMapper.getDeduct();
         Integer deductTime = deduct.getDeductTime();
         CronTriggerFactoryBean factoryBean = new CronTriggerFactoryBean();
@@ -52,12 +55,12 @@ public class QuartzConfig {
 
     // 任务内容
     @Bean
-    public MethodInvokingJobDetailFactoryBean warnJob(warnJob warnJob) {
+    public MethodInvokingJobDetailFactoryBean warnJob() {
         MethodInvokingJobDetailFactoryBean factoryBean = new MethodInvokingJobDetailFactoryBean();
         // 是否并发执行
         factoryBean.setConcurrent(true);
         // 使用哪个对象
-        factoryBean.setTargetObject(warnJob);
+        factoryBean.setTargetObject(new warnJob());
         // 使用哪个方法
         factoryBean.setTargetMethod("warn");
         return factoryBean;

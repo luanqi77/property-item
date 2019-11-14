@@ -18,12 +18,12 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-
 public class TestController {
     @Autowired
     private SchedulerUtils schedulerUtils;
     @Autowired
     private Scheduler scheduler;
+
     @Autowired
     private DeductService deductService;
     @Autowired
@@ -95,7 +95,7 @@ public class TestController {
     @RequestMapping("/payTest")
     public String payTest(@RequestParam("second")Integer second){
         try {
-            schedulerUtils.updateExecuteTime("payJob","");
+            schedulerUtils.updateExecuteTime("payJob","0/"+second+" * * * * ? *");
         } catch (Exception e) {
             e.printStackTrace();
         }
