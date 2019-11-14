@@ -177,4 +177,24 @@
       open_id = #{openId,jdbcType=VARCHAR}
       where tel=#{tel}
   </update>
+  <select id="selectUserById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select * from user
+    where user_id = #{userId,jdbcType=INTEGER}
+  </select>
+  <select id="findUsers"  resultMap="BaseResultMap">
+   select * from user
+  </select>
+  <update id="updateUser" parameterType="com.qf.domain.User">
+    update user
+      set
+      username = #{username,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      realname = #{realname,jdbcType=VARCHAR},
+      pic = #{pic,jdbcType=VARCHAR},
+      live_time = #{liveTime,jdbcType=DATE},
+      email = #{email,jdbcType=VARCHAR},
+      statu = #{statu,jdbcType=INTEGER},
+      open_id = #{openId,jdbcType=VARCHAR}
+     where user_id = #{userId,jdbcType=INTEGER}
+  </update>
 </mapper>

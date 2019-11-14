@@ -3,6 +3,8 @@ package com.qf.dao;
 import com.qf.domain.User;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 @Mapper
 public interface UserMapper {
        int deleteByPrimaryKey(Integer userId);
@@ -19,4 +21,9 @@ public interface UserMapper {
 
     int updateByTel(User user);
 
+    List<User> findUsers();
+
+    Integer updateUser(User user);
+
+    Integer selectUserById(Integer userId);
 }
