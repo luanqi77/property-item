@@ -1,8 +1,10 @@
 package com.qf.config;
 
 
+import com.qf.shiro.LoginShiroRealm;
 import com.qf.shiro.MyRealm;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
+import org.apache.shiro.realm.Realm;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
@@ -10,6 +12,8 @@ import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreato
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import java.util.ArrayList;
 
 @Configuration
 public class ShiroConfig {
@@ -29,9 +33,12 @@ public class ShiroConfig {
 
     //配置安全管理器
     @Bean
-    public DefaultWebSecurityManager defaultWebSecurityManager(@Qualifier("myRealm")MyRealm myRealm){
+    public DefaultWebSecurityManager defaultWebSecurityManager(@Qualifier("myRealm")MyRealm myRealm,@Qualifier("loginShiroRealm")LoginShiroRealm loginShiroRealm){
         DefaultWebSecurityManager defaultWebSecurityManager=new DefaultWebSecurityManager();
-        defaultWebSecurityManager.setRealm(myRealm);
+        ArrayList<Realm> realms = new ArrayList<>();
+        realms.add(myRealm);
+        realms.add(loginShiroRealm);
+        defaultWebSecurityManager.setRealms(realms);
         return defaultWebSecurityManager;
     }
 
@@ -51,6 +58,13 @@ public class ShiroConfig {
         myRealm.setAuthorizationCachingEnabled(false);
         myRealm.setCredentialsMatcher(hashedCredentialsMatcher);
         return myRealm;
+    }
+    @Bean("loginShiroRealm")
+    public LoginShiroRealm loginShiroRealm(@Qualifier("hashedCredentialsMatcher")HashedCredentialsMatcher hashedCredentialsMatcher){
+        LoginShiroRealm loginShiroRealm=new LoginShiroRealm();
+        loginShiroRealm.setAuthorizationCachingEnabled(false);
+        loginShiroRealm.setCredentialsMatcher(hashedCredentialsMatcher);
+        return loginShiroRealm;
     }
 
     //开启shiro注解

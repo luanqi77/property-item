@@ -7,7 +7,7 @@ import java.util.List;
 
 @Mapper
 public interface UserMapper {
-       int deleteByPrimaryKey(Integer userId);
+    int deleteByPrimaryKey(Integer userId);
 
     int insert(User record);
 
@@ -26,4 +26,7 @@ public interface UserMapper {
     Integer updateUser(User user);
 
     Integer selectUserById(Integer userId);
+    List<User> findUserToPay();
+
+
 }
