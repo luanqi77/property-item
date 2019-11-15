@@ -30,4 +30,9 @@ public interface UserService {
     User checkOpenId(String openId);
 
     User updateUserOpenId(User user);
+
+    User findUserByUsernameAndTel(User user);
+
+
+
 }

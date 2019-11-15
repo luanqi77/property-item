@@ -117,4 +117,9 @@ public class UserServiceImpl implements UserService {
     public User updateUserOpenId(User user) {
         return userResponsitory.saveAndFlush(user);
     }
+
+    @Override
+    public User findUserByUsernameAndTel(User user) {
+        return userResponsitory.findUserByUsernameAndTel(user.getUsername(),user.getTel());
+    }
 }

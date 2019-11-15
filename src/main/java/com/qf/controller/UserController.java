@@ -15,6 +15,8 @@ import com.qf.util.AesUtil;
 import com.qf.util.DateUtil;
 import com.qf.utils.RedisUtils;
 import javafx.geometry.Pos;
+import org.apache.shiro.crypto.hash.SimpleHash;
+import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.server.Session;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -222,12 +224,29 @@ public class UserController {
 
     }
     /**
-     * 找回密码
+     * 找回密码(重置密码)
      */
-   /* @RequestMapping(value = "/resetPassword",method =RequestMethod.POST)
+   @RequestMapping(value = "/resetPassword",method =RequestMethod.POST)
     public String resetPassword(@RequestBody User user){
+        if(user.getUsername()!=null && user.getTel()!=null){
+            User userByUsernameAndTel = userService.findUserByUsernameAndTel(user);
+            if(userByUsernameAndTel!=null){
 
-    }*/
+                if (user.getCode().equals(userByUsernameAndTel.getCode())) {
+                    userByUsernameAndTel.setPassword("111111");
+                    ByteSource bytes = ByteSource.Util.bytes(userByUsernameAndTel.getUsername());
+                    SimpleHash md5 = new SimpleHash("MD5", userByUsernameAndTel.getPassword(), bytes, 1024);
+                    userByUsernameAndTel.setPassword(md5.toString());
+                    User user1 = userService.updateUserOpenId(userByUsernameAndTel);
+                    if(user1!=null){
+                        return "ok";
+                    }
+                }
+            }
+
+        }
+        return "error";
+    }
 
 
 

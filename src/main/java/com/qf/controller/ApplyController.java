@@ -11,6 +11,7 @@ import org.apache.shiro.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -34,8 +35,9 @@ public class ApplyController {
      */
     @RequestMapping(value = "/userApply",method = RequestMethod.POST)
     public String userApply(@RequestBody Apply apply){
-        if(apply.getUserId()!=null && apply.getApplyDeso()!=null && apply.getApplyTime()!=null){
+        if(apply.getUserId()!=null && apply.getApplyDeso()!=null ){
             apply.setStatus(1);
+            apply.setApplyTime(new Date());
             Apply add = applyService.add(apply);
             if(add!=null){
                 return "ok";
