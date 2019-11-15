@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.DeductMapper">
+  <resultMap id="BaseResultMap" type="com.qf.domain.Deduct">
+    <constructor>
+      <idArg column="deduct_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="property_fee" javaType="java.lang.Double" jdbcType="DOUBLE" />
+      <arg column="hot_fee" javaType="java.lang.Double" jdbcType="DOUBLE" />
+      <arg column="deduct_time" javaType="java.util.Date" jdbcType="DATE" />
+      <arg column="warn_time" javaType="java.util.Date" jdbcType="DATE" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    deduct_id, property_fee, hot_fee, deduct_time, warn_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from deduct
+    where deduct_id = #{deductId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from deduct
+    where deduct_id = #{deductId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.qf.domain.Deduct">
+    insert into deduct (deduct_id, property_fee, hot_fee, 
+      deduct_time, warn_time)
+    values (#{deductId,jdbcType=INTEGER}, #{propertyFee,jdbcType=DOUBLE}, #{hotFee,jdbcType=DOUBLE}, 
+      #{deductTime,jdbcType=DATE}, #{warnTime,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" parameterType="com.qf.domain.Deduct">
+    insert into deduct
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="deductId != null">
+        deduct_id,
+      </if>
+      <if test="propertyFee != null">
+        property_fee,
+      </if>
+      <if test="hotFee != null">
+        hot_fee,
+      </if>
+      <if test="deductTime != null">
+        deduct_time,
+      </if>
+      <if test="warnTime != null">
+        warn_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="deductId != null">
+        #{deductId,jdbcType=INTEGER},
+      </if>
+      <if test="propertyFee != null">
+        #{propertyFee,jdbcType=DOUBLE},
+      </if>
+      <if test="hotFee != null">
+        #{hotFee,jdbcType=DOUBLE},
+      </if>
+      <if test="deductTime != null">
+        #{deductTime,jdbcType=DATE},
+      </if>
+      <if test="warnTime != null">
+        #{warnTime,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qf.domain.Deduct">
+    update deduct
+    <set>
+      <if test="propertyFee != null">
+        property_fee = #{propertyFee,jdbcType=DOUBLE},
+      </if>
+      <if test="hotFee != null">
+        hot_fee = #{hotFee,jdbcType=DOUBLE},
+      </if>
+      <if test="deductTime != null">
+        deduct_time = #{deductTime,jdbcType=DATE},
+      </if>
+      <if test="warnTime != null">
+        warn_time = #{warnTime,jdbcType=DATE},
+      </if>
+    </set>
+    where deduct_id = #{deductId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qf.domain.Deduct">
+    update deduct
+    set property_fee = #{propertyFee,jdbcType=DOUBLE},
+      hot_fee = #{hotFee,jdbcType=DOUBLE},
+      deduct_time = #{deductTime,jdbcType=DATE},
+      warn_time = #{warnTime,jdbcType=DATE}
+    where deduct_id = #{deductId,jdbcType=INTEGER}
+  </update>
+</mapper>
