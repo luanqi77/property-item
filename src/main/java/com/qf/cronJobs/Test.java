@@ -24,12 +24,10 @@ public class Test {
 
     //@Scheduled(fixedRate = 6000)
     public void reportCurrentTime() {
-        log.info("11111");
         System.out.println("今天" + dateFormat.format(new Date())+"号");
     }
     //@Scheduled(fixedRate = 6000)
     public void reportCurrentTime2() {
-        log.info("222222");
         System.out.println("今天" + dateFormat.format(new Date())+"号");
     }
 

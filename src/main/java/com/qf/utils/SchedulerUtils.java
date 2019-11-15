@@ -1,5 +1,6 @@
 package com.qf.utils;
 
+import lombok.extern.slf4j.Slf4j;
 import org.quartz.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Component;
  * @date 2019/11/14 15:00
  */
 @Component
+@Slf4j
 public class SchedulerUtils {
     @Autowired
     private Scheduler scheduler;
@@ -20,7 +22,7 @@ public class SchedulerUtils {
         JobKey key = new JobKey(jobKey);
         try {
             scheduler.pauseJob(key);
-            System.out.println("停止定时任务"+jobKey);
+            log.info("停止定时任务"+jobKey);
         } catch (SchedulerException e) {
             e.printStackTrace();
         }
@@ -32,7 +34,7 @@ public class SchedulerUtils {
 
         JobKey key = new JobKey(jobKey);
         scheduler.resumeJob(key);
-        System.out.println("启动定时任务"+jobKey);
+        log.info("启动定时任务"+jobKey);
         return "start";
     }
 
@@ -51,8 +53,7 @@ public class SchedulerUtils {
         scheduler.deleteJob(key);
         // 启动任务
         scheduler.scheduleJob(jobDetail, trigger);
-        System.out.println("更新定时任务策略"+jobKey);
-
+        log.info("更新定时任务策略"+jobKey);
         return "trigger";
     }
 }

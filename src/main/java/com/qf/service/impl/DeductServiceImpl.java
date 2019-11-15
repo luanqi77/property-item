@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+@Service("deductService")
 public class DeductServiceImpl implements DeductService {
     @Autowired
     private TelMessageUtils telMessageUtils;

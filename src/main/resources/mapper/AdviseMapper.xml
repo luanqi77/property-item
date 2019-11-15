@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.AdviseMapper">
+  <resultMap id="BaseResultMap" type="com.qf.domain.Advise">
+    <constructor>
+      <idArg column="advise_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="user_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="description" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="advise_time" javaType="java.util.Date" jdbcType="DATE" />
+      <arg column="status" javaType="java.lang.Integer" jdbcType="INTEGER" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    advise_id, user_id, description, advise_time, status
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from advise
+    where advise_id = #{adviseId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from advise
+    where advise_id = #{adviseId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.qf.domain.Advise">
+    insert into advise (advise_id, user_id, description, 
+      advise_time, status)
+    values (#{adviseId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{description,jdbcType=VARCHAR}, 
+      #{adviseTime,jdbcType=DATE}, #{status,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.qf.domain.Advise">
+    insert into advise
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="adviseId != null">
+        advise_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="adviseTime != null">
+        advise_time,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="adviseId != null">
+        #{adviseId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="adviseTime != null">
+        #{adviseTime,jdbcType=DATE},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qf.domain.Advise">
+    update advise
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="adviseTime != null">
+        advise_time = #{adviseTime,jdbcType=DATE},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+    </set>
+    where advise_id = #{adviseId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qf.domain.Advise">
+    update advise
+    set user_id = #{userId,jdbcType=INTEGER},
+      description = #{description,jdbcType=VARCHAR},
+      advise_time = #{adviseTime,jdbcType=DATE},
+      status = #{status,jdbcType=INTEGER}
+    where advise_id = #{adviseId,jdbcType=INTEGER}
+  </update>
+  
+  <update id="updateStatusByAdviseId" parameterType="com.qf.domain.Advise">
+    update advise
+    set status=#{status}
+    where advise_id=#{adviseId}
+  </update>
+</mapper>

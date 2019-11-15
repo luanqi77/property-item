@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class BackstageController {
+public class BackstageController{
     @Autowired
     private UserSolrService userSolrService;
     @Autowired
@@ -39,6 +39,15 @@ public class BackstageController {
         return  backstageService.updateStaffPassword(staff);
     }
 
+    //新增员工
+    @RequestMapping("/insertStaff")
+    public String insertStaff(@RequestBody Staff staff){
+        if (backstageService.insertStaff(staff)>1){
+            return "success";
+        }else {
+            return "fail";
+        }
+    }
 
 
 
