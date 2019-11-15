@@ -1,14 +1,18 @@
 package com.qf.utils;
 
+import com.qf.domain.User;
 import com.zhenzi.sms.ZhenziSmsClient;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.Random;
 
 @Component
 public class TelMessageUtils {
+    @Autowired
+    private ZhenziSmsClient client;
     public String sendMessage(String tel) {
-        ZhenziSmsClient client = new ZhenziSmsClient("https://sms_developer.zhenzikj.com", "103150", "092e748f-80cf-4aab-98b6-67e91ce7742c");
         String result = null;
         try {
             String checkCOde = randomCode();
@@ -19,6 +23,19 @@ public class TelMessageUtils {
             e.printStackTrace();
         }
         return null;
+    }
+    public String warnMessage(List<User> users){
+        for (User user : users) {
+            try {
+                String message=user.getRealname()+"，您的余额不足，请及时充值物业管理费用";
+                //client.send(user.getTel(),message);
+                System.out.println(user.getRealname()+"余额不足,电话："+user.getTel());
+            } catch (Exception e) {
+                e.printStackTrace();
+                return "fail";
+            }
+        }
+        return "success";
     }
 
     public static String randomCode(){

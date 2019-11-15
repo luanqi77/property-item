@@ -98,5 +98,10 @@
     where u.user_id=h.user_id
     and h.user_id=a.user_id
   </select>
-
+  <update id="payFee">
+    UPDATE
+	`user` u,house h,account a
+    SET
+	a.money=a.money-h.hot_fee-h.property_fee-a.park_fee
+  </update>
 </mapper>

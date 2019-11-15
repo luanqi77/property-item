@@ -166,6 +166,12 @@
       <if test="propertyFee != null">
         property_fee = #{propertyFee,jdbcType=INTEGER}*area,
       </if>
+      <if test="deductTime != null">
+        deduct_time = #{deductTime,jdbcType=INTEGER},
+      </if>
+      <if test="warnTime != null">
+        warn_time = #{warnTime,jdbcType=INTEGER},
+      </if>
     </set>
 
   </update>
