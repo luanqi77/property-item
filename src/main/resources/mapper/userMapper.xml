@@ -21,6 +21,12 @@
     <result property="realname" column="realname"></result>
     <result property="tel" column="tel"></result>
   </resultMap>
+  <resultMap id="UserResultMap" type="com.qf.domain.UserParking">
+    <id column="up_id" property="up_id"></id>
+    <id column="park_id" property="park_id"></id>
+    <id column="user_id" property="user_id"></id>
+
+  </resultMap>
   <sql id="Base_Column_List">
     user_id, username, password, realname, tel, pic, live_time, email, statu, code, open_id
   </sql>
@@ -183,11 +189,11 @@
       where tel=#{tel}
   </update>
 
-  <select id="selectUserById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    SELECT park_id FROM user_parking where user_parking.user_id =(SELECT user_id from `user`WHERE user_id = #{userId})
+  <select id="selectUserById" parameterType="java.lang.Integer" resultMap="UserResultMap">
+    SELECT park_id FROM user_parking where user_parking.user_id =(SELECT user_id from user WHERE user_id = #{userId})
   </select>
-  <select id="findUsers"  resultMap="BaseResultMap">
-   select * from user
+  <select id="findOneUsers"  resultMap="BaseResultMap">
+   select * from user where user_id =#{userId}
   </select>
   <update id="updateUser" parameterType="com.qf.domain.User">
     update user

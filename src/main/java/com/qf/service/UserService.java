@@ -1,5 +1,6 @@
 package com.qf.service;
 
+import com.qf.domain.Parking;
 import com.qf.domain.User;
 
 import java.util.List;
@@ -21,9 +22,9 @@ public interface UserService {
 
     String regist(User user);
 
-    List<User> findUsers();
+    User findOneUsers(Integer userId);
 
     Integer updateUser(User user);
 
-    Integer selectUserById(Integer userId);
+    List<Parking> selectUserById(Integer userId);
 }

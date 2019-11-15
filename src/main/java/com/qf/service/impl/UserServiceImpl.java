@@ -2,6 +2,7 @@ package com.qf.service.impl;
 
 import com.qf.dao.UserMapper;
 import com.qf.dao.UserResponsitory;
+import com.qf.domain.Parking;
 import com.qf.domain.User;
 import com.qf.service.UserService;
 import org.apache.shiro.SecurityUtils;
@@ -87,8 +88,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> findUsers() {
-        return userMapper.findUsers();
+    public User findOneUsers(Integer userId) {
+        return userMapper.findOneUsers(userId);
     }
 
     @Override
@@ -103,7 +104,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Integer selectUserById(Integer userId) {
+    public List<Parking> selectUserById(Integer userId) {
         return userMapper.selectUserById(userId);
     }
 }

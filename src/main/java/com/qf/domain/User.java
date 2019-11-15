@@ -1,13 +1,17 @@
 package com.qf.domain;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Table
+@Data
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
     private Integer userId;
 
     private String username;

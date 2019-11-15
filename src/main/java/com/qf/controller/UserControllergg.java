@@ -1,12 +1,10 @@
 package com.qf.controller;
 
+import com.qf.domain.Parking;
 import com.qf.domain.User;
 import com.qf.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,9 +19,10 @@ public class UserControllergg {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/findUsers")
-    public List<User> findUsers(@RequestBody User user){
-        return userService.findUsers();
+    @RequestMapping("/findOneUsers")
+    public User findOneUsers(@RequestBody User user){
+        User oneUser = userService.findOneUsers(user.getUserId());
+        return oneUser;
     }
 
     @RequestMapping(value = "/updateUser",method = RequestMethod.POST)
@@ -32,8 +31,9 @@ public class UserControllergg {
         return  updateUser;
     }
 
-    @RequestMapping("/selectUserById")
-    public Integer selectUserById(Integer userId){
+    @RequestMapping("/selectUserById/{userId}")
+    public List<Parking> selectUserById(@PathVariable("userId") Integer userId){
         return userService.selectUserById(userId);
+
     }
 }
