@@ -107,6 +107,10 @@ public class BackstageServiceImpl implements BackstageService {
         return accountMapper.findUserAccount();
     }
 
+    @Override
+    public int insertStaff(Staff staff) {
+        return staffMapper.insertSelective(staff);
+    }
 
 
 }

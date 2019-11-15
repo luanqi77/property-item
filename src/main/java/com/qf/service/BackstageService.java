@@ -16,4 +16,5 @@ public interface BackstageService {
     int updateUser(User user);
     List<UserAccount> findUserAccount();
 
+    int insertStaff(Staff staff);
 }

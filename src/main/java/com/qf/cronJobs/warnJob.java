@@ -1,8 +1,10 @@
 package com.qf.cronJobs;
 
 import com.qf.service.DeductService;
+import com.qf.service.impl.DeductServiceImpl;
+import com.qf.utils.ApplicationContextUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -13,9 +15,8 @@ import org.springframework.context.annotation.Configuration;
 @Slf4j
 @Configuration
 public class warnJob {
-    @Autowired
-    private DeductService deductService;
     public void warn(){
+        DeductService deductService = (DeductServiceImpl)ApplicationContextUtil.getBean("deductService");
         deductService.warnJob();
         log.info("执行提醒任务");
     }

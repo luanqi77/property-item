@@ -40,8 +40,8 @@ public class QuartzConfig {
     // 定义什么时候做，使用 cron 表达式
     @Bean
     public CronTriggerFactoryBean payCron(@Qualifier("payJob") MethodInvokingJobDetailFactoryBean payJob){
-        System.out.println("111111111");
         Deduct deduct = deductMapper.getDeduct();
+        System.out.println(deduct);
         Integer deductTime = deduct.getDeductTime();
         CronTriggerFactoryBean factoryBean = new CronTriggerFactoryBean();
         // 设置job对象
@@ -70,6 +70,7 @@ public class QuartzConfig {
     @Bean
     public CronTriggerFactoryBean warnCron(@Qualifier("warnJob") MethodInvokingJobDetailFactoryBean warnJob){
         Deduct deduct = deductMapper.getDeduct();
+        System.out.println(deduct);
         Integer warnTime = deduct.getWarnTime();
         CronTriggerFactoryBean factoryBean = new CronTriggerFactoryBean();
         // 设置job对象
