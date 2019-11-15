@@ -22,13 +22,11 @@ public interface UserService {
 
     String regist(User user);
 
-    User findOneUsers(Integer userId);
     //高健
     List<User> findUsers();
 
     Integer updateUser(User user);
 
-    List<Parking> selectUserById(Integer userId);
     Integer selectUserById(Integer userId);
 
     //高健end
