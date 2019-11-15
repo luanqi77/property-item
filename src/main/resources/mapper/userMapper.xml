@@ -189,9 +189,6 @@
       where tel=#{tel}
   </update>
 
-  <select id="selectUserById" parameterType="java.lang.Integer" resultMap="UserResultMap">
-    SELECT park_id FROM user_parking where user_parking.user_id =(SELECT user_id from user WHERE user_id = #{userId})
-  </select>
   <select id="findOneUsers"  resultMap="BaseResultMap">
    select * from user where user_id =#{userId}
   </select>
