@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @PackageName:com.qf.service.impl;
@@ -32,7 +33,23 @@ public class ApplyServiceImpl implements ApplyService {
     }
 
     @Override
-    public  List<Applysss> selectApplyByStaff(String status) {
-       return applyMapper.selectApplyByStaff(status);
+    public List<Applysss> selectApplyByStaff(Integer status) {
+
+        return applyMapper.selectApplyByStaff(status);
+    }
+
+    @Override
+    public Apply selectApplyByApplyId(Integer applyId) {
+        Optional<Apply> byId = applyResponseitory.findById(applyId);
+        if (byId.isPresent()) {
+            Apply apply = byId.get();
+            return apply;
+        }
+        return null;
+    }
+
+    @Override
+    public Apply updateApplyByStatus(Apply apply) {
+        return applyResponseitory.saveAndFlush(apply);
     }
 }

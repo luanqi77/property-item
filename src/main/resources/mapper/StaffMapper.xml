@@ -133,4 +133,24 @@
     password = #{password,jdbcType=VARCHAR}
     where staff_number = #{staffNumber,jdbcType=INTEGER}
   </update>
+
+  <!--
+    //马浩雲写的……start
+    Staff selectStaffByStaffNumber(String staffNumber);
+    //马浩雲写的……end
+  -->
+  <select id="selectStaffByStaffNumber" parameterType="java.lang.String" resultMap="BaseResultMap">
+   SELECT
+s.password,
+s.staff_id,
+s.staff_name,
+s.staff_number
+FROM
+staff s
+WHERE
+s.staff_number=#{staffNumber}
+
+
+
+  </select>
 </mapper>

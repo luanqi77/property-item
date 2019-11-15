@@ -16,7 +16,7 @@ public interface ApplyMapper {
 
     Apply selectByPrimaryKey(Integer applyId);
 
-    List<Applysss> selectApplyByStaff(String status);
+    List<Applysss> selectApplyByStaff(Integer status);
 
     int updateByPrimaryKeySelective(Apply record);
 

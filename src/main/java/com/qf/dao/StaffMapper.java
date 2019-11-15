@@ -56,4 +56,8 @@ public interface StaffMapper {
     Staff findByStaffNumber(String staffNumber);
 
     int updatePassword(Staff staff);
+
+    //马浩雲写的……start
+    Staff selectStaffByStaffNumber(String staffNumber);
+    //马浩雲写的……end
 }

@@ -23,6 +23,7 @@ public class UserControllergg {
 
     @RequestMapping("/findUsers")
     public List<User> findUsers(@RequestBody User user){
+
         return userService.findUsers();
     }
 
@@ -34,6 +35,7 @@ public class UserControllergg {
 
     @RequestMapping("/selectUserById")
     public Integer selectUserById(Integer userId){
+
         return userService.selectUserById(userId);
     }
 }

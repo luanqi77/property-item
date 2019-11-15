@@ -25,8 +25,11 @@ public class QuartzConfig {
     // 任务内容
     @Bean
     public MethodInvokingJobDetailFactoryBean payJob() {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 9798d5f7af5550d0b3bb4bed2bb64de6c5bff7a2
         MethodInvokingJobDetailFactoryBean factoryBean = new MethodInvokingJobDetailFactoryBean();
         // 是否并发执行
         factoryBean.setConcurrent(true);
@@ -41,7 +44,6 @@ public class QuartzConfig {
     @Bean
     public CronTriggerFactoryBean payCron(@Qualifier("payJob") MethodInvokingJobDetailFactoryBean payJob){
         Deduct deduct = deductMapper.getDeduct();
-        System.out.println(deduct);
         Integer deductTime = deduct.getDeductTime();
         CronTriggerFactoryBean factoryBean = new CronTriggerFactoryBean();
         // 设置job对象

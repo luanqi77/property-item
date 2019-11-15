@@ -109,7 +109,7 @@
   <!--
     List<Applysss> selectApplyByStaff(String status);
   -->
-  <select id="selectApplyByStaff" parameterType="java.lang.String" resultType="com.qf.domain.Applysss">
+  <select id="selectApplyByStaff" parameterType="java.lang.Integer" resultType="com.qf.domain.Applysss">
  select
 u.username,
 a.apply_deso,
@@ -118,7 +118,8 @@ h.floor,
 h.room,
 a.apply_time,
 a.status,
-a.staff_name
+a.staff_name,
+a.apply_id
 FROM
 apply a,
 user u,
