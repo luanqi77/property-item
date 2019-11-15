@@ -21,12 +21,14 @@ public interface UserService {
 
     String regist(User user);
 
+    //高健
     List<User> findUsers();
 
     Integer updateUser(User user);
 
     Integer selectUserById(Integer userId);
 
+    //高健end
     User checkOpenId(String openId);
 
     User updateUserOpenId(User user);
