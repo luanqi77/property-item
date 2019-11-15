@@ -166,8 +166,18 @@
             <artifactId>elasticsearch-rest-high-level-client</artifactId>
             <version>6.2.1</version>
         </dependency>
-
-
+        <!--榛子云發短信-mhy-->
+        <dependency>
+            <groupId>com.zhenzikj</groupId>
+            <artifactId>zhenzisms</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <!--httpclient-mhy-->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.6</version>
+        </dependency>
 
     </dependencies>
     <build>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.qf.domain.User">
+    <constructor>
+      <idArg column="user_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="username" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="password" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="realname" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="tel" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="pic" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="live_time" javaType="java.util.Date" jdbcType="DATE" />
+      <arg column="email" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="statu" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="code" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="open_id" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <resultMap id="mainResultMap" type="com.qf.domain.User">
+    <result property="userId" column="user_id"></result>
+    <result property="realname" column="realname"></result>
+    <result property="tel" column="tel"></result>
+  </resultMap>
+  <sql id="Base_Column_List">
+    user_id, username, password, realname, tel, pic, live_time, email, statu, code, open_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where user_id = #{userId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from user
+    where user_id = #{userId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.qf.domain.User">
+    insert into user (user_id, username, password, 
+      realname, tel, pic, 
+      live_time, email, statu, 
+      code, open_id)
+    values (#{userId,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{realname,jdbcType=VARCHAR}, #{tel,jdbcType=VARCHAR}, #{pic,jdbcType=VARCHAR}, 
+      #{liveTime,jdbcType=DATE}, #{email,jdbcType=VARCHAR}, #{statu,jdbcType=INTEGER}, 
+      #{code,jdbcType=VARCHAR}, #{openId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.qf.domain.User" useGeneratedKeys="true" keyProperty="userId">
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="password != null">
+        password,
+      </if>
+      <if test="realname != null">
+        realname,
+      </if>
+      <if test="tel != null">
+        tel,
+      </if>
+      <if test="pic != null">
+        pic,
+      </if>
+      <if test="liveTime != null">
+        live_time,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+      <if test="statu != null">
+        statu,
+      </if>
+      <if test="code != null">
+        code,
+      </if>
+      <if test="openId != null">
+        open_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null">
+        #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="tel != null">
+        #{tel,jdbcType=VARCHAR},
+      </if>
+      <if test="pic != null">
+        #{pic,jdbcType=VARCHAR},
+      </if>
+      <if test="liveTime != null">
+        #{liveTime,jdbcType=DATE},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="statu != null">
+        #{statu,jdbcType=INTEGER},
+      </if>
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="openId != null">
+        #{openId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qf.domain.User">
+    update user
+    <set>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null">
+        realname = #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="tel != null">
+        tel = #{tel,jdbcType=VARCHAR},
+      </if>
+      <if test="pic != null">
+        pic = #{pic,jdbcType=VARCHAR},
+      </if>
+      <if test="liveTime != null">
+        live_time = #{liveTime,jdbcType=DATE},
+      </if>
+      <if test="email != null">
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="statu != null">
+        statu = #{statu,jdbcType=INTEGER},
+      </if>
+      <if test="code != null">
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="openId != null">
+        open_id = #{openId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qf.domain.User">
+    update user
+    set username = #{username,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      realname = #{realname,jdbcType=VARCHAR},
+      tel = #{tel,jdbcType=VARCHAR},
+      pic = #{pic,jdbcType=VARCHAR},
+      live_time = #{liveTime,jdbcType=DATE},
+      email = #{email,jdbcType=VARCHAR},
+      statu = #{statu,jdbcType=INTEGER},
+      code = #{code,jdbcType=VARCHAR},
+      open_id = #{openId,jdbcType=VARCHAR}
+    where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+
+  <!--int updateByTel(User user);-->
+  <update id="updateByTel" parameterType="com.qf.domain.User" >
+      update user
+      set
+      username = #{username,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      realname = #{realname,jdbcType=VARCHAR},
+      pic = #{pic,jdbcType=VARCHAR},
+      live_time = #{liveTime,jdbcType=DATE},
+      email = #{email,jdbcType=VARCHAR},
+      statu = #{statu,jdbcType=INTEGER},
+      open_id = #{openId,jdbcType=VARCHAR}
+      where tel=#{tel}
+  </update>
+
+  <select id="selectUserById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    SELECT park_id FROM user_parking where user_parking.user_id =(SELECT user_id from `user`WHERE user_id = #{userId})
+  </select>
+  <select id="findUsers"  resultMap="BaseResultMap">
+   select * from user
+  </select>
+  <update id="updateUser" parameterType="com.qf.domain.User">
+    update user
+      set
+      username = #{username,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      realname = #{realname,jdbcType=VARCHAR},
+      pic = #{pic,jdbcType=VARCHAR},
+      live_time = #{liveTime,jdbcType=DATE},
+      email = #{email,jdbcType=VARCHAR},
+      statu = #{statu,jdbcType=INTEGER},
+      open_id = #{openId,jdbcType=VARCHAR}
+     where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+
+
+  <select id="findUserToPay" resultMap="mainResultMap">
+    SELECT
+    u.user_id,u.tel,u.realname
+    FROM
+    user u,
+    house h,
+    account a
+    WHERE
+    u.user_id = h.user_id
+    AND h.user_id = a.user_id
+    AND a.money &lt; h.hot_fee+a.park_fee+h.property_fee
+  </select>
+
+
+</mapper>

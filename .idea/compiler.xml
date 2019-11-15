@@ -9,5 +9,8 @@
         <module name="property-item" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="property-item" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
