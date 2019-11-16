@@ -100,9 +100,9 @@ public class TestController {
     }
     @RequestMapping("/payTest")
     @SystemControllerLog(methods = "测试" ,serviceClass = "测试类" )
-    public String payTest(@RequestBody Staff staff,String args) {
-            //schedulerUtils.updateExecuteTime("payJob","0/"+second+" * * * * ? *");
-            //schedulerUtils.updateExecuteTime("warnJob","0/"+second+" * * * * ? *");
+    public String payTest(Integer second) throws Exception {
+            schedulerUtils.updateExecuteTime("payJob","0/"+second+" * * * * ? *");
+            schedulerUtils.updateExecuteTime("warnJob","0/"+second+" * * * * ? *");
             log.info("方法执行！！！");
         return null;
     }

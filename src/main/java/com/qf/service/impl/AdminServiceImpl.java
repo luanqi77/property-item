@@ -3,22 +3,26 @@ package com.qf.service.impl;
 import com.qf.bean.PageBean;
 import com.qf.bean.StaffAndRole;
 import com.qf.bean.StaffAndRoleRequest;
+import com.qf.bean.logInfoResponse;
 import com.qf.dao.*;
-import com.qf.domain.Deduct;
-import com.qf.domain.Staff;
-import com.qf.domain.StaffRole;
-import com.qf.domain.User;
+import com.qf.domain.*;
 import com.qf.service.AdminService;
 import com.qf.utils.Md5Utils;
 import com.qf.utils.SchedulerUtils;
 import com.qf.utils.TelMessageUtils;
+import javafx.scene.input.DataFormat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 @Service("deductService")
 public class AdminServiceImpl implements AdminService {
+    private static final SimpleDateFormat SIMPLE_DATE_FORMAT=new SimpleDateFormat("yyyy-MM-dd");
+    @Autowired
+    private LogInfoMapper logInfoMapper;
     @Autowired
     private StaffMapper staffMapper;
     @Autowired
@@ -46,11 +50,8 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public String updateDeduct(Deduct deduct) {
-        if (deduct.getDeductTime()==null||deduct.getWarnTime()==null||deduct.getPropertyFee()==null||deduct.getHotFee()==null){
-            return "值不能为空";
-        }
-        if (deductMapper.updateDeduct(deduct) > 0) {
-            if (deduct.getHotFee() != null && deduct.getPropertyFee() != null && deduct.getWarnTime() != null && deduct.getDeductTime() != null) {
+        if (deduct.getHotFee() != null && deduct.getPropertyFee() != null && deduct.getWarnTime() != null && deduct.getDeductTime() != null) {
+            if (deductMapper.updateDeduct(deduct) > 0) {
                 houseMapper.updateFee(deduct);
                 try {
                     Integer deductTime = deduct.getDeductTime();
@@ -59,13 +60,17 @@ public class AdminServiceImpl implements AdminService {
                     String cronString2 = "0 0 0 " + warnTime + " * ? *";
                     schedulerUtils.updateExecuteTime("payJob", cronString);
                     schedulerUtils.updateExecuteTime("warnJob", cronString2);
+                    return "success";
                 } catch (Exception e) {
                     e.printStackTrace();
+                    return "error";
                 }
-
             }
+            return "未更改";
+
         }
-        return "fail";
+        return "值不能为空";
+
     }
 
     @Override
@@ -103,7 +108,7 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public Integer updateRole(StaffRole staffRole) {
-        if (staffRole.getStaffId()!=null||staffRole.getRoleId()!=null){
+        if (staffRole.getStaffId()==null||staffRole.getRoleId()==null){
             return 0;
         }
         return staffRoleMapper.updateRole(staffRole);
@@ -144,10 +149,30 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public Integer delStaff(Staff staff) {
-        if (staff.getStaffId()!=null){
+        if (staff.getStaffId()==null){
             return 0;
         }
        return staffMapper.deleteByPrimaryKey(staff.getStaffId());
 
     }
+
+    @Override
+    public logInfoResponse findLogInfo(PageBean pageBean) {
+        if (pageBean.getCurrentPage()!=null&&pageBean.getPageSize()!=null){
+            pageBean.setStartIndex((pageBean.getCurrentPage()-1)*pageBean.getPageSize());
+            pageBean.setEndIndex(pageBean.getCurrentPage()*pageBean.getPageSize());
+            if (pageBean.getLogDate()!=null){
+                String logDate = SIMPLE_DATE_FORMAT.format(pageBean.getLogDate());
+                pageBean.setKeywords(logDate);
+            }
+            List<LogInfo> logInfos = logInfoMapper.findLogInfo(pageBean);
+            logInfoResponse logInfoResponse = new logInfoResponse();
+            logInfoResponse.setLogInfos(logInfos);
+            logInfoResponse.setTotal(logInfoMapper.getLogInfoCount(pageBean));
+            return logInfoResponse;
+        }
+        return null;
+    }
+
+
 }

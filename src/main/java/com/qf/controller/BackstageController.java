@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class BackstageController{
     @Autowired
@@ -37,7 +39,7 @@ public class BackstageController{
         return "fail";
     }
 
-    //员工修改密码
+    //员工修改密码√
     @RequestMapping("/updateStaffPassword")
     @RequiresAuthentication
     public String updatePassword(@RequestBody Staff staff){
@@ -59,20 +61,17 @@ public class BackstageController{
         return results;
     }
 
-    //更改用户信息
+    //更改用户信息√
     @SystemControllerLog(methods = "更改用户信息")
     @RequestMapping("/updateUser")
     @RequiresPermissions("user_account")
     public String updateUser(@RequestBody User user){
-        if (backstageService.updateUser(user)>0){
-            //更新solr索引库
-            userSolrService.dataIntoSolrFromDb();
-            return "success";
-        }
-        return "fail";
+        String result = backstageService.updateUser(user);
+        userSolrService.dataIntoSolrFromDb();
+        return result;
     }
 
-    //移除用户
+    //移除用户√
     @SystemControllerLog(methods = "移除用户")
     @RequestMapping("/removeMaster")
     @RequiresPermissions("user_account")
@@ -84,12 +83,15 @@ public class BackstageController{
         }
         return "fail";
     }
-    //得到用户账户表
+    //得到用户账户表√
     @RequestMapping("/findUserAccount")
     @RequiresPermissions("user_account")
     public UserAccountResponse getUserAccount(@RequestBody PageBean pageBean){
         return userSolrService.queryUserAccountsByPage(pageBean);
     }
+
+
+
 
 
 

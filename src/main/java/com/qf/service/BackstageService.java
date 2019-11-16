@@ -12,7 +12,7 @@ public interface BackstageService {
     String updateStaffPassword(Staff staff);
     String insertUser(UserRegisterRequest userRegisterRequest);
     int delUserById(User user);
-    int updateUser(User user);
+    String updateUser(User user);
     List<UserAccount> findUserAccount();
 
 

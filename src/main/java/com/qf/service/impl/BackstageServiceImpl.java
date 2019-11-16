@@ -50,16 +50,16 @@ public class BackstageServiceImpl implements BackstageService {
             } catch (Exception e) {
                 e.printStackTrace();
                 System.out.println("fail");
+                return "认证失败";
             }
         }else {
             return "账号或密码不能为空";
         }
-        return "密码错误";
     }
 
     @Override
     public String updateStaffPassword(Staff staff) {
-        if (staff.getPassword()!=null&&staff.getPassword()!=""){
+        if (staff.getPassword()==null||staff.getPassword()==""){
             return "密码不能为空";
         }
         String principal = (String)SecurityUtils.getSubject().getPrincipal();
@@ -103,17 +103,19 @@ public class BackstageServiceImpl implements BackstageService {
         Integer userId = user.getUserId();
         if (userId!=null) {
             houseMapper.removeMaster(userId);
+            accountMapper.deleteByUserId(userId);
             return userMapper.deleteByPrimaryKey(userId);
         }
         return 0;
     }
 
     @Override
-    public int updateUser(User user) {
-        if (user.getTel()==null&user.getTel()==""&&user.getRealname()!=null&&user.getRealname()!=""){
-            return 0;
+    public String updateUser(User user) {
+        if (user.getTel()==null||user.getTel()==""||user.getRealname()!=null||user.getRealname()==""){
+            return "真实姓名或电话不能为空";
         }
-        return userMapper.updateByPrimaryKeySelective(user);
+        userMapper.updateByPrimaryKeySelective(user);
+        return "success";
     }
 
     @Override

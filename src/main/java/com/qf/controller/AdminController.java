@@ -3,6 +3,7 @@ package com.qf.controller;
 import com.qf.aop.SystemControllerLog;
 import com.qf.bean.PageBean;
 import com.qf.bean.StaffAndRoleRequest;
+import com.qf.bean.logInfoResponse;
 import com.qf.domain.Deduct;
 import com.qf.domain.Staff;
 import com.qf.domain.StaffRole;
@@ -21,7 +22,7 @@ public class AdminController {
     private AdminService AdminService;
 
 
-    //获得收费策略基本信息
+    //获得收费策略基本信息√
     @RequestMapping("/getDeduct")
     @RequiresPermissions("payment_rule")
     public Deduct getDeduct(){
@@ -29,15 +30,15 @@ public class AdminController {
         return deduct;
     }
 
-    //更改收费策略基本信息
+    //更改收费策略基本信息√
     @SystemControllerLog(methods = "更改收费策略")
     @RequestMapping("/updateDeduct")
-    @RequiresPermissions("payment rule")
+    @RequiresPermissions("payment_rule")
     public String updateDeduct(@RequestBody Deduct deduct){
         //System.out.println(deduct);
         return AdminService.updateDeduct(deduct);
     }
-    //提醒缴费
+    //提醒缴费√
     @SystemControllerLog(methods = "提醒缴费")
     @RequestMapping("/warnJob")
     @RequiresPermissions("payment_rule")
@@ -45,7 +46,7 @@ public class AdminController {
         return AdminService.warnJob();
     }
 
-    //得到员工表
+    //得到员工表√
     @RequestMapping("/findStaff")
     @RequiresPermissions("staff_manage")
     public StaffAndRoleRequest findStaff(@RequestBody PageBean pageBean){
@@ -53,7 +54,7 @@ public class AdminController {
     }
 
 
-    //更改员工角色
+    //更改员工角色√
     @SystemControllerLog(methods = "更改员工角色")
     @RequestMapping("/updateRole")
     @RequiresPermissions("staff_manage")
@@ -64,7 +65,7 @@ public class AdminController {
         return "fail";
     }
 
-    //重置员工密码
+    //重置员工密码√
     @SystemControllerLog(methods = "重置员工密码")
     @RequestMapping("/resetPassword")
     @RequiresPermissions("staff_manage")
@@ -83,16 +84,23 @@ public class AdminController {
         return AdminService.insertStaff(staff);
     }
 
-    //移除员工
+    //移除员工√
     @SystemControllerLog(methods = "移除员工")
     @RequestMapping("/delStaff")
     @RequiresPermissions("staff_manage")
     public String delStaff(@RequestBody Staff staff){
-        if (AdminService.delStaff(staff)>1){
+        if (AdminService.delStaff(staff)>0){
             return "success";
         }else {
             return "fail";
         }
+    }
+
+    //得到操作记录表
+    @RequiresPermissions("operation_log")
+    @RequestMapping("/findLogInfo")
+    public logInfoResponse findLogInfo(@RequestBody PageBean pageBean){
+        return AdminService.findLogInfo(pageBean);
     }
 
 }

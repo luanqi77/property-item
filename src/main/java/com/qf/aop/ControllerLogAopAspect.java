@@ -207,13 +207,15 @@ public class ControllerLogAopAspect {
                 try {
                     //执行页面请求模块方法，并返回
                     object = pjp.proceed();
+                    String result = (String) object;
                     log.setResultstatus("success");
-                    log.setResultmsg("执行成功");
+                    log.setResultmsg(result);
                     //保存进数据库
                     logInfoMapper.insertSelective(log);
                 } catch (Throwable e) {
                     log.setResultstatus("fail");
                     log.setResultmsg(e.getMessage());
+                    e.printStackTrace();
                     logInfoMapper.insertSelective(log);
                 }
             } else {

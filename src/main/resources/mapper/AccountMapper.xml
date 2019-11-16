@@ -104,4 +104,9 @@
     SET
 	a.money=a.money-h.hot_fee-h.property_fee-a.park_fee
   </update>
+
+  <delete id="deleteByUserId" parameterType="java.lang.Integer">
+    delete from account
+    where user_id = #{userId,jdbcType=INTEGER}
+  </delete>
 </mapper>
