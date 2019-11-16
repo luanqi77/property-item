@@ -12,6 +12,7 @@
       <arg column="role_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
     </constructor>
   </resultMap>
+
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
@@ -101,5 +102,44 @@
     set staff_id = #{staffId,jdbcType=INTEGER},
       role_id = #{roleId,jdbcType=INTEGER}
     where staff_role_id = #{staffRoleId,jdbcType=INTEGER}
+  </update>
+
+  <resultMap id="staffRoleMap" type="com.qf.bean.StaffAndRole">
+    <result column="staff_number" property="staffNumber"></result>
+    <result column="staff_name" property="realName"></result>
+    <result column="staff_id" property="staffId"></result>
+    <result column="role_id" property="roleId"></result>
+    <result column="role_name" property="roleName"></result>
+  </resultMap>
+
+  <select id="findStaff" parameterType="com.qf.bean.StaffAndRole" resultMap="staffRoleMap">
+    select
+    s.staff_number,s.staff_name,s.staff_id,r.role_id,role_name
+    from
+    staff s,role r,staff_role sr
+    where s.staff_id=sr.staff_id
+    and sr.role_id=r.role_id
+    <if test="keywords!=null and keywords!=''">
+      and s.staff_name=#{keywords,jdbcType=VARCHAR }
+    </if>
+    limit #{startIndex,jdbcType=INTEGER},#{endIndex,jdbcType=INTEGER}
+  </select>
+
+  <select id="findStaffCount" resultType="java.lang.Long">
+    select
+      count(*)
+    from
+    staff s,role r,staff_role sr
+    where s.staff_id=sr.staff_id
+    and sr.role_id=r.role_id
+    <if test="keywords!=null and keywords!=''">
+      and s.staff_name=#{keywords,jdbcType=VARCHAR }
+    </if>
+  </select>
+
+  <update id="updateRole" parameterType="com.qf.domain.StaffRole">
+    update  staff_role
+    set role_id=#{roleId,jdbcType=INTEGER}
+    where staff_id=#{staffId,jdbcType=INTEGER}
   </update>
 </mapper>

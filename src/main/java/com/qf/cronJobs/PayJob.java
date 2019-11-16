@@ -1,8 +1,8 @@
 package com.qf.cronJobs;
 
 
-import com.qf.service.DeductService;
-import com.qf.service.impl.DeductServiceImpl;
+import com.qf.service.AdminService;
+import com.qf.service.impl.AdminServiceImpl;
 import com.qf.utils.ApplicationContextUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Configuration;
@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class PayJob {
     public void pay(){
-        DeductService deductService = (DeductServiceImpl)ApplicationContextUtil.getBean("deductService");
+        AdminService deductService = (AdminServiceImpl)ApplicationContextUtil.getBean("deductService");
         deductService.payJob();
         log.info("执行扣费任务");
     }

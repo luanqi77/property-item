@@ -10,11 +10,10 @@ import java.util.List;
 public interface BackstageService {
     String login(Staff staff);
     String updateStaffPassword(Staff staff);
-
     String insertUser(UserRegisterRequest userRegisterRequest);
-    int delUserById(int id);
+    int delUserById(User user);
     int updateUser(User user);
     List<UserAccount> findUserAccount();
 
-    int insertStaff(Staff staff);
+
 }

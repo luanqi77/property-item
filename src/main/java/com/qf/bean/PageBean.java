@@ -1,5 +1,6 @@
 package com.qf.bean;
 
+
 import lombok.Data;
 
 /**
@@ -11,6 +12,9 @@ import lombok.Data;
 public class PageBean {
     private Integer currentPage;
     private Integer pageSize;
+    private Integer startIndex;
+    private Integer endIndex;
     private String keywords;
+
 }
 
