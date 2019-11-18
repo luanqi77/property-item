@@ -1,5 +1,8 @@
 package com.qf.domain;
 
+import lombok.ToString;
+
+@ToString
 public class StaffRole {
     /**
      *

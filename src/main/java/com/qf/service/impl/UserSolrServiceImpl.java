@@ -5,6 +5,7 @@ import com.qf.bean.UserAccount;
 import com.qf.bean.UserAccountResponse;
 import com.qf.service.BackstageService;
 import com.qf.service.UserSolrService;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.client.solrj.impl.HttpSolrServer;
@@ -26,6 +27,7 @@ import java.util.List;
  * @date 2019/11/13 11:41
  */
 @Service
+@Slf4j
 public class UserSolrServiceImpl implements UserSolrService {
     @Autowired
     private BackstageService backstageService;
@@ -33,6 +35,15 @@ public class UserSolrServiceImpl implements UserSolrService {
     private HttpSolrServer solrServer;
     @Override
     public String dataIntoSolrFromDb() {
+        try {
+            solrServer.deleteByQuery("*:*");  //把删除的条件设置为"*:*"就可以了
+            solrServer.commit();
+            log.debug("清空索引");
+        } catch (Exception e) {
+            log.debug("删除全部索引失败");
+
+            e.printStackTrace();
+        }
 //        查询数据库
         List<UserAccount> all = backstageService.findUserAccount();
 //        将每条数据转成文档并写入solr索引库中
@@ -71,6 +82,7 @@ public class UserSolrServiceImpl implements UserSolrService {
     @Override
     public UserAccountResponse queryUserAccountsByPage(PageBean pageBean) {
         List<UserAccount> userAccounts=new ArrayList<>();
+
         SolrQuery solrQuery = new SolrQuery();
         if (pageBean.getKeywords()==null||pageBean.getKeywords()==""){
             pageBean.setKeywords("*");

@@ -1,5 +1,7 @@
 package com.qf.dao;
 
+import com.qf.bean.PageBean;
+import com.qf.bean.StaffAndRole;
 import com.qf.domain.Staff;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -60,4 +62,6 @@ public interface StaffMapper {
     //马浩雲写的……start
     Staff selectStaffByStaffNumber(String staffNumber);
     //马浩雲写的……end
+
+
 }

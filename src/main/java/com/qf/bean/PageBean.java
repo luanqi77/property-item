@@ -1,5 +1,6 @@
 package com.qf.bean;
 
+
 import lombok.Data;
 
 import java.util.Date;
@@ -13,6 +14,10 @@ import java.util.Date;
 public class PageBean {
     private Integer currentPage;
     private Integer pageSize;
+    private Integer startIndex;
+    private Integer endIndex;
     private String keywords;
+    private Date logDate;
+
 }
 
