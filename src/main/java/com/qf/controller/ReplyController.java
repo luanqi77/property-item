@@ -49,4 +49,11 @@ public class ReplyController {
 
     }
 
+    /*
+    * 用户查看回复*/
+    @RequestMapping("/selectReplyByAdviseId")
+    public List<Reply> selectReplyByAdviseId(@RequestParam("adviseId") Integer adviseId){
+        return replyService.selectReplyByAdviseId(adviseId);
+    }
+
 }

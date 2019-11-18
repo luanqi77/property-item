@@ -13,4 +13,6 @@ public interface ReplyService {
     String insertReply(Reply reply);
 
     PageBeanFindAdviseAndReply selectReplyByStaffId(Integer size,Integer page,Integer staffId);
+
+    List<Reply> selectReplyByAdviseId(Integer adviseId);
 }

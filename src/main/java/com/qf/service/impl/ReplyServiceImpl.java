@@ -67,4 +67,9 @@ public class ReplyServiceImpl implements ReplyService {
         return pageBean;
 
     }
+
+    @Override
+    public List<Reply> selectReplyByAdviseId(Integer adviseId) {
+        return replyRepository.findReplyByAdviseId(adviseId);
+    }
 }
