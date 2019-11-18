@@ -26,6 +26,11 @@ public class InformationController {
         return list;
 
     }
+    @RequestMapping("/findAllInformation")
+    public List<Information> findAllInformation(){
+        return informationService.findAllInformation();
+    }
+
 
     @RequestMapping("/insertInformation")
     public Integer insertInformation(@RequestBody Information information){
