@@ -38,12 +38,4 @@ public class AdviseController {
     }
 
 
-//    @RequestMapping(value = "/selectLog",method = RequestMethod.POST)
-//////    public String selectLog(@RequestBody PageBean pageBean){
-//////        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-//////        String dateStr = format.format(pageBean.getLogTime());
-//////        System.out.println(dateStr+"=============");
-//////        return "ok";
-//////    }
-
 }
