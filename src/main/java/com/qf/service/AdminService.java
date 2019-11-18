@@ -1,6 +1,7 @@
 package com.qf.service;
 
 import com.qf.bean.PageBean;
+import com.qf.bean.StaffAndRole;
 import com.qf.bean.StaffAndRoleRequest;
 import com.qf.bean.logInfoResponse;
 import com.qf.domain.Deduct;
@@ -25,4 +26,6 @@ public interface AdminService {
     Integer delStaff(Staff staff);
 
     logInfoResponse findLogInfo(PageBean pageBean);
+
+    StaffAndRole getStaffInfo(int id);
 }

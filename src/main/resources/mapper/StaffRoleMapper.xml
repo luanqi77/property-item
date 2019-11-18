@@ -112,7 +112,7 @@
     <result column="role_name" property="roleName"></result>
   </resultMap>
 
-  <select id="findStaff" parameterType="com.qf.bean.StaffAndRole" resultMap="staffRoleMap">
+  <select id="findStaff" parameterType="com.qf.bean.PageBean" resultMap="staffRoleMap">
     select
     s.staff_number,s.staff_name,s.staff_id,r.role_id,role_name
     from
@@ -142,4 +142,16 @@
     set role_id=#{roleId,jdbcType=INTEGER}
     where staff_id=#{staffId,jdbcType=INTEGER}
   </update>
+
+  <select id="getStaffInfo" parameterType="com.qf.bean.PageBean" resultMap="staffRoleMap">
+    select
+    s.staff_number,s.staff_name,s.staff_id,r.role_id,role_name
+    from
+    staff s,role r,staff_role sr
+    where s.staff_id=sr.staff_id
+    and sr.role_id=r.role_id
+    and s.staff_id=#{id,jdbcType=INTEGER}
+  </select>
+
+
 </mapper>

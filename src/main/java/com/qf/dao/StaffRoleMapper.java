@@ -61,4 +61,6 @@ public interface StaffRoleMapper {
     Long findStaffCount(PageBean pageBean);
 
     Integer updateRole(StaffRole staffRole);
+
+    StaffAndRole getStaffInfo(int id);
 }

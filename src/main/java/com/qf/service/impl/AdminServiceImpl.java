@@ -174,5 +174,10 @@ public class AdminServiceImpl implements AdminService {
         return null;
     }
 
+    @Override
+    public StaffAndRole getStaffInfo(int id) {
+        return staffRoleMapper.getStaffInfo(id);
+    }
+
 
 }
