@@ -2,6 +2,7 @@ package com.qf.service.impl;
 
 import com.qf.dao.InformationMapper;
 import com.qf.domain.Information;
+import com.qf.response.ResponseUser;
 import com.qf.service.InformationService;
 import org.apache.commons.collections.map.HashedMap;
 import org.springframework.stereotype.Service;
@@ -27,11 +28,16 @@ public class InformationServiceImpl implements InformationService {
     }
 
     @Override
-    public List<Information> findAllInformationBypage(Integer page, Integer size) {
+    public ResponseUser findAllInformationBypage(Integer page, Integer size) {
         Map<String, Object> data = new HashedMap();
         data.put("page",(page-1)*size);
         data.put("size",size);
-        return informationMapper.findAllInformationBypage(data);
+        List<Information> allInformationBypage = informationMapper.findAllInformationBypage(data);
+        ResponseUser user = new ResponseUser();
+        user.setList(allInformationBypage);
+        long bytotal = informationMapper.selectInformationBytotal();
+        user.setTotal(bytotal);
+        return user;
     }
 
     @Override

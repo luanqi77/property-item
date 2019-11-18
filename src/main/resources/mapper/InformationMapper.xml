@@ -19,6 +19,11 @@
     <select id="findAllInformationBypage"  parameterType="map" resultMap="myInformation">
         select * from information limit #{page} , #{size}
     </select>
+    <select id="selectInformationBytotal" resultType="java.lang.Integer">
+        select count(*) from information
+    </select>
+
+
 
 
     <insert id="insertInformation" parameterType="com.qf.domain.Information">
