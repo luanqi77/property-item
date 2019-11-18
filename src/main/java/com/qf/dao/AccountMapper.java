@@ -23,4 +23,6 @@ public interface AccountMapper {
     List<UserAccount> findUserAccount();
 
     Integer payFee();
+
+    int deleteByUserId(Integer userId);
 }

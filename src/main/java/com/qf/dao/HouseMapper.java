@@ -21,4 +21,6 @@ public interface HouseMapper {
     int removeMaster(Integer userId);
 
     int updateFee(Deduct deduct);
+
+    House selectByUserId(Integer userId);
 }

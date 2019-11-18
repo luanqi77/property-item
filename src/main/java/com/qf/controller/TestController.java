@@ -6,8 +6,8 @@ import com.qf.bean.UserAccount;
 import com.qf.bean.UserAccountResponse;
 import com.qf.domain.Deduct;
 import com.qf.domain.Staff;
+import com.qf.service.AdminService;
 import com.qf.service.BackstageService;
-import com.qf.service.DeductService;
 import com.qf.service.UserSolrService;
 import com.qf.utils.Md5Utils;
 import com.qf.utils.SchedulerUtils;
@@ -31,7 +31,7 @@ public class TestController {
     private Scheduler scheduler;
 
     @Autowired
-    private DeductService deductService;
+    private AdminService deductService;
     @Autowired
     private Md5Utils md5Utils;
     @Autowired
@@ -100,9 +100,9 @@ public class TestController {
     }
     @RequestMapping("/payTest")
     @SystemControllerLog(methods = "测试" ,serviceClass = "测试类" )
-    public String payTest(@RequestBody Staff staff,String args) {
-            //schedulerUtils.updateExecuteTime("payJob","0/"+second+" * * * * ? *");
-            //schedulerUtils.updateExecuteTime("warnJob","0/"+second+" * * * * ? *");
+    public String payTest(Integer second) throws Exception {
+            schedulerUtils.updateExecuteTime("payJob","0/"+second+" * * * * ? *");
+            schedulerUtils.updateExecuteTime("warnJob","0/"+second+" * * * * ? *");
             log.info("方法执行！！！");
         return null;
     }

@@ -75,7 +75,7 @@ public class QuartzConfig {
         factoryBean.setJobDetail(warnJob.getObject());
         // 设置执行时间
         String cronString="0 0 0 "+warnTime+" * ? *";
-        System.out.println(cronString);
+        //System.out.println(cronString);
         factoryBean.setCronExpression(cronString);
         return  factoryBean;
     }

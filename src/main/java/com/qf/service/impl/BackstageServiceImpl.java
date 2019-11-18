@@ -2,10 +2,7 @@ package com.qf.service.impl;
 
 import com.qf.bean.UserAccount;
 import com.qf.bean.UserRegisterRequest;
-import com.qf.dao.AccountMapper;
-import com.qf.dao.HouseMapper;
-import com.qf.dao.StaffMapper;
-import com.qf.dao.UserMapper;
+import com.qf.dao.*;
 import com.qf.domain.Account;
 import com.qf.domain.House;
 import com.qf.domain.Staff;
@@ -18,10 +15,13 @@ import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.Id;
 import java.util.List;
 
 @Service
 public class BackstageServiceImpl implements BackstageService {
+    @Autowired
+    private  Md5Utils md5Utils;
     @Autowired
     private AccountMapper accountMapper;
     @Autowired
@@ -31,36 +31,37 @@ public class BackstageServiceImpl implements BackstageService {
     @Autowired
     private StaffMapper staffMapper;
 
-    @Autowired
-    private Md5Utils md5Utils;
+
     @Override
     public String login(Staff staff) {
-        String staffNumber = staff.getStaffNumber();
-        String password = staff.getPassword();
-        if(staffNumber!=""&&staffNumber!=null&&password!=""&&password!=null) {
+        if (staff.getStaffNumber() != null && staff.getStaffNumber() != "" && staff.getPassword() != null && staff.getPassword() != "") {
+            String staffNumber = staff.getStaffNumber();
+            String password = staff.getPassword();
             //System.out.println(staff);
             try {
                 Subject subject = SecurityUtils.getSubject();
                 UsernamePasswordToken token = new UsernamePasswordToken(staffNumber, password);
                 subject.login(token);
                 if (subject.isAuthenticated()) {
-                    Staff byStaffNumber = staffMapper.findByStaffNumber(staffNumber);
-                    return byStaffNumber.getStaffName();
+                    return "success";
                 } else {
-                    return null;
+                    return "fail";
                 }
             } catch (Exception e) {
                 e.printStackTrace();
-                System.out.println("登录失败");
+                System.out.println("fail");
+                return "认证失败";
             }
         }else {
-            return "fail";
+            return "账号或密码不能为空";
         }
-        return null;
     }
 
     @Override
     public String updateStaffPassword(Staff staff) {
+        if (staff.getPassword()==null||staff.getPassword()==""){
+            return "密码不能为空";
+        }
         String principal = (String)SecurityUtils.getSubject().getPrincipal();
         String passwordCode = md5Utils.getPasswordCode(staff.getPassword(), principal);
         staff.setStaffNumber(principal);
@@ -73,7 +74,13 @@ public class BackstageServiceImpl implements BackstageService {
 
     @Override
     public String insertUser(UserRegisterRequest userRegisterRequest) {
-
+        User user = userRegisterRequest.getUser();
+        if (user.getRealname()==null||user.getRealname()==""||user.getTel()==""||user.getTel()==null){
+            return "真实姓名或电话不能为空";
+        }
+        if (houseMapper.selectByUserId(userRegisterRequest.getHouseId())!=null){
+            return "房屋已存在住户";
+        }
         if (userMapper.insertSelective(userRegisterRequest.getUser())>0){
             Integer userId = userRegisterRequest.getUser().getUserId();
             //为house添加用户
@@ -92,14 +99,23 @@ public class BackstageServiceImpl implements BackstageService {
     }
 
     @Override
-    public int delUserById(int id) {
-        houseMapper.removeMaster(id);
-        return userMapper.deleteByPrimaryKey(id);
+    public int delUserById(User user) {
+        Integer userId = user.getUserId();
+        if (userId!=null) {
+            houseMapper.removeMaster(userId);
+            accountMapper.deleteByUserId(userId);
+            return userMapper.deleteByPrimaryKey(userId);
+        }
+        return 0;
     }
 
     @Override
-    public int updateUser(User user) {
-        return userMapper.updateByPrimaryKey(user);
+    public String updateUser(User user) {
+        if (user.getTel()==null||user.getTel()==""||user.getRealname()!=null||user.getRealname()==""){
+            return "真实姓名或电话不能为空";
+        }
+        userMapper.updateByPrimaryKeySelective(user);
+        return "success";
     }
 
     @Override
@@ -108,8 +124,22 @@ public class BackstageServiceImpl implements BackstageService {
     }
 
     @Override
-    public int insertStaff(Staff staff) {
-        return staffMapper.insertSelective(staff);
+    public Staff getCurrentStaff() {
+        String principal = (String)SecurityUtils.getSubject().getPrincipal();
+        if (principal!=null&&principal!=""){
+            Staff staff = staffMapper.findByStaffNumber(principal);
+            return staff;
+        }
+        return null;
+    }
+
+    @Override
+    public User getUserById(int id) {
+        User user = userMapper.selectByPrimaryKey(id);
+        if (user!=null){
+            return user;
+        }
+        return null;
     }
 
 

@@ -153,7 +153,7 @@
   </update>
 
   <update id="removeMaster" parameterType="java.lang.Integer">
-    update house
+    update house,
     set user_id = null
     where user_id = #{userId,jdbcType=INTEGER}
   </update>
@@ -166,13 +166,14 @@
       <if test="propertyFee != null">
         property_fee = #{propertyFee,jdbcType=INTEGER}*area,
       </if>
-      <if test="deductTime != null">
-        deduct_time = #{deductTime,jdbcType=INTEGER},
-      </if>
-      <if test="warnTime != null">
-        warn_time = #{warnTime,jdbcType=INTEGER},
-      </if>
     </set>
 
   </update>
+
+  <select id="selectByUserId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from house
+    where user_id = #{userId,jdbcType=INTEGER}
+  </select>
 </mapper>
