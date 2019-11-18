@@ -3,11 +3,7 @@ package com.qf.controller;
 import com.qf.domain.Information;
 import com.qf.service.InformationService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,9 +18,13 @@ public class InformationController {
     @Autowired
     private InformationService informationService;
 
-    @RequestMapping("/findAllInformation")
-    public List<Information> findAllInformation(){
-        return informationService.findAllInformation();
+    @RequestMapping("/findAllInformationBypage/{page}/{size}")
+    public List<Information> findAllInformation(@PathVariable("page")Integer page, @PathVariable("size")Integer size){
+        List<Information>  list =  informationService.findAllInformationBypage(page,size);
+        System.out.println(list);
+
+        return list;
+
     }
 
     @RequestMapping("/insertInformation")

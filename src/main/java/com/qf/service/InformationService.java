@@ -13,6 +13,8 @@ import java.util.List;
 public interface InformationService {
     List<Information> findAllInformation();
 
+    List<Information> findAllInformationBypage(Integer page, Integer size);
+
     void deleteInformation(Integer inid);
 
     Integer insertInformation(Information information);
