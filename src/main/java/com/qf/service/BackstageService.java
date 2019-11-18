@@ -17,4 +17,6 @@ public interface BackstageService {
 
 
     Staff getCurrentStaff();
+
+    User getUserById(int id);
 }

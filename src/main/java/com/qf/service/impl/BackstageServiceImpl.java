@@ -133,5 +133,14 @@ public class BackstageServiceImpl implements BackstageService {
         return null;
     }
 
+    @Override
+    public User getUserById(int id) {
+        User user = userMapper.selectByPrimaryKey(id);
+        if (user!=null){
+            return user;
+        }
+        return null;
+    }
+
 
 }
