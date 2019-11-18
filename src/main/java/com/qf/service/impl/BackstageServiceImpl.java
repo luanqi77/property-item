@@ -123,7 +123,15 @@ public class BackstageServiceImpl implements BackstageService {
         return accountMapper.findUserAccount();
     }
 
-
+    @Override
+    public Staff getCurrentStaff() {
+        String principal = (String)SecurityUtils.getSubject().getPrincipal();
+        if (principal!=null&&principal!=""){
+            Staff staff = staffMapper.findByStaffNumber(principal);
+            return staff;
+        }
+        return null;
+    }
 
 
 }

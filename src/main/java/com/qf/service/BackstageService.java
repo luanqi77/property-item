@@ -16,4 +16,5 @@ public interface BackstageService {
     List<UserAccount> findUserAccount();
 
 
+    Staff getCurrentStaff();
 }

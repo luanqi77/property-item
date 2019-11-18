@@ -90,6 +90,12 @@ public class BackstageController{
         return userSolrService.queryUserAccountsByPage(pageBean);
     }
 
+    //获取当前用户信息
+    @RequestMapping("/getCurrentStaff")
+    public Staff getCurrentStaff(){
+        return backstageService.getCurrentStaff();
+    }
+
 
 
 
