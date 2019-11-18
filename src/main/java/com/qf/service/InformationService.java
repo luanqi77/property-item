@@ -1,6 +1,7 @@
 package com.qf.service;
 
 import com.qf.domain.Information;
+import com.qf.response.ResponseUser;
 
 import java.util.List;
 
@@ -13,6 +14,8 @@ import java.util.List;
 public interface InformationService {
     List<Information> findAllInformation();
 
+    ResponseUser findAllInformationBypage(Integer page, Integer size);
+
     void deleteInformation(Integer inid);
 
     Integer insertInformation(Information information);
@@ -20,4 +23,5 @@ public interface InformationService {
     Integer updateInformation(Information information);
 
     Information selectInformationById(Integer inid);
+
 }

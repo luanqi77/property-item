@@ -10,7 +10,7 @@ public class AlipayConfig {
 
 	public static String notify_url = "http://localhost:8080/#/index";
 	
-	public static String return_url = "http://localhost:8080/#/index";
+	public static String return_url = "http://localhost:8080/#/userinfo";
 	
 	public static String sign_type = "RSA2";
 	
