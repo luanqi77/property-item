@@ -10,11 +10,9 @@ import com.qf.service.AdminService;
 import com.qf.utils.Md5Utils;
 import com.qf.utils.SchedulerUtils;
 import com.qf.utils.TelMessageUtils;
-import javafx.scene.input.DataFormat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
@@ -127,7 +125,7 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public String insertStaff(Staff staff) {
+    public String insertStaff(Staff staff, int roleId) {
         if (staff.getStaffNumber()==null||staff.getStaffNumber()==""||staff.getStaffName()==null||staff.getStaffName()==""){
             return "工号或姓名不能为空";
         }
@@ -139,7 +137,7 @@ public class AdminServiceImpl implements AdminService {
         staff.setPassword(passwordCode);
         if (staffMapper.insertSelective(staff)>0){
             StaffRole staffRole = new StaffRole();
-            staffRole.setRoleId(2);
+            staffRole.setRoleId(roleId);
             staffRole.setStaffId(staff.getStaffId());
             staffRoleMapper.insert(staffRole);
             return "success";

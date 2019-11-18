@@ -81,8 +81,8 @@ public class AdminController {
     @SystemControllerLog(methods = "新增员工")
     @RequestMapping("/insertStaff")
     @RequiresPermissions("staff_manage")
-    public String insertStaff(@RequestBody Staff staff){
-        return AdminService.insertStaff(staff);
+    public String insertStaff(@RequestBody Staff staff,@RequestParam int roleId){
+        return AdminService.insertStaff(staff,roleId);
     }
 
     //移除员工√

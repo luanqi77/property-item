@@ -21,7 +21,7 @@ public interface AdminService {
 
     Integer resetPassword(String staffNumber);
 
-    String insertStaff(Staff staff);
+    String insertStaff(Staff staff, int roleId);
 
     Integer delStaff(Staff staff);
 
