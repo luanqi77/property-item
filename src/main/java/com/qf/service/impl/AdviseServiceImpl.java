@@ -18,4 +18,13 @@ public class AdviseServiceImpl implements AdviseService {
         }
         return "fail";
     }
+
+    @Override
+    public Advise selectAdviseByadviseId(Integer adviseId) {
+        if (adviseId!=null){
+            Advise adviseByAdviseId = adviseRepository.findAdviseByAdviseId(adviseId);
+            return adviseByAdviseId;
+        }
+        return null;
+    }
 }

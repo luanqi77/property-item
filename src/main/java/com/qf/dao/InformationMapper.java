@@ -4,6 +4,7 @@ import com.qf.domain.Information;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Company: Telegram
@@ -15,6 +16,8 @@ import java.util.List;
 public interface InformationMapper {
     List<Information> findAllInformation();
 
+    List<Information> findAllInformationBypage(Map<String,Object> data);
+
     Integer insertInformation(Information information);
 
     void deleteInformation(Integer inid);
@@ -22,4 +25,6 @@ public interface InformationMapper {
     Integer updateInformation(Information information);
 
     Information selectInformationById(Integer inid);
+
+    Integer selectInformationBytotal();
 }

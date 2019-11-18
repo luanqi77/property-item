@@ -1,6 +1,7 @@
 package com.qf.service;
 
 import com.qf.domain.Board;
+import com.qf.response.ResponseUser;
 
 import java.util.List;
 
@@ -14,6 +15,8 @@ import java.util.List;
 
 public interface BoardService {
     public List<Board> findAllBoard();
+
+    ResponseUser findAllBoardBypage(Integer page, Integer size);
 
     public Board insertBoard(Board board);
 

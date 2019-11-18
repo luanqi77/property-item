@@ -1,12 +1,19 @@
 package com.qf.service.impl;
 
 import com.qf.dao.BoardResponsitory;
+import com.qf.domain.Advise;
 import com.qf.domain.Board;
+import com.qf.domain.Information;
+import com.qf.response.ResponseUser;
 import com.qf.service.BoardService;
+import org.apache.commons.collections.map.HashedMap;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -24,6 +31,30 @@ public class BoardServiceImpl implements BoardService {
     public List<Board> findAllBoard() {
         return boardResponsitory.findAll();
     }
+
+//    @Override
+//    public ResponseUser findAllBoardBypage(Integer page, Integer size) {
+//        Map<String, Object> data = new HashedMap();
+//        data.put("page",(page-1)*size);
+//        data.put("size",size);
+//        List<Board> allBoardBypage = boardMapper.findAllBoardBypage(data);
+//        ResponseUser user = new ResponseUser();
+//        user.setList(allBoardBypage);
+//        long bytotal1 = boardMapper.selectBoardBytotal();
+//        user.setTotal(bytotal1);
+//        return user;
+//    }
+@Override
+public ResponseUser findAllBoardBypage(Integer page, Integer size) {
+    PageRequest of = PageRequest.of(page - 1, size);
+    Page<Board> all = boardResponsitory.findAll(of);
+    List<Board> content = all.getContent();
+    long totalElements = all.getTotalElements();
+    ResponseUser responseUser = new ResponseUser();
+    responseUser.setTotal(totalElements);
+    responseUser.setList(content);
+    return responseUser;
+}
 
     @Override
     public Board insertBoard(Board board) {

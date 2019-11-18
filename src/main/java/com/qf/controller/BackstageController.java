@@ -100,7 +100,8 @@ public class BackstageController{
 
     //根据用户id获得用户信息
     @RequestMapping("/getUserById")
-    public User getUserById(@RequestParam int id){
+    public User getUserById(@RequestParam("id") Integer id){
+        System.out.println(backstageService.getUserById(id));
         return backstageService.getUserById(id);
     }
 

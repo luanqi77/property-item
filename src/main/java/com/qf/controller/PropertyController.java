@@ -20,6 +20,7 @@ public class PropertyController {
     @RequestMapping("/propertypay")
     public String PropertyPay(){
         String pay="";
+
         try {
             pay = alipayUtils.pay();
         } catch (AlipayApiException e) {
