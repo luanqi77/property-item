@@ -1,14 +1,15 @@
 package com.qf.controller;
 
+import com.qf.bean.PageBean;
 import com.qf.domain.Advise;
 import com.qf.service.AdviseService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @RestController
 public class AdviseController {
@@ -28,5 +29,21 @@ public class AdviseController {
             return "fail";
         }
     }
+
+    /*
+    * 查询用户建议*/
+    @RequestMapping(value = "/selectAdviseByAdviseId",method = RequestMethod.POST)
+    public Advise selectAdviseByAdviseId(@RequestBody Advise advise){
+      return  adviseService.selectAdviseByadviseId(advise.getAdviseId());
+    }
+
+
+//    @RequestMapping(value = "/selectLog",method = RequestMethod.POST)
+//////    public String selectLog(@RequestBody PageBean pageBean){
+//////        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+//////        String dateStr = format.format(pageBean.getLogTime());
+//////        System.out.println(dateStr+"=============");
+//////        return "ok";
+//////    }
 
 }
