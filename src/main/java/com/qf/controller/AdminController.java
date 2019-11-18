@@ -2,6 +2,7 @@ package com.qf.controller;
 
 import com.qf.aop.SystemControllerLog;
 import com.qf.bean.PageBean;
+import com.qf.bean.StaffAndRole;
 import com.qf.bean.StaffAndRoleRequest;
 import com.qf.bean.logInfoResponse;
 import com.qf.domain.Deduct;
@@ -80,8 +81,8 @@ public class AdminController {
     @SystemControllerLog(methods = "新增员工")
     @RequestMapping("/insertStaff")
     @RequiresPermissions("staff_manage")
-    public String insertStaff(@RequestBody Staff staff){
-        return AdminService.insertStaff(staff);
+    public String insertStaff(@RequestBody Staff staff,@RequestParam int roleId){
+        return AdminService.insertStaff(staff,roleId);
     }
 
     //移除员工√
@@ -101,6 +102,13 @@ public class AdminController {
     @RequestMapping("/findLogInfo")
     public logInfoResponse findLogInfo(@RequestBody PageBean pageBean){
         return AdminService.findLogInfo(pageBean);
+    }
+
+    //根据id获得员工信息
+    @RequestMapping("/getStaffInfo")
+    @RequiresPermissions("staff_manage")
+    public StaffAndRole getStaffInfo(@RequestParam int id){
+        return AdminService.getStaffInfo(id);
     }
 
 }
