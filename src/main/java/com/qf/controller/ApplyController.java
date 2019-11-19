@@ -1,6 +1,7 @@
 package com.qf.controller;
 
 import com.qf.domain.Apply;
+import com.qf.domain.ApplyByPageAndSize;
 import com.qf.domain.Applysss;
 import com.qf.domain.Staff;
 import com.qf.service.ApplyService;
@@ -47,13 +48,22 @@ public class ApplyController {
         }
         return "信息不完整";
     }
-    /**
+/*    *//**
      *员工对报修信息的查看(根据status)
-     */
+     *//*
     @RequestMapping(value = "/selectApplyByStaff/{page}/{size}",method = RequestMethod.GET)
     public List<Applysss> selectApplyByStaff(@RequestBody Apply apply,@PathVariable("page") Integer page, @PathVariable("size") Integer size){
 
             return applyService.selectApplyByStaff(apply.getStatus());
+
+    }*/
+    /**
+     *员工对报修信息的查看(根据status)
+     */
+    @RequestMapping(value = "/selectApplyByStaff/{page}/{size}",method = RequestMethod.GET)
+    public ApplyByPageAndSize selectApplyByStaff(@RequestBody Apply apply, @PathVariable("page") Integer page, @PathVariable("size") Integer size){
+
+        return applyService.ApplyFindAll(apply.getStatus(),page,size);
 
     }
     /**
