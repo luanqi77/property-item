@@ -1,13 +1,18 @@
 package com.qf.controller;
 
+import com.qf.aop.SystemControllerLog;
 import com.qf.bean.PageBean;
 import com.qf.bean.UserAccount;
 import com.qf.bean.UserAccountResponse;
+import com.qf.domain.Deduct;
+import com.qf.domain.Staff;
+import com.qf.service.AdminService;
 import com.qf.service.BackstageService;
-import com.qf.service.DeductService;
 import com.qf.service.UserSolrService;
 import com.qf.utils.Md5Utils;
 import com.qf.utils.SchedulerUtils;
+import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
 import org.quartz.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,14 +23,15 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-
+@Slf4j
 public class TestController {
     @Autowired
     private SchedulerUtils schedulerUtils;
     @Autowired
     private Scheduler scheduler;
+
     @Autowired
-    private DeductService deductService;
+    private AdminService deductService;
     @Autowired
     private Md5Utils md5Utils;
     @Autowired
@@ -93,12 +99,11 @@ public class TestController {
         return "trigger";
     }
     @RequestMapping("/payTest")
-    public String payTest(@RequestParam("second")Integer second){
-        try {
-            schedulerUtils.updateExecuteTime("payJob","");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    @SystemControllerLog(methods = "测试" ,serviceClass = "测试类" )
+    public String payTest(Integer second) throws Exception {
+            schedulerUtils.updateExecuteTime("payJob","0/"+second+" * * * * ? *");
+            schedulerUtils.updateExecuteTime("warnJob","0/"+second+" * * * * ? *");
+            log.info("方法执行！！！");
         return null;
     }
 

@@ -1,5 +1,6 @@
 package com.qf.service;
 
+import com.qf.domain.Parking;
 import com.qf.domain.User;
 
 import java.util.List;

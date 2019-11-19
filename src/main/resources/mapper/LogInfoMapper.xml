@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.LogInfoMapper">
+  <resultMap id="BaseResultMap" type="com.qf.domain.LogInfo">
+    <constructor>
+      <idArg column="log_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="staff_number" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="method" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="params" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="execute_time" javaType="java.util.Date" jdbcType="DATE" />
+      <arg column="resultStatus" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="resultmsg" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    log_id, staff_number, method, params, execute_time, resultStatus, resultmsg
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from log_info
+    where log_id = #{logId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from log_info
+    where log_id = #{logId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.qf.domain.LogInfo">
+    insert into log_info (log_id, staff_number, method, 
+      params, execute_time, resultStatus, 
+      resultmsg)
+    values (#{logId,jdbcType=INTEGER}, #{staffNumber,jdbcType=VARCHAR}, #{method,jdbcType=VARCHAR}, 
+      #{params,jdbcType=VARCHAR}, #{executeTime,jdbcType=DATE}, #{resultstatus,jdbcType=VARCHAR}, 
+      #{resultmsg,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.qf.domain.LogInfo">
+    insert into log_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="logId != null">
+        log_id,
+      </if>
+      <if test="staffNumber != null">
+        staff_number,
+      </if>
+      <if test="method != null">
+        method,
+      </if>
+      <if test="params != null">
+        params,
+      </if>
+      <if test="executeTime != null">
+        execute_time,
+      </if>
+      <if test="resultstatus != null">
+        resultStatus,
+      </if>
+      <if test="resultmsg != null">
+        resultmsg,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="logId != null">
+        #{logId,jdbcType=INTEGER},
+      </if>
+      <if test="staffNumber != null">
+        #{staffNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="method != null">
+        #{method,jdbcType=VARCHAR},
+      </if>
+      <if test="params != null">
+        #{params,jdbcType=VARCHAR},
+      </if>
+      <if test="executeTime != null">
+        #{executeTime,jdbcType=DATE},
+      </if>
+      <if test="resultstatus != null">
+        #{resultstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="resultmsg != null">
+        #{resultmsg,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qf.domain.LogInfo">
+    update log_info
+    <set>
+      <if test="staffNumber != null">
+        staff_number = #{staffNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="method != null">
+        method = #{method,jdbcType=VARCHAR},
+      </if>
+      <if test="params != null">
+        params = #{params,jdbcType=VARCHAR},
+      </if>
+      <if test="executeTime != null">
+        execute_time = #{executeTime,jdbcType=DATE},
+      </if>
+      <if test="resultstatus != null">
+        resultStatus = #{resultstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="resultmsg != null">
+        resultmsg = #{resultmsg,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where log_id = #{logId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qf.domain.LogInfo">
+    update log_info
+    set staff_number = #{staffNumber,jdbcType=VARCHAR},
+      method = #{method,jdbcType=VARCHAR},
+      params = #{params,jdbcType=VARCHAR},
+      execute_time = #{executeTime,jdbcType=DATE},
+      resultStatus = #{resultstatus,jdbcType=VARCHAR},
+      resultmsg = #{resultmsg,jdbcType=VARCHAR}
+    where log_id = #{logId,jdbcType=INTEGER}
+  </update>
+
+  <select id="findLogInfo" parameterType="com.qf.bean.PageBean" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from log_info
+    <if test="keywords!=null and keywords!=''">
+      where date_format([execute_time],'%Y-%m-%d') = #{keywords,jdbcType=VARCHAR}
+    </if>
+    limit #{startIndex,jdbcType=INTEGER},#{endIndex,jdbcType=INTEGER}
+  </select>
+
+  <select id="getLogInfoCount" parameterType="com.qf.bean.PageBean" resultType="java.lang.Long">
+    select
+    count(*)
+    from log_info
+    <if test="keywords!=null and keywords!=''">
+      where date_format([execute_time],'%Y-%m-%d') = #{keywords,jdbcType=VARCHAR}
+    </if>
+    order by execute_time desc
+  </select>
+</mapper>

@@ -25,6 +25,7 @@ public class QuartzConfig {
     // 任务内容
     @Bean
     public MethodInvokingJobDetailFactoryBean payJob() {
+
         MethodInvokingJobDetailFactoryBean factoryBean = new MethodInvokingJobDetailFactoryBean();
         // 是否并发执行
         factoryBean.setConcurrent(true);
@@ -67,13 +68,14 @@ public class QuartzConfig {
     @Bean
     public CronTriggerFactoryBean warnCron(@Qualifier("warnJob") MethodInvokingJobDetailFactoryBean warnJob){
         Deduct deduct = deductMapper.getDeduct();
+        System.out.println(deduct);
         Integer warnTime = deduct.getWarnTime();
         CronTriggerFactoryBean factoryBean = new CronTriggerFactoryBean();
         // 设置job对象
         factoryBean.setJobDetail(warnJob.getObject());
         // 设置执行时间
         String cronString="0 0 0 "+warnTime+" * ? *";
-        System.out.println(cronString);
+        //System.out.println(cronString);
         factoryBean.setCronExpression(cronString);
         return  factoryBean;
     }

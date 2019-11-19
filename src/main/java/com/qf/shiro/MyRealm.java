@@ -16,8 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import javax.annotation.Resource;
 
 public class MyRealm extends AuthorizingRealm {
-    @Resource
-    private UserMapper userMapper;
+
 
     @Autowired
     private UserResponsitory userResponsitoryl;

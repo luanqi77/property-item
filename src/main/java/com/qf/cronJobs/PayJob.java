@@ -1,10 +1,12 @@
 package com.qf.cronJobs;
 
 
-import com.qf.service.DeductService;
+import com.qf.service.AdminService;
+import com.qf.service.impl.AdminServiceImpl;
+import com.qf.utils.ApplicationContextUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+
 
 /**
  * @author 张正
@@ -14,13 +16,10 @@ import org.springframework.context.annotation.Configuration;
 @Slf4j
 @Configuration
 public class PayJob {
-    @Autowired
-    private DeductService deductService;
     public void pay(){
+        AdminService deductService = (AdminServiceImpl)ApplicationContextUtil.getBean("deductService");
         deductService.payJob();
         log.info("执行扣费任务");
     }
-
-
 
 }

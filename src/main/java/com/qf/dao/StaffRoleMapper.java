@@ -1,7 +1,11 @@
 package com.qf.dao;
 
+import com.qf.bean.PageBean;
+import com.qf.bean.StaffAndRole;
 import com.qf.domain.StaffRole;
 import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 @Mapper
 public interface StaffRoleMapper {
@@ -52,4 +56,11 @@ public interface StaffRoleMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(StaffRole record);
+
+    List<StaffAndRole> findStaff(PageBean pageBean);
+    Long findStaffCount(PageBean pageBean);
+
+    Integer updateRole(StaffRole staffRole);
+
+    StaffAndRole getStaffInfo(int id);
 }

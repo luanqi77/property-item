@@ -8,25 +8,27 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * Created by 54110 on 2019-09-19.
+ * Created by 张正 on 2019-11-15.
  */
 @ControllerAdvice
 @ResponseBody
 public class ExceptionController {
 
     @ExceptionHandler(value = UnauthorizedException.class)
-    public String defaultErrorHandler(){
-        return "unauth";
+    public String defaultErrorHandler(Exception e){
+        System.out.println(e.getMessage());
+        return "权限不足";
     }
 
     @ExceptionHandler(value =UnauthenticatedException.class )
     public String UnauthenticatedExceptionHandle(Exception e){
-        //System.out.println("未登录！！");
+        System.out.println(e.getMessage());
         return "未登录";
     }
     @ExceptionHandler(value = AuthorizationException.class)
     public String AuthorizationExceptionHandle(Exception e){
         System.out.println(e.getMessage());
-        return "权限不够，请向管理员申请权限";
+        return "权限验证出错";
     }
+
 }

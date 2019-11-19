@@ -1,8 +1,10 @@
 package com.qf.controller;
 
 import com.qf.domain.Board;
+import com.qf.response.ResponseUser;
 import com.qf.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,6 +26,12 @@ public class BoardController {
     public List<Board> findAllBoard(){
 
         return boardService.findAllBoard();
+    }
+    @RequestMapping("/findAllBoardBypage/{page}/{size}")
+    public ResponseUser findAllBoardBypage(@PathVariable("page")Integer page, @PathVariable("size")Integer size){
+        ResponseUser  list =  boardService.findAllBoardBypage(page,size);
+        System.out.println(list);
+        return list;
     }
 
     @RequestMapping("/insertBoard")

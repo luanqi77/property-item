@@ -25,9 +25,9 @@ public class AlipayUtils {
         alipayRequest.setBizContent("{" +
                 "    \"out_trade_no\":\""+out_trade_no+"\"," +
                 "    \"product_code\":\"FAST_INSTANT_TRADE_PAY\"," +
-                "    \"total_amount\":8.88," +
-                "    \"subject\":\"医生赏金\"," +
-                "    \"body\":\"医生赏金\"," +
+                "    \"total_amount\":300," +
+                "    \"subject\":\"物业费\"," +
+                "    \"body\":\"物业费\"," +
                 "    \"timeout_express\":\""+ timeout_express +"\" ,"+
                 "    \"passback_params\":\"merchantBizType%3d3C%26merchantBizNo%3d2016010101111\"," +
                 "    \"extend_params\":{" +
