@@ -35,6 +35,8 @@ public interface UserService {
 
     User findUserByUsernameAndTel(User user);
 
+    User  findUserById(User user);
+
 
 
 }

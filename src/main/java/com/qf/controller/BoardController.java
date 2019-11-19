@@ -22,6 +22,7 @@ public class BoardController {
 
     @RequestMapping("/findAllBoard")
     public List<Board> findAllBoard(){
+
         return boardService.findAllBoard();
     }
 

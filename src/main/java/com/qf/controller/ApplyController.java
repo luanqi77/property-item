@@ -50,17 +50,18 @@ public class ApplyController {
     /**
      *员工对报修信息的查看(根据status)
      */
-    @RequestMapping(value = "/selectApplyByStaff/{status}",method = RequestMethod.GET)
-    public List<Applysss> selectApplyByStaff(@PathVariable("status")Integer status){
+    @RequestMapping(value = "/selectApplyByStaff/{page}/{size}",method = RequestMethod.GET)
+    public List<Applysss> selectApplyByStaff(@RequestBody Apply apply,@PathVariable("page") Integer page, @PathVariable("size") Integer size){
 
-            return applyService.selectApplyByStaff(status);
+            return applyService.selectApplyByStaff(apply.getStatus());
 
     }
     /**
     * 员工修改报修信息表状态
     */
-    @RequestMapping("/updateApplyStatus/{applyId}")
-    public String updateApplyStatus(@PathVariable("applyId")Integer applyId){
+    @RequestMapping("/updateApplyStatus")
+    public String updateApplyStatus(@RequestBody Apply apply11){
+        Integer applyId = apply11.getApplyId();
         String staffNumber =(String) SecurityUtils.getSubject().getPrincipal();
         //(postman测试用) String staffNumber ="admin";
         if(staffNumber!=null && applyId!=null){
