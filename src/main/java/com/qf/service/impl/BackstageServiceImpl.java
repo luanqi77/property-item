@@ -81,18 +81,25 @@ public class BackstageServiceImpl implements BackstageService {
         if (houseMapper.selectByUserId(userRegisterRequest.getHouseId())!=null){
             return "房屋已存在住户";
         }
+        if (houseMapper.selectByPrimaryKey(userRegisterRequest.getHouseId())==null){
+            return "房屋不存在";
+        }
         if (userMapper.insertSelective(userRegisterRequest.getUser())>0){
             Integer userId = userRegisterRequest.getUser().getUserId();
             //为house添加用户
             House house = new House();
             house.setHouseId(userRegisterRequest.getHouseId());
             house.setUserId(userId);
-            houseMapper.updateByPrimaryKeySelective(house);
-            //添加用户对应的账户表
-            Account account = new Account();
-            account.setUserId(userId);
-            accountMapper.insertSelective(account);
-            return "success";
+            if ( houseMapper.updateByPrimaryKeySelective(house)>0){
+                //添加用户对应的账户表
+                Account account = new Account();
+                account.setUserId(userId);
+                accountMapper.insertSelective(account);
+                return "success";
+            }
+            return "fail";
+
+
         }
         return "fail";
 
@@ -111,7 +118,8 @@ public class BackstageServiceImpl implements BackstageService {
 
     @Override
     public String updateUser(User user) {
-        if (user.getTel()==null||user.getTel()==""||user.getRealname()!=null||user.getRealname()==""){
+        System.out.println(user+"---");
+        if (user.getTel()==null||user.getTel()==""||user.getRealname()==null||user.getRealname()==""){
             return "真实姓名或电话不能为空";
         }
         userMapper.updateByPrimaryKeySelective(user);
@@ -126,6 +134,7 @@ public class BackstageServiceImpl implements BackstageService {
     @Override
     public Staff getCurrentStaff() {
         String principal = (String)SecurityUtils.getSubject().getPrincipal();
+        System.out.println(principal);
         if (principal!=null&&principal!=""){
             Staff staff = staffMapper.findByStaffNumber(principal);
             return staff;

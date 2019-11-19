@@ -3,8 +3,10 @@ package com.qf.controller;
 import com.qf.bean.PageBeanFindAdviseAndReply;
 import com.qf.domain.AdviseAndReply;
 import com.qf.domain.Reply;
+import com.qf.domain.Staff;
 import com.qf.response.ResponseUser;
 import com.qf.service.ReplyService;
+import com.qf.service.StaffService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +18,8 @@ import java.util.List;
 public class ReplyController {
     @Autowired
     private ReplyService replyService;
-
+    @Autowired
+    private StaffService staffService;
     /**
      * 展示用户的建议及投诉*/
     @RequiresPermissions("complaint")
@@ -29,23 +32,22 @@ public class ReplyController {
     @RequestMapping(value = "/insertReply",method = RequestMethod.POST)
     @RequiresPermissions("complaint")
     public String insertReply(@RequestBody Reply reply){
-        Integer staffId=(Integer)SecurityUtils.getSubject().getPrincipal();
-        staffId=1;
-        if (staffId!=null){
-            reply.setStaffId(staffId);
-            if (reply!=null){
+        String staffNumber = (String) SecurityUtils.getSubject().getPrincipal();
+        Staff staff = staffService.selectStaffByStaffNumber(staffNumber);
+            if (reply.getAdviseId()!=null&&reply.getReplyDeso()!=null){
+                reply.setStaffId(staff.getStaffId());
                 return replyService.insertReply(reply);
             }
-        }
-        return "fail";
+                return "fail";
     }
 
     /*员工查看自己的回复,根据自己id查并分页*/
     @RequestMapping("/selectReplyByStaffId/{page}/{size}")
     @RequiresPermissions("complaint")
     public PageBeanFindAdviseAndReply selectReplyByStaffId(@PathVariable("page") Integer page, @PathVariable("size") Integer size){
-        //Integer staffId=(Integer)SecurityUtils.getSubject().getPrincipal();
-        Integer staffId=1;
+        String staffNumber = (String) SecurityUtils.getSubject().getPrincipal();
+        Staff staff = staffService.selectStaffByStaffNumber(staffNumber);
+        Integer staffId=staff.getStaffId();
         if (staffId!=null){
             return replyService.selectReplyByStaffId(page,size,staffId);
         }

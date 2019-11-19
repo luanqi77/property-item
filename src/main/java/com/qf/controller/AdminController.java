@@ -49,7 +49,7 @@ public class AdminController {
 
     //得到员工表√
     @RequestMapping("/findStaff")
-    @RequiresPermissions("staff_manage")
+    //@RequiresPermissions("staff_manage")
     public StaffAndRoleRequest findStaff(@RequestBody PageBean pageBean){
         return  AdminService.findStaff(pageBean);
     }
@@ -58,8 +58,9 @@ public class AdminController {
     //更改员工角色√
     @SystemControllerLog(methods = "更改员工角色")
     @RequestMapping("/updateRole")
-    @RequiresPermissions("staff_manage")
+    //@RequiresPermissions("staff_manage")
     public String updateRole(@RequestBody StaffRole staffRole){
+        System.out.println(staffRole);
         if (AdminService.updateRole(staffRole)>0){
             return "success";
         }
@@ -68,9 +69,9 @@ public class AdminController {
 
     //重置员工密码√
     @SystemControllerLog(methods = "重置员工密码")
-    @RequestMapping("/resetPassword")
+    @RequestMapping("/resetStaffPassword")
     @RequiresPermissions("staff_manage")
-    public String resetPassword(@RequestParam String staffNumber){
+    public String resetPassword(@RequestParam("staffNumber") String staffNumber){
         if (AdminService.resetPassword(staffNumber)>0){
             return "success";
         }
@@ -81,7 +82,8 @@ public class AdminController {
     @SystemControllerLog(methods = "新增员工")
     @RequestMapping("/insertStaff")
     @RequiresPermissions("staff_manage")
-    public String insertStaff(@RequestBody Staff staff,@RequestParam int roleId){
+    public String insertStaff(@RequestBody Staff staff,@RequestParam("roleId") int roleId){
+        System.out.println(staff+"=="+roleId);
         return AdminService.insertStaff(staff,roleId);
     }
 
@@ -106,9 +108,9 @@ public class AdminController {
 
     //根据id获得员工信息
     @RequestMapping("/getStaffInfo")
-    @RequiresPermissions("staff_manage")
-    public StaffAndRole getStaffInfo(@RequestParam int id){
-        return AdminService.getStaffInfo(id);
+    //@RequiresPermissions("staff_manage")
+    public StaffAndRole getStaffInfo(@RequestParam("staffId") int staffId){
+        return AdminService.getStaffInfo(staffId);
     }
 
 }
