@@ -379,6 +379,7 @@ public class UserController {
     public User findUserById(@RequestBody User user) {
         User userById = userService.findUserById(user);
         if (userById != null) {
+
             return user;
 
         }
@@ -406,12 +407,13 @@ public class UserController {
      */
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     @ResponseBody
-    public String upload(MultipartFile file) {
+    public String upload(@RequestParam MultipartFile file) {
 
         if (Objects.isNull(file) || file.isEmpty()) {
             return "fail";
         } else {
             String path = uploadUtils.upload(file);
+            System.out.println(path);
             return path;
         }
 
