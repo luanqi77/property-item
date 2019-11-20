@@ -26,8 +26,7 @@ public interface UserMapper {
     Integer updateUser(User user);
 
     Integer selectUserById(Integer userId);
+
     List<User> findUserToPay();
-
-
 
 }
