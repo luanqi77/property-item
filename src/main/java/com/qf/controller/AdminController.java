@@ -36,7 +36,6 @@ public class AdminController {
     @RequestMapping("/updateDeduct")
     @RequiresPermissions("payment_rule")
     public String updateDeduct(@RequestBody Deduct deduct){
-        //System.out.println(deduct);
         return AdminService.updateDeduct(deduct);
     }
     //提醒缴费√
@@ -49,7 +48,7 @@ public class AdminController {
 
     //得到员工表√
     @RequestMapping("/findStaff")
-    //@RequiresPermissions("staff_manage")
+    @RequiresPermissions("staff_manage")
     public StaffAndRoleRequest findStaff(@RequestBody PageBean pageBean){
         return  AdminService.findStaff(pageBean);
     }
@@ -58,7 +57,7 @@ public class AdminController {
     //更改员工角色√
     @SystemControllerLog(methods = "更改员工角色")
     @RequestMapping("/updateRole")
-    //@RequiresPermissions("staff_manage")
+    @RequiresPermissions("staff_manage")
     public String updateRole(@RequestBody StaffRole staffRole){
         System.out.println(staffRole);
         if (AdminService.updateRole(staffRole)>0){
@@ -109,7 +108,7 @@ public class AdminController {
 
     //根据id获得员工信息
     @RequestMapping("/getStaffInfo")
-    //@RequiresPermissions("staff_manage")
+    @RequiresPermissions("staff_manage")
     public StaffAndRole getStaffInfo(@RequestParam("staffId") int staffId){
         return AdminService.getStaffInfo(staffId);
     }

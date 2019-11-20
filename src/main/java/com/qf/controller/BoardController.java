@@ -3,6 +3,7 @@ package com.qf.controller;
 import com.qf.domain.Board;
 import com.qf.response.ResponseUser;
 import com.qf.service.BoardService;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -33,17 +34,19 @@ public class BoardController {
         System.out.println(list);
         return list;
     }
-
+    @RequiresPermissions("Info_maintenance")
     @RequestMapping("/insertBoard")
     public Board insertBoard(@RequestBody Board board){
         return boardService.insertBoard(board);
     }
 
+    @RequiresPermissions("Info_maintenance")
     @RequestMapping("/deleteBoard")
     public void deleteBoard(@RequestBody Board board){
         boardService.deleteBoard(board);
     }
 
+    @RequiresPermissions("Info_maintenance")
     @RequestMapping("/updateBoard")
     public Board updateBoard(@RequestBody Board board){
         return boardService.updateBoard(board);

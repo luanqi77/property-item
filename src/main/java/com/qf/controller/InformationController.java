@@ -3,6 +3,7 @@ package com.qf.controller;
 import com.qf.domain.Information;
 import com.qf.response.ResponseUser;
 import com.qf.service.InformationService;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,21 +32,21 @@ public class InformationController {
         return informationService.findAllInformation();
     }
 
-
+    @RequiresPermissions("Info_maintenance")
     @RequestMapping("/insertInformation")
     public Integer insertInformation(@RequestBody Information information){
         System.out.println(information);
         Integer info = informationService.insertInformation(information);
         return info;
     }
-
+    @RequiresPermissions("Info_maintenance")
     @RequestMapping("/deleteInformation")
     public void deleteInformation(@RequestBody Information information){
 
         informationService.deleteInformation(information.getInid());
         System.out.println(information.getInid());
     }
-
+    @RequiresPermissions("Info_maintenance")
     @RequestMapping(value = "/updateInformation",method = RequestMethod.POST)
     public Integer updateInformation(@RequestBody Information information){
         Integer integer1 = informationService.updateInformation(information);
