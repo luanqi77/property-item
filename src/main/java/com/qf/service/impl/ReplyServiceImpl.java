@@ -1,10 +1,7 @@
 package com.qf.service.impl;
 
 import com.qf.bean.PageBeanFindAdviseAndReply;
-import com.qf.dao.AdviseMapper;
-import com.qf.dao.AdviseRepository;
-import com.qf.dao.ReplyMapper;
-import com.qf.dao.ReplyRepository;
+import com.qf.dao.*;
 import com.qf.domain.Advise;
 import com.qf.domain.AdviseAndReply;
 import com.qf.domain.Reply;
@@ -29,6 +26,8 @@ public class ReplyServiceImpl implements ReplyService {
     private AdviseRepository adviseRepository;
     @Autowired
     private AdviseMapper adviseMapper;
+    @Autowired
+    private StaffMapper staffMapper;
 
 
     @Override
@@ -46,6 +45,7 @@ public class ReplyServiceImpl implements ReplyService {
 
     @Override
     public String insertReply(Reply reply) {
+
         reply.setReplyTime(new Date());
         Reply save = replyRepository.save(reply);
         System.out.println(save);
