@@ -125,7 +125,7 @@
       where  ( datediff ( execute_time , #{keywords,jdbcType=VARCHAR} ) = 0 )
     </if>
     limit #{startIndex,jdbcType=INTEGER},#{endIndex,jdbcType=INTEGER}
-    order by execute_time desc
+
   </select>
 
   <select id="getLogInfoCount" parameterType="com.qf.bean.PageBean" resultType="java.lang.Long">
