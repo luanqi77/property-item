@@ -12,5 +12,5 @@ import lombok.Data;
 public class UserParking {
     private Integer up_id;
     private Integer park_id;
-    private Integer user_id;
+    private Integer userId;
 }
