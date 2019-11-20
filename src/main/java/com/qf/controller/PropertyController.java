@@ -5,6 +5,7 @@ import com.qf.utils.AlipayUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.SessionAttribute;
 
 /**
  * @Company: Telegram
@@ -19,8 +20,8 @@ public class PropertyController {
 
     @RequestMapping("/propertypay")
     public String PropertyPay(){
-        String pay="";
 
+        String pay="";
         try {
             pay = alipayUtils.pay();
         } catch (AlipayApiException e) {

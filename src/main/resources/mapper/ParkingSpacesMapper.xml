@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.ParkingSpacesMapper">
+    <resultMap id="ParkingSpacesResultMap" type="com.qf.domain.UserParking">
+        <id property="up_id" column="up_id"/>
+        <result property="park_id" column="park_id"/>
+        <result property="userId" column="user_id"/>
+    </resultMap>
+    <select id="findAllParkingSpaces" parameterType="map" resultMap="ParkingSpacesResultMap">
+    select * from user_parking limit #{page} , #{size}
+    </select>
+    <select id="selectParkingSpacesBytotal" resultType="java.lang.Integer">
+        select count(*) from user_parking
+    </select>
+    <select id="selectParkingSpacesById" resultMap="ParkingSpacesResultMap" parameterType="Integer">
+        select * from user_parking where up_id=#{up_id}
+    </select>
+    <update id="updateParkingSpaces" parameterType="com.qf.domain.UserParking"  >
+        update user_parking
+        <set>
+            <if test="park_id!=null and park_id!=''">
+                park_id=#{park_id},
+            </if>
+            <if test="userId!=null and userId!=''">
+                user_id=#{userId},
+            </if>
+        </set>
+        where up_id=#{up_id}
+    </update>
+</mapper>

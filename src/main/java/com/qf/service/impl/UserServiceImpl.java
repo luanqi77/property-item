@@ -30,22 +30,25 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
 
+
+
     @Override
-    public String login(User user) {
+    public User login(User user) {
         try {
             Subject subject = SecurityUtils.getSubject();
             UsernamePasswordToken token = new UsernamePasswordToken(user.getUsername(), user.getPassword());
             subject.login(token);
             if (subject.isAuthenticated()) {
-                return "succeed";
+                User user1 = userResponsitory.findUserByUsername(user.getUsername());
+                return user1;
             } else {
-                return "fail";
+                return null;
             }
         } catch (Exception e) {
             System.out.println("登录失败，密码错误");
             e.printStackTrace();
         }
-        return "login";
+        return null;
     }
 
     @Override
