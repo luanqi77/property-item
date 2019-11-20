@@ -62,7 +62,7 @@ public class ApplyController {
      *员工对报修信息的查看(根据status)
      */
     @RequestMapping(value = "/selectApplyByStaff/{status}/{page}/{size}",method = RequestMethod.GET)
-    public ApplyByPageAndSize selectApplyByStaff(@PathParam("status") Integer status, @PathVariable("page") Integer page, @PathVariable("size") Integer size){
+    public ApplyByPageAndSize selectApplyByStaff(@PathVariable("status") Integer status, @PathVariable("page") Integer page, @PathVariable("size") Integer size){
 
         return applyService.ApplyFindAll(status,page,size);
 
