@@ -153,7 +153,7 @@
   </update>
 
   <update id="removeMaster" parameterType="java.lang.Integer">
-    update house,
+    update house
     set user_id = null
     where user_id = #{userId,jdbcType=INTEGER}
   </update>

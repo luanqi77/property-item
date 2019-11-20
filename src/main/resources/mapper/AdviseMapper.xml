@@ -7,7 +7,7 @@
       <arg column="user_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="description" javaType="java.lang.String" jdbcType="VARCHAR" />
       <arg column="advise_time" javaType="java.util.Date" jdbcType="DATE" />
-      <arg column="status" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="status" javaType="java.lang.String" jdbcType="VARCHAR" />
     </constructor>
   </resultMap>
   <sql id="Base_Column_List">
@@ -62,7 +62,7 @@
         #{adviseTime,jdbcType=DATE},
       </if>
       <if test="status != null">
-        #{status,jdbcType=INTEGER},
+        #{status,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -79,7 +79,7 @@
         advise_time = #{adviseTime,jdbcType=DATE},
       </if>
       <if test="status != null">
-        status = #{status,jdbcType=INTEGER},
+        status = #{status,jdbcType=VARCHAR},
       </if>
     </set>
     where advise_id = #{adviseId,jdbcType=INTEGER}
@@ -89,7 +89,7 @@
     set user_id = #{userId,jdbcType=INTEGER},
       description = #{description,jdbcType=VARCHAR},
       advise_time = #{adviseTime,jdbcType=DATE},
-      status = #{status,jdbcType=INTEGER}
+      status = #{status,jdbcType=VARCHAR}
     where advise_id = #{adviseId,jdbcType=INTEGER}
   </update>
   

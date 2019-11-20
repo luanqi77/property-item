@@ -3,6 +3,7 @@ package com.qf.service.impl;
 import com.qf.dao.ApplyMapper;
 import com.qf.dao.ApplyResponseitory;
 import com.qf.domain.Apply;
+import com.qf.domain.ApplyByPageAndSize;
 import com.qf.domain.Applysss;
 import com.qf.service.ApplyService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,5 +52,19 @@ public class ApplyServiceImpl implements ApplyService {
     @Override
     public Apply updateApplyByStatus(Apply apply) {
         return applyResponseitory.saveAndFlush(apply);
+    }
+
+    @Override
+    public ApplyByPageAndSize ApplyFindAll(Integer status, Integer page, Integer size) {
+        Integer startIndex=(page-1)*size;
+        List<Applysss> applies = applyMapper.ApplyFindAll(status, startIndex, size);
+        System.out.println(applies+"=================");
+        Integer total = applyMapper.selectApplyByApplyStatus(status);
+        System.out.println(total+"---------------");
+        ApplyByPageAndSize applyByPageAndSize =new ApplyByPageAndSize();
+        applyByPageAndSize.setApplyList(applies);
+        applyByPageAndSize.setTotal(total);
+
+        return applyByPageAndSize;
     }
 }

@@ -21,6 +21,6 @@ public class Advise {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date adviseTime;
 
-    private Integer status;
+    private String status;
 
 }

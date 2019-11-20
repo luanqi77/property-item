@@ -29,6 +29,7 @@ public class BackstageController{
     //员工的登录和注销√
     @RequestMapping("/StaffLogin")
     public String staffLogin(@RequestBody Staff staff){
+        System.out.println(staff);
             return backstageService.login(staff);
     }
     @RequestMapping("/StaffLogout")
@@ -56,6 +57,7 @@ public class BackstageController{
     @SystemControllerLog(methods = "新增用户")
     @RequestMapping("/insertUser")
     public String insertUser(@RequestBody UserRegisterRequest userRegisterRequest) {
+        System.out.println(userRegisterRequest);
         String results = backstageService.insertUser(userRegisterRequest);
         //更新solr索引库
         userSolrService.dataIntoSolrFromDb();
@@ -67,6 +69,7 @@ public class BackstageController{
     @RequestMapping("/updateUser")
     @RequiresPermissions("user_account")
     public String updateUser(@RequestBody User user){
+        System.out.println(user+"++");
         String result = backstageService.updateUser(user);
         userSolrService.dataIntoSolrFromDb();
         return result;
@@ -77,6 +80,8 @@ public class BackstageController{
     @RequestMapping("/removeMaster")
     @RequiresPermissions("user_account")
     public String delUser(@RequestBody User user){
+        System.out.println(user);
+        System.out.println(backstageService.delUserById(user));
         if (backstageService.delUserById(user)>0){
             //更新solr索引库
             userSolrService.dataIntoSolrFromDb();
@@ -84,14 +89,18 @@ public class BackstageController{
         }
         return "fail";
     }
+
     //得到用户账户表√
     @RequestMapping("/findUserAccount")
     @RequiresPermissions("user_account")
     public UserAccountResponse getUserAccount(@RequestBody PageBean pageBean){
+        System.out.println(pageBean+"====");
+        userSolrService.dataIntoSolrFromDb();
         return userSolrService.queryUserAccountsByPage(pageBean);
     }
 
     //获取当前用户信息
+    @RequiresAuthentication
     @RequestMapping("/getCurrentStaff")
     public Staff getCurrentStaff(){
         return backstageService.getCurrentStaff();
@@ -99,7 +108,8 @@ public class BackstageController{
 
     //根据用户id获得用户信息
     @RequestMapping("/getUserById")
-    public User getUserById(@RequestParam int id){
+    public User getUserById(@RequestParam("id") Integer id){
+        System.out.println(backstageService.getUserById(id));
         return backstageService.getUserById(id);
     }
 
