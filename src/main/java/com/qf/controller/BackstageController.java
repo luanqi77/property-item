@@ -80,6 +80,7 @@ public class BackstageController{
     @RequestMapping("/removeMaster")
     @RequiresPermissions("user_account")
     public String delUser(@RequestBody User user){
+        System.out.println(user);
         System.out.println(backstageService.delUserById(user));
         if (backstageService.delUserById(user)>0){
             //更新solr索引库
@@ -94,6 +95,7 @@ public class BackstageController{
     @RequiresPermissions("user_account")
     public UserAccountResponse getUserAccount(@RequestBody PageBean pageBean){
         System.out.println(pageBean+"====");
+        userSolrService.dataIntoSolrFromDb();
         return userSolrService.queryUserAccountsByPage(pageBean);
     }
 
