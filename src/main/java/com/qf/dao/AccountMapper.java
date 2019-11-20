@@ -25,4 +25,6 @@ public interface AccountMapper {
     Integer payFee();
 
     int deleteByUserId(Integer userId);
+
+    Integer save(Integer userId);
 }

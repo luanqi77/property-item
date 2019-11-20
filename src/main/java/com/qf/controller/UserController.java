@@ -391,9 +391,11 @@ public class UserController {
      */
     @RequestMapping("/saveAndFlushUser")
     @ResponseBody
-    public String updateUser(@RequestBody User user) {
+    public String updateUser(@RequestBody User user,HttpSession session) {
         if (user != null && user.getUserId() != null) {
             User user1 = userService.updateUserOpenId(user);
+            session.setAttribute("user",user1);
+            System.out.println(session.getAttribute("user"));
             return "ok";
         }
 
