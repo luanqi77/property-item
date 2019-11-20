@@ -12,6 +12,7 @@ import org.apache.shiro.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.websocket.server.PathParam;
 import java.util.Date;
 import java.util.List;
 
@@ -60,10 +61,10 @@ public class ApplyController {
     /**
      *员工对报修信息的查看(根据status)
      */
-    @RequestMapping(value = "/selectApplyByStaff/{page}/{size}",method = RequestMethod.GET)
-    public ApplyByPageAndSize selectApplyByStaff(@RequestBody Apply apply, @PathVariable("page") Integer page, @PathVariable("size") Integer size){
+    @RequestMapping(value = "/selectApplyByStaff/{status}/{page}/{size}",method = RequestMethod.GET)
+    public ApplyByPageAndSize selectApplyByStaff(@PathParam("status") Integer status, @PathVariable("page") Integer page, @PathVariable("size") Integer size){
 
-        return applyService.ApplyFindAll(apply.getStatus(),page,size);
+        return applyService.ApplyFindAll(status,page,size);
 
     }
     /**

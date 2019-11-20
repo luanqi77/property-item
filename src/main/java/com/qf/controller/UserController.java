@@ -414,5 +414,21 @@ public class UserController {
         }
 
     }
+    /**
+     * 查看我的钱包
+     * */
+    @RequestMapping("checkUserPassword")
+    public String checkUserPassword(@RequestBody User user,HttpSession session){
+
+        if(user.getPassword()!=null){
+
+            User user1 = (User) session.getAttribute("user");
+            if(user.getPassword()==user1.getPassword()){
+                return "succeed";
+            }
+            return "error";
+        }
+        return "error";
+    }
 
 }

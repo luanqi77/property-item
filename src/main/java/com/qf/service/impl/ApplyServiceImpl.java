@@ -57,8 +57,10 @@ public class ApplyServiceImpl implements ApplyService {
     @Override
     public ApplyByPageAndSize ApplyFindAll(Integer status, Integer page, Integer size) {
         Integer startIndex=(page-1)*size;
-        List<Applysss> applies = applyMapper.ApplyFindAll(startIndex, page, size);
+        List<Applysss> applies = applyMapper.ApplyFindAll(status, startIndex, size);
+        System.out.println(applies+"=================");
         Integer total = applyMapper.selectApplyByApplyStatus(status);
+        System.out.println(total+"---------------");
         ApplyByPageAndSize applyByPageAndSize =new ApplyByPageAndSize();
         applyByPageAndSize.setApplyList(applies);
         applyByPageAndSize.setTotal(total);

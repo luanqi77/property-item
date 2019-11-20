@@ -140,7 +140,7 @@ a.status=#{status}
 -->
   <select id="selectApplyByApplyStatus" parameterType="java.lang.Integer" resultType="java.lang.Integer">
  select
-COUNT(status)
+COUNT(*)
 FROM
 apply a,
 user u,
