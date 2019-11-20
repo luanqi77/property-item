@@ -2,6 +2,7 @@ package com.qf.controller;
 
 import com.qf.bean.PageBean;
 import com.qf.domain.Advise;
+import com.qf.domain.User;
 import com.qf.service.AdviseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,9 +22,8 @@ public class AdviseController {
     @RequestMapping(value = "/insertAdvise",method = RequestMethod.POST)
     public String insertAdvise(@RequestBody Advise advise, HttpSession session){
         if (!advise.getDescription().isEmpty()){
-            //User user = (User)session.getAttribute("user");
-            //advise.setUserId(user.getUserId);
-            advise.setUserId(1);
+            User user = (User)session.getAttribute("user");
+            advise.setUserId(user.getUserId());
             return adviseService.insertAdvise(advise);
         }else {
             return "fail";
