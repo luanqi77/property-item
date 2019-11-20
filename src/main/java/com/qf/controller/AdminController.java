@@ -103,6 +103,7 @@ public class AdminController {
     @RequiresPermissions("operation_log")
     @RequestMapping("/findLogInfo")
     public logInfoResponse findLogInfo(@RequestBody PageBean pageBean){
+        System.out.println(pageBean);
         return AdminService.findLogInfo(pageBean);
     }
 
