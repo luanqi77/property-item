@@ -72,9 +72,9 @@ public class UserController {
     @RequestMapping(value = "/userLogin", method = RequestMethod.POST)
     @ResponseBody
     public String UserLogin(@RequestBody User user, HttpSession httpSession) {
-        String login = userService.login(user);
-        if (login.equals("succeed")) {
-            httpSession.setAttribute("user", user);
+        User login = userService.login(user);
+        if (login!=null) {
+            httpSession.setAttribute("user", login);
             return "succeed";
         }
         return "fail";
