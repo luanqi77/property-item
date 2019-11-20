@@ -25,4 +25,6 @@ public interface InformationMapper {
     Integer updateInformation(Information information);
 
     Information selectInformationById(Integer inid);
+
+    Integer selectInformationBytotal();
 }

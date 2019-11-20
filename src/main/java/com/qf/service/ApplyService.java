@@ -1,6 +1,7 @@
 package com.qf.service;
 
 import com.qf.domain.Apply;
+import com.qf.domain.ApplyByPageAndSize;
 import com.qf.domain.Applysss;
 
 import java.util.List;
@@ -14,6 +15,8 @@ public interface ApplyService {
     Apply  selectApplyByApplyId(Integer applyId);
 
     Apply  updateApplyByStatus(Apply apply);
+
+    ApplyByPageAndSize ApplyFindAll(Integer status, Integer page, Integer size);
 
 }
 

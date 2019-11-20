@@ -116,5 +116,33 @@
       staff_name = #{staffName,jdbcType=VARCHAR}
     where reply_id = #{replyId,jdbcType=INTEGER}
   </update>
+  <resultMap id="replyResultMap" type="com.qf.domain.AdviseAndReply">
+    <result property="description" column="description"></result>
+    <result property="replyDeso" column="reply_deso"></result>
+    <result property="adviseTime" column="advise_time"></result>
+    <result property="replyTime" column="reply_time"></result>
+  </resultMap>
+  <select id="selectAdviseAndReplyByStaff" resultMap="replyResultMap" parameterType="java.util.Map">
+    SELECT
+      a.description,
+      a.advise_time,
+      r.reply_deso,
+      r.reply_time
+    FROM
+      advise a,
+      reply r
+    WHERE
+      a.advise_id=r.advise_id
+      and
+      r.staff_id=#{staffId}
+      limit #{startIndex},#{pageSize}
+
+  </select>
+
+  <select id="selectReplyByStaffId" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+    select count(staff_id) from reply where  staff_id=#{staffId}
+  </select>
+
+
 
 </mapper>

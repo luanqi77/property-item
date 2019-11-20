@@ -3,6 +3,7 @@ package com.qf.dao;
 import com.qf.domain.Apply;
 import com.qf.domain.Applysss;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -21,4 +22,9 @@ public interface ApplyMapper {
     int updateByPrimaryKeySelective(Apply record);
 
     int updateByPrimaryKey(Apply record);
+
+
+    Integer selectApplyByApplyStatus(Integer status);
+
+    List<Applysss> ApplyFindAll(@Param("status") Integer status, @Param("startIndex") Integer startIndex, @Param("pageSize")Integer pageSize);
 }
