@@ -18,7 +18,7 @@ public interface UserService {
 
     User checkTel(String tel);
 
-    String login(User user);
+    User login(User user);
 
     String regist(User user);
 

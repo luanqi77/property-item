@@ -20,12 +20,12 @@ public class AlipayUtils {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
         String format = formatter.format(new Date());
         String out_trade_no=format+randomCode();
-        String timeout_express = "1c";
+        String timeout_express = "2m";
         System.out.println(out_trade_no);
         alipayRequest.setBizContent("{" +
                 "    \"out_trade_no\":\""+out_trade_no+"\"," +
                 "    \"product_code\":\"FAST_INSTANT_TRADE_PAY\"," +
-                "    \"total_amount\":300," +
+                "    \"total_amount\":1000," +
                 "    \"subject\":\"物业费\"," +
                 "    \"body\":\"物业费\"," +
                 "    \"timeout_express\":\""+ timeout_express +"\" ,"+
