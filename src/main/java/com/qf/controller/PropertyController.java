@@ -27,6 +27,7 @@ public class PropertyController {
         User user =(User) httpSession.getAttribute("user");
         Integer userId = user.getUserId();
         acountService.save(userId);
+        System.out.println(userId);
         String pay="";
         try {
             pay = alipayUtils.pay();
