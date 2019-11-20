@@ -142,4 +142,7 @@
   <select id="selectReplyByStaffId" parameterType="java.lang.Integer" resultType="java.lang.Integer">
     select count(staff_id) from reply where  staff_id=#{staffId}
   </select>
+
+
+
 </mapper>

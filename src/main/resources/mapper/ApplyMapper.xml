@@ -131,4 +131,54 @@ u.user_id=h.user_id
 and
 a.status=#{status}
   </select>
+
+
+
+  <!--
+  马浩雲写的
+  Integer selectApplyByApplyStatus(Integer status);
+-->
+  <select id="selectApplyByApplyStatus" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+ select
+COUNT(*)
+FROM
+apply a,
+user u,
+house h
+WHERE
+a.user_id=u.user_id
+and
+u.user_id=h.user_id
+and
+a.status=#{status}
+  </select>
+  <!--
+  马浩雲写的
+        List<Applysss> ApplyFindAll(Integer status, Integer page, Integer size);
+
+  -->
+  <select id="ApplyFindAll" resultType="com.qf.domain.Applysss" parameterType="java.util.Map">
+    select
+u.username,
+a.apply_deso,
+h.build,
+h.floor,
+h.room,
+a.apply_time,
+a.status,
+a.staff_name,
+a.apply_id
+FROM
+apply a,
+user u,
+house h
+WHERE
+a.user_id=u.user_id
+and
+u.user_id=h.user_id
+and
+a.status=#{status}
+limit #{startIndex},#{pageSize}
+
+  </select>
 </mapper>

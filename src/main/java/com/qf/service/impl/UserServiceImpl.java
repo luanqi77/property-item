@@ -122,4 +122,9 @@ public class UserServiceImpl implements UserService {
     public User findUserByUsernameAndTel(User user) {
         return userResponsitory.findUserByUsernameAndTel(user.getUsername(),user.getTel());
     }
+
+    @Override
+    public User findUserById(User user) {
+        return userResponsitory.findUserByUserId(user.getUserId());
+    }
 }
