@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService {
             UsernamePasswordToken token = new UsernamePasswordToken(user.getUsername(), user.getPassword());
             subject.login(token);
             if (subject.isAuthenticated()) {
-                User user1 = userResponsitory.findUserByUsernameAndPassword(user.getUsername(), user.getPassword());
+                User user1 = userResponsitory.findUserByUsername(user.getUsername());
                 return user1;
             } else {
                 return null;
