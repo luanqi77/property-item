@@ -159,7 +159,7 @@ a.status=#{status}
   -->
   <select id="ApplyFindAll" resultType="com.qf.domain.Applysss" parameterType="java.util.Map">
     select
-u.username,
+u.realname,
 a.apply_deso,
 h.build,
 h.floor,

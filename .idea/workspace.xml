@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="70a984ac-5865-437c-93d2-ecb67f8dfd04" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ecac48c8-baa7-41ee-9f01-08512fe33059" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qf/service/AcountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qf/service/impl/AcountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/excludeFromValidation.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_net_commons_net_3_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_10_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/controller/ApplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/controller/ApplyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/controller/BackstageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/controller/BackstageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/controller/InformationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/controller/InformationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/controller/PropertyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/controller/PropertyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/dao/AccountMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/dao/AccountMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/domain/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/domain/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/domain/Applysss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/domain/Applysss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AccountMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AccountMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ApplyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ApplyMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/LogInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/LogInfoMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,12 +35,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="PropertyController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/PropertyController.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/service/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+            <state relative-caret-position="434">
+              <caret line="121" selection-start-line="121" selection-end-line="121" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="400" column="14" lean-forward="true" selection-start-line="400" selection-start-column="14" selection-end-line="400" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -53,8 +92,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/qf/dao/UserResponsitory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qf/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qf/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qf/controller/PropertyController.java" />
       </list>
     </option>
   </component>
@@ -92,11 +129,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="49" />
-    <option name="y" value="63" />
-    <option name="width" value="1848" />
-    <option name="height" value="930" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1935" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -104,9 +141,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -205,26 +240,6 @@
               <item name="property-item" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="qf" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="property-item" type="b2602c69:ProjectViewProjectNode" />
-              <item name="property-item" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="qf" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="property-item" type="b2602c69:ProjectViewProjectNode" />
-              <item name="property-item" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -239,6 +254,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -248,17 +265,13 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="E:/QFjava1906/191107-rabbitMq-断点续传/project/springboot-mq" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.qf.service.impl" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -341,7 +354,8 @@
       <option name="presentableId" value="Default" />
       <updated>1574152785573</updated>
       <workItem from="1574152786868" duration="8139000" />
-      <workItem from="1574215277358" duration="9641000" />
+      <workItem from="1574215277358" duration="11039000" />
+      <workItem from="1574300685872" duration="2422000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/luanqi77/property-item&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;pom.xml&#10;#&#9;property-item.iml&#10;#&#9;src/main/java/com/qf/dao/UserResponsitory.java&#10;#&#9;src/main/java/com/qf/service/impl/UserServiceImpl.java">
       <created>1574152875949</created>
@@ -413,90 +427,94 @@
       <option name="project" value="LOCAL" />
       <updated>1574231343117</updated>
     </task>
-    <task id="LOCAL-00011" summary="gj">
-      <created>1574249672710</created>
+    <task id="LOCAL-00011" summary="Merge branch 'master' of https://github.com/luanqi77/property-item&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/qf/dao/UserResponsitory.java">
+      <created>1574249260929</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1574249672710</updated>
+      <updated>1574249260929</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Merge branch 'master' of https://github.com/luanqi77/property-item&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/qf/dao/UserResponsitory.java">
+      <created>1574249291477</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1574249291477</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Merge branch 'master' of https://github.com/luanqi77/property-item&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <created>1574249333455</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1574249333455</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19616000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="21606000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="33" y="42" width="1232" height="620" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.5008518" side_tool="true" weight="0.32924336" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info id="Capture Tool" />
-      <window_info id="Designer" />
-      <window_info anchor="right" id="Database" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32924336" />
-      <window_info anchor="bottom" id="Messages" weight="0.32924336" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info id="Image Layers" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Version Control" sideWeight="0.49914822" weight="0.32924336" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4826176" />
-      <window_info anchor="bottom" id="Spring" weight="0.32924336" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24957411" />
-      <window_info anchor="right" id="Bean Validation" />
-      <window_info id="Web" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4550642" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.3297587" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.30813125" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Java Enterprise" order="7" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32952926" />
-      <window_info anchor="right" id="Maven Projects" order="3" weight="0.3297587" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25201073" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Web" order="2" side_tool="true" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.50927246" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.30813125" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="bottom" id="Java Enterprise" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32952926" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5577746" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25536194" />
       <window_info anchor="right" id="Bean Validation" order="3" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5577746" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25536194" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Java Enterprise" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.3297587" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Bean Validation" order="3" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32952926" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.50927246" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.30813125" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info id="Designer" order="2" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,10 +525,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge branch 'master' of https://github.com/luanqi77/property-item&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;pom.xml&#10;#&#9;property-item.iml&#10;#&#9;src/main/java/com/qf/dao/UserResponsitory.java&#10;#&#9;src/main/java/com/qf/service/impl/UserServiceImpl.java" />
-    <MESSAGE value="Merge branch 'master' of https://github.com/luanqi77/property-item&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="Merge branch 'master' of https://github.com/luanqi77/property-item&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/qf/dao/UserResponsitory.java" />
-    <MESSAGE value="gj" />
-    <option name="LAST_COMMIT_MESSAGE" value="gj" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/luanqi77/property-item&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/luanqi77/property-item&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -518,6 +535,61 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ApplyMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5249">
+          <caret line="181" lean-forward="true" selection-start-line="181" selection-end-line="181" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/PropertyApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/service/ReplyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/ReplyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-596">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ParkingMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/PermissionMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/dao/RoleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-741">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/dao/StaffMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1263">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/dao/AdviseMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/dao/ApplyResponseitory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
@@ -578,16 +650,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1">
           <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/domain/Account.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+        <state relative-caret-position="58">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -698,12 +767,48 @@
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0-sources.jar!/org/apache/shiro/util/ThreadContext.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0-sources.jar!/org/apache/shiro/SecurityUtils.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0-sources.jar!/org/apache/shiro/authc/UsernamePasswordToken.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0-sources.jar!/org/apache/shiro/subject/support/DelegatingSubject.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3-sources.jar!/ch/qos/logback/classic/LoggerContext.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3-sources.jar!/ch/qos/logback/classic/Logger.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0-sources.jar!/org/apache/shiro/util/ThreadContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="280" selection-start-line="280" selection-end-line="280" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0-sources.jar!/org/apache/shiro/SecurityUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0-sources.jar!/org/apache/shiro/authc/UsernamePasswordToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0-sources.jar!/org/apache/shiro/subject/support/DelegatingSubject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="319" selection-start-line="319" selection-end-line="319" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3-sources.jar!/ch/qos/logback/classic/LoggerContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="266" selection-start-line="266" selection-end-line="266" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3-sources.jar!/ch/qos/logback/classic/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="618" selection-start-line="618" selection-end-line="618" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/service/impl/UserSolrServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -713,20 +818,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/domain/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1102">
+        <state relative-caret-position="1740">
           <caret line="73" selection-start-line="73" selection-end-line="73" />
           <folding>
             <element signature="e#1334#1335#0" expanded="true" />
             <element signature="e#1365#1366#0" expanded="true" />
             <element signature="e#1552#1553#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="34" column="25" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -737,6 +835,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ApplyMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4843">
+          <caret line="167" column="9" selection-start-line="167" selection-start-column="9" selection-end-line="167" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/dao/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/userMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4959" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/dao/StaffRoleMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -744,104 +861,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/dao/UserMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ApplyMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1565">
-          <caret line="167" column="9" lean-forward="true" selection-start-line="167" selection-start-column="9" selection-end-line="167" selection-end-column="9" />
+        <state relative-caret-position="290">
+          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="97" column="29" selection-start-line="97" selection-start-column="19" selection-end-line="97" selection-end-column="29" />
+        <state relative-caret-position="434">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="396" column="57" selection-start-line="396" selection-start-column="57" selection-end-line="396" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/utils/AlipayUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="38" column="23" lean-forward="true" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/service/AcountService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/service/impl/AcountServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#470#471#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/dao/AccountMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/InformationMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-567" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AccountMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="113" column="11" lean-forward="true" selection-start-line="113" selection-start-column="11" selection-end-line="113" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-243">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/InformationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-819">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/BoardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-252">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/PropertyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+        <state relative-caret-position="231">
+          <caret line="400" column="14" lean-forward="true" selection-start-line="400" selection-start-column="14" selection-end-line="400" selection-end-column="14" />
         </state>
       </provider>
     </entry>
