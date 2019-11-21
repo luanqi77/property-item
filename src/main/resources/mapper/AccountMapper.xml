@@ -113,4 +113,12 @@
     UPDATE account set money=money+1000 WHERE user_id=#{userId}
   </update>
 
+  <select id="selectMoneyByUserId" resultType="java.lang.Double" parameterType="java.lang.Integer">
+    select
+    money
+    from
+    account
+    where user_id=#{userId,jdbcType=INTEGER}
+  </select>
+
 </mapper>

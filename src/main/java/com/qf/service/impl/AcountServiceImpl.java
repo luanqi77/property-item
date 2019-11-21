@@ -19,4 +19,9 @@ public class AcountServiceImpl implements AcountService {
     public Integer save(Integer userId) {
         return accountMapper.save(userId);
     }
+
+    @Override
+    public Double selectMoneyByUserId(Integer userId) {
+        return accountMapper.selectMoneyByUserId(userId);
+    }
 }

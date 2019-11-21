@@ -8,4 +8,6 @@ package com.qf.service;
  */
 public interface AcountService {
     Integer save (Integer userId);
+
+    Double selectMoneyByUserId(Integer userId);
 }
