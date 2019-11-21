@@ -2,8 +2,10 @@ package com.qf.service;
 
 import com.qf.domain.Advise;
 
+import java.util.List;
+
 public interface AdviseService {
     String insertAdvise(Advise advise);
 
-    Advise selectAdviseByadviseId(Integer adviseId);
+    List<Advise> selectAdviseByUserId(Integer userId);
 }

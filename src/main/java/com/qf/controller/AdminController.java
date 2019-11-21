@@ -108,7 +108,6 @@ public class AdminController {
 
     //根据id获得员工信息
     @RequestMapping("/getStaffInfo")
-    @RequiresPermissions("staff_manage")
     public StaffAndRole getStaffInfo(@RequestParam("staffId") int staffId){
         return AdminService.getStaffInfo(staffId);
     }

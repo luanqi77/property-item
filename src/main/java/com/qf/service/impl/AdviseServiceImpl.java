@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class AdviseServiceImpl implements AdviseService {
@@ -23,10 +24,10 @@ public class AdviseServiceImpl implements AdviseService {
     }
 
     @Override
-    public Advise selectAdviseByadviseId(Integer adviseId) {
-        if (adviseId!=null){
-            Advise adviseByAdviseId = adviseRepository.findAdviseByAdviseId(adviseId);
-            return adviseByAdviseId;
+    public List<Advise> selectAdviseByUserId(Integer userId) {
+        if (userId!=null){
+            List<Advise> adviseByUserId = adviseRepository.findAdviseByUserId(userId);
+            return adviseByUserId;
         }
         return null;
     }

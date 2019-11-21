@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 @RestController
 public class AdviseController {
@@ -32,9 +33,13 @@ public class AdviseController {
 
     /*
     * 查询用户建议*/
-    @RequestMapping(value = "/selectAdviseByAdviseId",method = RequestMethod.POST)
-    public Advise selectAdviseByAdviseId(@RequestBody Advise advise){
-      return  adviseService.selectAdviseByadviseId(advise.getAdviseId());
+    @RequestMapping(value = "/selectAdviseByUserId",method = RequestMethod.POST)
+    public List<Advise> selectAdviseByAdviseId(HttpSession session){
+        User user = (User)session.getAttribute("user");
+        if (user.getUserId()!=null){
+            return adviseService.selectAdviseByUserId(user.getUserId());
+        }
+        return  null;
     }
 
 
