@@ -393,7 +393,7 @@ public class UserController {
     @ResponseBody
     public String updateUser(@RequestBody User user,HttpSession session) {
         if (user != null && user.getUserId() != null) {
-            ByteSource bytes = ByteSource.Util.bytes(user.getPassword());
+            ByteSource bytes = ByteSource.Util.bytes(user.getUsername());
             SimpleHash md5 = new SimpleHash("MD5", user.getPassword(), bytes, 1024);
             user.setPassword(md5.toString());
             User user1 = userService.updateUserOpenId(user);
