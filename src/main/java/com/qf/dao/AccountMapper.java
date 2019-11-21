@@ -27,4 +27,6 @@ public interface AccountMapper {
     int deleteByUserId(Integer userId);
 
     Integer save(Integer userId);
+
+    Double selectMoneyByUserId(Integer userId);
 }

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.HouseMapper">
+  <resultMap id="BaseResultMap" type="com.qf.domain.House">
+    <constructor>
+      <idArg column="house_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="user_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="build" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="area" javaType="java.lang.Double" jdbcType="DOUBLE" />
+      <arg column="style" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="floor" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="room" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="toward" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="hot_fee" javaType="java.lang.Double" jdbcType="DOUBLE" />
+      <arg column="property_fee" javaType="java.lang.Double" jdbcType="DOUBLE" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    house_id, user_id, build, area, style, floor, room, toward, hot_fee, property_fee
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from house
+    where house_id = #{houseId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from house
+    where house_id = #{houseId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.qf.domain.House">
+    insert into house (house_id, user_id, build, 
+      area, style, floor, 
+      room, toward, hot_fee, 
+      property_fee)
+    values (#{houseId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{build,jdbcType=INTEGER}, 
+      #{area,jdbcType=DOUBLE}, #{style,jdbcType=VARCHAR}, #{floor,jdbcType=INTEGER}, 
+      #{room,jdbcType=INTEGER}, #{toward,jdbcType=VARCHAR}, #{hotFee,jdbcType=DOUBLE}, 
+      #{propertyFee,jdbcType=DOUBLE})
+  </insert>
+  <insert id="insertSelective" parameterType="com.qf.domain.House">
+    insert into house
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="houseId != null">
+        house_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="build != null">
+        build,
+      </if>
+      <if test="area != null">
+        area,
+      </if>
+      <if test="style != null">
+        style,
+      </if>
+      <if test="floor != null">
+        floor,
+      </if>
+      <if test="room != null">
+        room,
+      </if>
+      <if test="toward != null">
+        toward,
+      </if>
+      <if test="hotFee != null">
+        hot_fee,
+      </if>
+      <if test="propertyFee != null">
+        property_fee,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="houseId != null">
+        #{houseId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="build != null">
+        #{build,jdbcType=INTEGER},
+      </if>
+      <if test="area != null">
+        #{area,jdbcType=DOUBLE},
+      </if>
+      <if test="style != null">
+        #{style,jdbcType=VARCHAR},
+      </if>
+      <if test="floor != null">
+        #{floor,jdbcType=INTEGER},
+      </if>
+      <if test="room != null">
+        #{room,jdbcType=INTEGER},
+      </if>
+      <if test="toward != null">
+        #{toward,jdbcType=VARCHAR},
+      </if>
+      <if test="hotFee != null">
+        #{hotFee,jdbcType=DOUBLE},
+      </if>
+      <if test="propertyFee != null">
+        #{propertyFee,jdbcType=DOUBLE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qf.domain.House">
+    update house
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="build != null">
+        build = #{build,jdbcType=INTEGER},
+      </if>
+      <if test="area != null">
+        area = #{area,jdbcType=DOUBLE},
+      </if>
+      <if test="style != null">
+        style = #{style,jdbcType=VARCHAR},
+      </if>
+      <if test="floor != null">
+        floor = #{floor,jdbcType=INTEGER},
+      </if>
+      <if test="room != null">
+        room = #{room,jdbcType=INTEGER},
+      </if>
+      <if test="toward != null">
+        toward = #{toward,jdbcType=VARCHAR},
+      </if>
+      <if test="hotFee != null">
+        hot_fee = #{hotFee,jdbcType=DOUBLE},
+      </if>
+      <if test="propertyFee != null">
+        property_fee = #{propertyFee,jdbcType=DOUBLE},
+      </if>
+    </set>
+    where house_id = #{houseId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qf.domain.House">
+    update house
+    set user_id = #{userId,jdbcType=INTEGER},
+      build = #{build,jdbcType=INTEGER},
+      area = #{area,jdbcType=DOUBLE},
+      style = #{style,jdbcType=VARCHAR},
+      floor = #{floor,jdbcType=INTEGER},
+      room = #{room,jdbcType=INTEGER},
+      toward = #{toward,jdbcType=VARCHAR},
+      hot_fee = #{hotFee,jdbcType=DOUBLE},
+      property_fee = #{propertyFee,jdbcType=DOUBLE}
+    where house_id = #{houseId,jdbcType=INTEGER}
+  </update>
+
+  <update id="removeMaster" parameterType="java.lang.Integer">
+    update house
+    set user_id = null
+    where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+  <update id="updateFee" parameterType="com.qf.domain.Deduct">
+    update house
+    <set>
+      <if test="hotFee != null">
+        hot_fee = #{hotFee,jdbcType=INTEGER}*area,
+      </if>
+      <if test="propertyFee != null">
+        property_fee = #{propertyFee,jdbcType=INTEGER}*area,
+      </if>
+    </set>
+
+  </update>
+
+  <select id="selectByUserId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from house
+    where user_id = #{userId,jdbcType=INTEGER}
+  </select>
+</mapper>

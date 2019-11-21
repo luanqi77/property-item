@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.AccountMapper">
+  <resultMap id="BaseResultMap" type="com.qf.domain.Account">
+    <constructor>
+      <idArg column="account_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="user_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="money" javaType="java.lang.Double" jdbcType="DOUBLE" />
+      <arg column="park_fee" javaType="java.lang.Double" jdbcType="DOUBLE" />
+    </constructor>
+  </resultMap>
+  <resultMap id="AccountResultMap" type="com.qf.bean.UserAccount">
+    <result column="user_id" property="userId"/>
+    <result column="house_id" property="houseId"/>
+    <result column="realname" property="realName"/>
+    <result column="tel" property="tel"/>
+    <result column="build" property="build"/>
+    <result column="money" property="money"/>
+  </resultMap>
+  <sql id="Base_Column_List">
+    account_id, user_id, money, park_fee
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from account
+    where account_id = #{accountId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from account
+    where account_id = #{accountId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.qf.domain.Account">
+    insert into account (account_id, user_id, money, 
+      park_fee)
+    values (#{accountId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{money,jdbcType=DOUBLE}, 
+      #{parkFee,jdbcType=DOUBLE})
+  </insert>
+  <insert id="insertSelective" parameterType="com.qf.domain.Account">
+    insert into account
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="accountId != null">
+        account_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="money != null">
+        money,
+      </if>
+      <if test="parkFee != null">
+        park_fee,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="accountId != null">
+        #{accountId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="money != null">
+        #{money,jdbcType=DOUBLE},
+      </if>
+      <if test="parkFee != null">
+        #{parkFee,jdbcType=DOUBLE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qf.domain.Account">
+    update account
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="money != null">
+        money = #{money,jdbcType=DOUBLE},
+      </if>
+      <if test="parkFee != null">
+        park_fee = #{parkFee,jdbcType=DOUBLE},
+      </if>
+    </set>
+    where account_id = #{accountId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qf.domain.Account">
+    update account
+    set user_id = #{userId,jdbcType=INTEGER},
+      money = #{money,jdbcType=DOUBLE},
+      park_fee = #{parkFee,jdbcType=DOUBLE}
+    where account_id = #{accountId,jdbcType=INTEGER}
+  </update>
+
+  <select id="findUserAccount" resultMap="AccountResultMap">
+    select
+    u.user_id,u.realname,u.tel,h.build,h.house_id,a.money
+    from
+    user u,house h,account a
+    where u.user_id=h.user_id
+    and h.user_id=a.user_id
+  </select>
+  <update id="payFee">
+    UPDATE
+	`user` u,house h,account a
+    SET
+	a.money=a.money-h.hot_fee-h.property_fee-a.park_fee
+  </update>
+
+  <delete id="deleteByUserId" parameterType="java.lang.Integer">
+    delete from account
+    where user_id = #{userId,jdbcType=INTEGER}
+  </delete>
+  <update id="save" parameterType="java.lang.Integer">
+    UPDATE account set money=money+1000 WHERE user_id=#{userId}
+  </update>
+
+</mapper>

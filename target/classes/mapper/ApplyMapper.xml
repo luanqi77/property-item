@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.ApplyMapper">
+  <resultMap id="BaseResultMap" type="com.qf.domain.Apply">
+    <constructor>
+      <idArg column="apply_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="user_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="apply_deso" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="apply_time" javaType="java.util.Date" jdbcType="DATE" />
+      <arg column="status" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="staff_name" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    apply_id, user_id, apply_deso, apply_time, status, staff_name
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from apply
+    where apply_id = #{applyId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from apply
+    where apply_id = #{applyId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.qf.domain.Apply">
+    insert into apply (apply_id, user_id, apply_deso, 
+      apply_time, status, staff_name
+      )
+    values (#{applyId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{applyDeso,jdbcType=VARCHAR}, 
+      #{applyTime,jdbcType=DATE}, #{status,jdbcType=INTEGER}, #{staffName,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.qf.domain.Apply">
+    insert into apply
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="applyId != null">
+        apply_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="applyDeso != null">
+        apply_deso,
+      </if>
+      <if test="applyTime != null">
+        apply_time,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="staffName != null">
+        staff_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="applyId != null">
+        #{applyId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="applyDeso != null">
+        #{applyDeso,jdbcType=VARCHAR},
+      </if>
+      <if test="applyTime != null">
+        #{applyTime,jdbcType=DATE},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="staffName != null">
+        #{staffName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qf.domain.Apply">
+    update apply
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="applyDeso != null">
+        apply_deso = #{applyDeso,jdbcType=VARCHAR},
+      </if>
+      <if test="applyTime != null">
+        apply_time = #{applyTime,jdbcType=DATE},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="staffName != null">
+        staff_name = #{staffName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where apply_id = #{applyId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qf.domain.Apply">
+    update apply
+    set user_id = #{userId,jdbcType=INTEGER},
+      apply_deso = #{applyDeso,jdbcType=VARCHAR},
+      apply_time = #{applyTime,jdbcType=DATE},
+      status = #{status,jdbcType=INTEGER},
+      staff_name = #{staffName,jdbcType=VARCHAR}
+    where apply_id = #{applyId,jdbcType=INTEGER}
+  </update>
+
+  <!--
+    List<Applysss> selectApplyByStaff(String status);
+  -->
+  <select id="selectApplyByStaff" parameterType="java.lang.Integer" resultType="com.qf.domain.Applysss">
+ select
+u.username,
+a.apply_deso,
+h.build,
+h.floor,
+h.room,
+a.apply_time,
+a.status,
+a.staff_name,
+a.apply_id
+FROM
+apply a,
+user u,
+house h
+WHERE
+a.user_id=u.user_id
+and
+u.user_id=h.user_id
+and
+a.status=#{status}
+  </select>
+
+
+
+  <!--
+  马浩雲写的
+  Integer selectApplyByApplyStatus(Integer status);
+-->
+  <select id="selectApplyByApplyStatus" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+ select
+COUNT(*)
+FROM
+apply a,
+user u,
+house h
+WHERE
+a.user_id=u.user_id
+and
+u.user_id=h.user_id
+and
+a.status=#{status}
+  </select>
+  <!--
+  马浩雲写的
+        List<Applysss> ApplyFindAll(Integer status, Integer page, Integer size);
+
+  -->
+  <select id="ApplyFindAll" resultType="com.qf.domain.Applysss" parameterType="java.util.Map">
+    select
+u.realname,
+a.apply_deso,
+h.build,
+h.floor,
+h.room,
+a.apply_time,
+a.status,
+a.staff_name,
+a.apply_id
+FROM
+apply a,
+user u,
+house h
+WHERE
+a.user_id=u.user_id
+and
+u.user_id=h.user_id
+and
+a.status=#{status}
+limit #{startIndex},#{pageSize}
+
+  </select>
+</mapper>

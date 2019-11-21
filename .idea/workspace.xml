@@ -1,17 +1,179 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f57b4f71-ebc3-49fc-8127-938bae6983c0" name="Default" comment="">
+    <list default="true" id="08612a71-11d8-4ea9-bd92-0c1cf24478b1" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/PropertyApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/aop/ControllerLogAopAspect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/aop/SystemControllerLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/bean/PageBean.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/bean/PageBeanFindAdviseAndReply.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/bean/ParkingSpaces.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/bean/StaffAndRole.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/bean/StaffAndRoleRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/bean/UserAccount.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/bean/UserAccountResponse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/bean/UserRegisterRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/bean/logInfoResponse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/config/AlipayConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/config/AsyncConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/config/ElasticsearchConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/config/ExceptionController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/config/QuartzConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/config/RedisCacheConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/config/RedisConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/config/RedisUtilsSerializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/config/ShiroConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/config/SolrConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/config/ZhenziSmsConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/constanst/Constanst.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/AdminController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/AdviseController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/ApplyController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/BackstageController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/BoardController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/HouseController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/InformationController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/ParkingController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/ParkingSpacesController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/PropertyController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/ReplyController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/TestController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/UserController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/cronJobs/PayJob.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/cronJobs/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/cronJobs/warnJob.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/AccountMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/AdviseMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/AdviseRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/ApplyMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/ApplyResponseitory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/BoardResponsitory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/DeductMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/HouseMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/InformationMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/LogInfoMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/ParkingMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/ParkingSpacesMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/PermissionMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/ReplyMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/ReplyRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/RoleMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/RolePermissionMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/StaffMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/StaffRoleMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/UserMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/UserResponsitory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Account.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Advise.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/AdviseAndReply.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Apply.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/ApplyByPageAndSize.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Applysss.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Board.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Deduct.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/House.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Information.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/LogInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Parking.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Permission.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Reply.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/RolePermission.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Staff.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/StaffRole.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/UserParking.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/entity/AccessToken.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/entity/HttpParame.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/entity/Result.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/entity/WechatUserUnionID.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/response/ResponseUser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/response/ResponseUserAndError.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/AcountService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/AdminService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/AdviseService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/ApplyService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/BackstageService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/BoardService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/HouseService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/InformationService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/ParkingService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/ParkingSpacesService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/RegisterService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/ReplyService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/StaffService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/UserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/UserSolrService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/WeixinLoginService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/AcountServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/AdminServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/AdviseServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/ApplyServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/BackstageServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/BoardServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/HouseServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/InformationServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/ParkingServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/RegisterServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/ReplyServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/StaffServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/UserSolrServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/WeixinLoginServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/parkingSpacesServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/shiro/LoginShiroRealm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/shiro/MyRealm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/util/AesUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/util/Base64Util.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/util/DateUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/util/HttpClientUtil$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/util/HttpClientUtil$LazyHolder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/util/HttpClientUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/util/PropertiesUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/utils/AlipayUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/utils/ApplicationContextUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/utils/CookieUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/utils/JsonUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/utils/Md5Utils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/utils/MsgResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/utils/RedisUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/utils/SchedulerUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/utils/TelMessageUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qf/utils/UploadUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/generatorConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/AccountMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/AdviseMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/ApplyMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/DeductMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/HouseMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/InformationMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/LogInfoMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/ParkingMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/ParkingSpacesMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/PermissionMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/ReplyMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/RoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/RolePermissionMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/StaffMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/StaffRoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/userMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/qiniu.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/images/weixinlogin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/jquery-3.3.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/jquery.cookie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/loginError.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/weixinconnectconfig.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/controller/AdviseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/controller/AdviseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/controller/BackstageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/controller/BackstageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/dao/AdviseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/dao/AdviseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/service/AdviseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/service/AdviseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/service/impl/AdviseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/service/impl/AdviseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/dao/AccountMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/dao/AccountMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/service/AcountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/service/AcountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/service/impl/AcountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/service/impl/AcountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AccountMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AccountMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,24 +182,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/AdminController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="109" column="36" selection-start-line="109" selection-start-column="36" selection-end-line="109" selection-end-column="36" />
-              <folding>
-                <element signature="e#1210#1211#0" expanded="true" />
-                <element signature="e#1266#1267#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AdviseController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/AdviseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="42" column="3" lean-forward="true" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
+            <state relative-caret-position="49">
+              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -84,8 +233,8 @@
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-310">
-              <caret line="396" column="12" selection-start-line="396" selection-start-column="12" selection-end-line="396" selection-end-column="12" />
+            <state relative-caret-position="-244">
+              <caret line="399" column="12" selection-start-line="399" selection-start-column="12" selection-end-line="399" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,7 +246,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/ReplyController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="594">
-              <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+              <caret line="63" selection-start-line="63" selection-end-line="63" />
             </state>
           </provider>
         </entry>
@@ -115,7 +264,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/service/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="301">
-              <caret line="120" column="5" lean-forward="true" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
+              <caret line="120" column="5" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
               <folding>
                 <element signature="e#3162#3163#0" expanded="true" />
               </folding>
@@ -125,63 +274,11 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-        <option value="Interface" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>findUserAccount</find>
-    </findStrings>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/qf/service/ApplyService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/ReplyMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qf/dao/ApplyMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qf/domain/ApplyByPageAndSize.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qf/domain/Applysss.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qf/service/impl/ApplyServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/ApplyMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qf/controller/ApplyController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qf/dao/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qf/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qf/dao/UserResponsitory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qf/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qf/controller/PropertyController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qf/controller/BackstageController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qf/controller/AdminController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qf/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qf/service/AdviseService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qf/dao/AdviseRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qf/service/impl/AdviseServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qf/controller/AdviseController.java" />
-      </list>
-    </option>
-  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="localRepository" value="E:\maven" />
-        <option name="mavenHome" value="E:/apache-maven-3.5.0" />
-        <option name="userSettingsFile" value="E:\apache-maven-3.5.0\conf\settings.xml" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -189,6 +286,11 @@
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="property-item" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="property-item" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
@@ -201,12 +303,6 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="48" />
-    <option name="y" value="63" />
-    <option name="width" value="1848" />
-    <option name="height" value="930" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -325,25 +421,6 @@
       </pane>
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.qf.service.impl" />
-    </key>
-  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -357,6 +434,17 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration name="PropertyApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qf.PropertyApplication" />
+      <module name="property-item" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qf.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -375,16 +463,6 @@
         <value defaultName="singleModule" />
       </option>
       <patterns />
-    </configuration>
-    <configuration name="PropertyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="property-item" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.qf.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qf.PropertyApplication" />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -410,7 +488,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.PropertyApplication" />
+        <item itemvalue="Application.PropertyApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -426,7 +504,7 @@
       <updated>1574152785573</updated>
       <workItem from="1574152786868" duration="8139000" />
       <workItem from="1574215277358" duration="9641000" />
-      <workItem from="1574299989237" duration="5647000" />
+      <workItem from="1574299989237" duration="6843000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/luanqi77/property-item&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;pom.xml&#10;#&#9;property-item.iml&#10;#&#9;src/main/java/com/qf/dao/UserResponsitory.java&#10;#&#9;src/main/java/com/qf/service/impl/UserServiceImpl.java">
       <created>1574152875949</created>
@@ -505,20 +583,18 @@
       <option name="project" value="LOCAL" />
       <updated>1574249672710</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="gj">
+      <created>1574308679012</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1574308679012</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25294000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="33000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -526,7 +602,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.502021" side_tool="true" weight="0.30851063" />
-      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32964224" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32902184" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -541,8 +617,8 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4987874" weight="0.51241136" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.497979" visible="true" weight="0.13829787" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4987874" weight="0.20390071" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.497979" visible="true" weight="0.2570922" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26758286" />
@@ -558,23 +634,15 @@
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge branch 'master' of https://github.com/luanqi77/property-item&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;pom.xml&#10;#&#9;property-item.iml&#10;#&#9;src/main/java/com/qf/dao/UserResponsitory.java&#10;#&#9;src/main/java/com/qf/service/impl/UserServiceImpl.java" />
-    <MESSAGE value="Merge branch 'master' of https://github.com/luanqi77/property-item&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="Merge branch 'master' of https://github.com/luanqi77/property-item&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/qf/dao/UserResponsitory.java" />
     <MESSAGE value="gj" />
-    <option name="LAST_COMMIT_MESSAGE" value="gj" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="8" />
-    </breakpoint-manager>
+    <MESSAGE value="Merge branch 'master' of https://github.com/luanqi77/property-item&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/luanqi77/property-item&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ReplyMapper.xml">
@@ -663,9 +731,6 @@
           <caret line="59" selection-start-line="59" selection-end-line="59" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0-sources.jar!/org/apache/shiro/util/ThreadContext.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0-sources.jar!/org/apache/shiro/SecurityUtils.java" />
@@ -844,7 +909,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
-          <caret line="120" column="5" lean-forward="true" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
+          <caret line="120" column="5" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
           <folding>
             <element signature="e#3162#3163#0" expanded="true" />
           </folding>
@@ -853,8 +918,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-310">
-          <caret line="396" column="12" selection-start-line="396" selection-start-column="12" selection-end-line="396" selection-end-column="12" />
+        <state relative-caret-position="-244">
+          <caret line="399" column="12" selection-start-line="399" selection-start-column="12" selection-end-line="399" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -864,7 +929,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/ReplyController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
-          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
         </state>
       </provider>
     </entry>
@@ -892,62 +957,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8118" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/AdviseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="42" column="3" lean-forward="true" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
+        <state relative-caret-position="49">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
