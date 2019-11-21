@@ -109,4 +109,8 @@
     delete from account
     where user_id = #{userId,jdbcType=INTEGER}
   </delete>
+  <update id="save" parameterType="java.lang.Integer">
+    UPDATE account set money=money+1000 WHERE user_id=#{userId}
+  </update>
+
 </mapper>

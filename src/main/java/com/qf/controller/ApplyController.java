@@ -9,6 +9,7 @@ import com.qf.service.ApplyService;
 import com.qf.service.StaffService;
 import org.apache.catalina.security.SecurityUtil;
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -61,6 +62,7 @@ public class ApplyController {
     /**
      *员工对报修信息的查看(根据status)
      */
+    @RequiresPermissions(" Maintenance_application")
     @RequestMapping(value = "/selectApplyByStaff/{status}/{page}/{size}",method = RequestMethod.GET)
     public ApplyByPageAndSize selectApplyByStaff(@PathVariable("status") Integer status, @PathVariable("page") Integer page, @PathVariable("size") Integer size){
 
@@ -70,6 +72,7 @@ public class ApplyController {
     /**
     * 员工修改报修信息表状态
     */
+    @RequiresPermissions(" Maintenance_application")
     @RequestMapping("/updateApplyStatus")
     public String updateApplyStatus(@RequestBody Apply apply11){
         Integer applyId = apply11.getApplyId();

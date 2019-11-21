@@ -15,9 +15,16 @@ public class Account {
     @Column(name = "user_id")
     private Integer userId;
 
+    @Column(name = "money")
     private Double money;
+
     @Column(name = "park_fee")
     private Double parkFee;
+
+    @Column(name = "count_number")
+    private Double countNumber;
+
+
 
     public Account(Integer accountId, Integer userId, Double money, Double parkFee) {
         this.accountId = accountId;

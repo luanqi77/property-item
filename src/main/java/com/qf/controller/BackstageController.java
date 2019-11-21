@@ -80,9 +80,8 @@ public class BackstageController{
     @RequestMapping("/removeMaster")
     @RequiresPermissions("user_account")
     public String delUser(@RequestBody User user){
-        System.out.println(user);
-        System.out.println(backstageService.delUserById(user));
-        if (backstageService.delUserById(user)>0){
+        //System.out.println(backstageService.delUserById(user)+"88");
+        if ((backstageService.delUserById(user))!=0){
             //更新solr索引库
             userSolrService.dataIntoSolrFromDb();
             return "success";
@@ -108,6 +107,7 @@ public class BackstageController{
 
     //根据用户id获得用户信息
     @RequestMapping("/getUserById")
+    @RequiresPermissions("data_manage")
     public User getUserById(@RequestParam("id") Integer id){
         System.out.println(backstageService.getUserById(id));
         return backstageService.getUserById(id);
