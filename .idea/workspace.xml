@@ -1,25 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08612a71-11d8-4ea9-bd92-0c1cf24478b1" name="Default" comment="">
+    <list default="true" id="08612a71-11d8-4ea9-bd92-0c1cf24478b1" name="Default" comment="Merge branch 'master' of https://github.com/luanqi77/property-item&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/controller/AdviseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/controller/AdviseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/dao/AdviseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/dao/AdviseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/dao/HouseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/dao/HouseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/service/AdviseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/service/AdviseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/service/HouseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/service/HouseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/service/impl/AdviseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/service/impl/AdviseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/service/impl/BackstageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/service/impl/BackstageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/service/impl/HouseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/service/impl/HouseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/HouseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/HouseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/controller/AdviseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/AdviseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/AdviseRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/AdviseRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/HouseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/HouseMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/AdviseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/AdviseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/HouseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/HouseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/AdviseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/AdviseServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/HouseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/HouseServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/HouseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/HouseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/controller/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/controller/StatisticsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/BackstageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/BackstageServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,7 +14,38 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AdviseController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/AdviseController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="902">
+              <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PropertyApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/PropertyApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StatisticsController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/StatisticsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -53,8 +69,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/qf/service/HouseService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qf/service/impl/HouseServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/qf/testData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qf/controller/StatisticsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qf/service/impl/BackstageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qf/controller/StatisticsController.java" />
       </list>
     </option>
   </component>
@@ -109,11 +125,6 @@
             <path>
               <item name="property-item" type="b2602c69:ProjectViewProjectNode" />
               <item name="property-item" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="property-item" type="b2602c69:ProjectViewProjectNode" />
-              <item name="property-item" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="property-item" type="b2602c69:ProjectViewProjectNode" />
@@ -293,7 +304,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.testData.test">
+  <component name="RunManager" selected="Application.PropertyApplication">
     <configuration name="PropertyApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.qf.PropertyApplication" />
       <module name="property-item" />
@@ -392,7 +403,7 @@
       <updated>1574152785573</updated>
       <workItem from="1574152786868" duration="8139000" />
       <workItem from="1574215277358" duration="9641000" />
-      <workItem from="1574299989237" duration="22792000" />
+      <workItem from="1574299989237" duration="23676000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/luanqi77/property-item&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;pom.xml&#10;#&#9;property-item.iml&#10;#&#9;src/main/java/com/qf/dao/UserResponsitory.java&#10;#&#9;src/main/java/com/qf/service/impl/UserServiceImpl.java">
       <created>1574152875949</created>
@@ -492,7 +503,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574316074812</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Merge branch 'master' of https://github.com/luanqi77/property-item&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <created>1574335857817</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1574335857817</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -510,10 +528,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15982000" />
+    <option name="totallyTimeSpent" value="16866000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.502021" side_tool="true" weight="0.30851063" />
@@ -532,11 +551,11 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4987874" weight="0.115248226" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.497979" visible="true" weight="0.20744681" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4987874" weight="0.53014183" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.497979" visible="true" weight="0.35460994" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26758286" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34357315" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -716,13 +735,6 @@
         <state relative-caret-position="-8118" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/PropertyApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/service/AdviseService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
@@ -808,13 +820,6 @@
             <element signature="e#1210#1211#0" expanded="true" />
             <element signature="e#1266#1267#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/AdviseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="45" column="50" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -925,16 +930,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/StatisticsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/cronJobs/warnJob.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
@@ -953,6 +948,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-988">
           <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/AdviseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="902">
+          <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/PropertyApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/StatisticsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
