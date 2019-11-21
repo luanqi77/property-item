@@ -23,4 +23,15 @@ public class HouseServiceImpl implements HouseService{
         House house = houseMapper.selectByUserId(id);
         return house;
     }
+
+
+    @Override
+    public Integer selectNoArrears(Integer build) {
+        return houseMapper.selectNoArrears(build);
+    }
+
+    @Override
+    public Integer selectHousehold(Integer build) {
+        return houseMapper.selectHousehold(build);
+    }
 }

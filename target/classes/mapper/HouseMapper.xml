@@ -176,4 +176,36 @@
     from house
     where user_id = #{userId,jdbcType=INTEGER}
   </select>
+
+  <select id="selectNoArrears" resultType="java.lang.Integer" parameterType="java.lang.Integer">
+    SELECT count(*)
+      FROM
+      (SELECT
+      h.user_id,
+      h.build,
+      a.money
+      FROM
+      user u,
+      house h,
+      account a
+      WHERE
+      u.user_id=h.user_id and
+      a.user_id=u.user_id and
+      h.build=#{build} and a.money>0)as s
+  </select>
+
+  <select id="selectHousehold" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+      SELECT count(*)
+        FROM
+        (SELECT
+        h.user_id,
+        h.build
+        FROM
+        user u,
+        house h
+        WHERE
+        u.user_id=h.user_id and
+        h.build=#{build}) as l
+
+  </select>
 </mapper>

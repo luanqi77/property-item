@@ -8,4 +8,6 @@ public interface AdviseService {
     String insertAdvise(Advise advise);
 
     List<Advise> selectAdviseByUserId(Integer userId);
+
+    Advise selectAdviseByAdviseId(Integer adviseId);
 }

@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.Id;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -75,14 +76,15 @@ public class BackstageServiceImpl implements BackstageService {
     @Override
     public String insertUser(UserRegisterRequest userRegisterRequest) {
         User user = userRegisterRequest.getUser();
+        userRegisterRequest.getUser().setLiveTime(new Date());
         if (user.getRealname()==null||user.getRealname()==""||user.getTel()==""||user.getTel()==null){
             return "真实姓名或电话不能为空";
         }
-        if (houseMapper.selectByUserId(userRegisterRequest.getHouseId())!=null){
-            return "房屋已存在住户";
-        }
-        if (houseMapper.selectByPrimaryKey(userRegisterRequest.getHouseId())==null){
+        House houseById = houseMapper.selectByPrimaryKey(userRegisterRequest.getHouseId());
+        if (houseById==null){
             return "房屋不存在";
+        }else if(houseById.getUserId()!=null){
+            return "房屋已存在住户";
         }
         if (userMapper.insertSelective(userRegisterRequest.getUser())>0){
             Integer userId = userRegisterRequest.getUser().getUserId();

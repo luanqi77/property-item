@@ -11,4 +11,8 @@ import com.qf.domain.House;
  */
 public interface HouseService {
     House selectByUserId(Integer id);
+
+    Integer selectNoArrears(Integer build);
+
+    Integer selectHousehold(Integer build);
 }

@@ -23,4 +23,8 @@ public interface HouseMapper {
     int updateFee(Deduct deduct);
 
     House selectByUserId(Integer userId);
+
+    Integer selectNoArrears(Integer build);
+
+    Integer selectHousehold(Integer build);
 }

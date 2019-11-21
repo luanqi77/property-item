@@ -24,13 +24,23 @@ public class AdviseController {
     public String insertAdvise(@RequestBody Advise advise, HttpSession session){
         if (!advise.getDescription().isEmpty()){
             User user = (User)session.getAttribute("user");
-            advise.setUserId(user.getUserId());
-            return adviseService.insertAdvise(advise);
-        }else {
-            return "fail";
+            if (user.getUserId()!=null){
+                advise.setUserId(user.getUserId());
+                return adviseService.insertAdvise(advise);
+            }
         }
+            return "fail";
     }
+    /*
+    * 员工根据adviseId查看建议*/
 
+    @RequestMapping("/selectAdviseByAdviseId")
+    public Advise selectAdviseByAdviseId(@RequestBody Advise advise){
+        if (advise.getAdviseId()!=null){
+            return adviseService.selectAdviseByAdviseId(advise.getAdviseId());
+        }
+        return null;
+    }
     /*
     * 查询用户建议*/
     @RequestMapping(value = "/selectAdviseByUserId",method = RequestMethod.POST)

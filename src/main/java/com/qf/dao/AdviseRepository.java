@@ -8,6 +8,7 @@ import java.util.List;
 public interface AdviseRepository extends JpaRepository<Advise,Integer> {
 
     List<Advise> findAdviseByUserId(Integer userId);
+    Advise findAdviseByAdviseId(Integer adviseId);
 }
 
 
