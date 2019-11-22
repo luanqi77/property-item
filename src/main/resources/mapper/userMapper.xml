@@ -180,12 +180,6 @@
       set
       username = #{username,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
-      realname = #{realname,jdbcType=VARCHAR},
-      pic = #{pic,jdbcType=VARCHAR},
-      live_time = #{liveTime,jdbcType=DATE},
-      email = #{email,jdbcType=VARCHAR},
-      statu = #{statu,jdbcType=INTEGER},
-      open_id = #{openId,jdbcType=VARCHAR}
       where tel=#{tel}
   </update>
 
