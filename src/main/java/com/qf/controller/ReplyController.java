@@ -1,5 +1,6 @@
 package com.qf.controller;
 
+import com.qf.aop.SystemControllerLog;
 import com.qf.bean.PageBeanFindAdviseAndReply;
 import com.qf.domain.AdviseAndReply;
 import com.qf.domain.Reply;
@@ -29,6 +30,7 @@ public class ReplyController {
     }
     /**
      * 员工回复业主的投诉建议及修改建议表的回复状态*/
+    @SystemControllerLog(methods = "回复投诉")
     @RequestMapping(value = "/insertReply",method = RequestMethod.POST)
     @RequiresPermissions("complaint")
     public String insertReply(@RequestBody Reply reply){

@@ -1,12 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08612a71-11d8-4ea9-bd92-0c1cf24478b1" name="Default" comment="Merge branch 'master' of https://github.com/luanqi77/property-item&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+    <list default="true" id="08612a71-11d8-4ea9-bd92-0c1cf24478b1" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/controller/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/controller/StatisticsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/BackstageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/BackstageServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/controller/ReplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/controller/ReplyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/PropertyApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/PropertyApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/aop/ControllerLogAopAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/aop/ControllerLogAopAspect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/bean/PageBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/bean/PageBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/bean/PageBeanFindAdviseAndReply.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/bean/PageBeanFindAdviseAndReply.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/bean/ParkingSpaces.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/bean/ParkingSpaces.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/bean/StaffAndRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/bean/StaffAndRole.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/bean/StaffAndRoleRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/bean/StaffAndRoleRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/bean/UserAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/bean/UserAccount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/bean/UserAccountResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/bean/UserAccountResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/bean/UserRegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/bean/UserRegisterRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/bean/logInfoResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/bean/logInfoResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/config/ExceptionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/config/ExceptionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/config/QuartzConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/config/QuartzConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/config/RedisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/config/RedisConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/config/RedisUtilsSerializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/config/RedisUtilsSerializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/config/ShiroConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/config/ShiroConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/controller/ApplyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/ApplyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/controller/BackstageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/BackstageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/controller/BoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/BoardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/controller/HouseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/HouseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/controller/InformationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/InformationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/controller/ParkingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/ParkingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/controller/ParkingSpacesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/ParkingSpacesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/controller/PropertyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/PropertyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/controller/ReplyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/ReplyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/controller/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/TestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/AdviseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/AdviseMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/ApplyMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/ApplyMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/DeductMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/DeductMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/InformationMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/InformationMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/LogInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/LogInfoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/ParkingMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/ParkingMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/ParkingSpacesMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/ParkingSpacesMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/PermissionMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/PermissionMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/ReplyMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/ReplyMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/ReplyRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/ReplyRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/RoleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/RoleMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/RolePermissionMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/RolePermissionMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/StaffMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/StaffMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/StaffRoleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/StaffRoleMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/UserResponsitory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/UserResponsitory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/domain/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/domain/Advise.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Advise.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/domain/AdviseAndReply.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/AdviseAndReply.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/domain/Apply.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Apply.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/domain/ApplyByPageAndSize.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/ApplyByPageAndSize.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/domain/Applysss.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Applysss.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/domain/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Board.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/domain/Deduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Deduct.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/domain/House.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/House.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/domain/Information.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Information.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/domain/LogInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/LogInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/domain/Parking.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Parking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/domain/Permission.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Permission.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/domain/Reply.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Reply.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/domain/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/domain/RolePermission.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/RolePermission.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/domain/Staff.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/Staff.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/domain/StaffRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/StaffRole.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/domain/UserParking.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/domain/UserParking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/entity/AccessToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/entity/AccessToken.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/entity/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/entity/Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/entity/WechatUserUnionID.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/entity/WechatUserUnionID.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/response/ResponseUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/response/ResponseUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/response/ResponseUserAndError.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/response/ResponseUserAndError.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/AdminService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/ApplyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/ApplyService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/BackstageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/BackstageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/BoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/BoardService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/InformationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/InformationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/ParkingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/ParkingService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/ParkingSpacesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/ParkingSpacesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/RegisterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/RegisterService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/ReplyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/ReplyService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/StaffService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/StaffService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/UserSolrService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/UserSolrService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/WeixinLoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/WeixinLoginService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/AdminServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/ApplyServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/ApplyServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/BoardServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/BoardServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/InformationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/InformationServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/ParkingServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/ParkingServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/RegisterServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/RegisterServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/ReplyServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/ReplyServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/StaffServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/StaffServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/UserSolrServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/UserSolrServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/WeixinLoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/WeixinLoginServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/parkingSpacesServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/parkingSpacesServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/shiro/LoginShiroRealm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/shiro/LoginShiroRealm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/shiro/MyRealm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/shiro/MyRealm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/util/AesUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/util/AesUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/util/Base64Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/util/Base64Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/util/DateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/util/DateUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/util/HttpClientUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/util/HttpClientUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/util/PropertiesUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/util/PropertiesUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/utils/ApplicationContextUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/utils/ApplicationContextUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/utils/CookieUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/utils/CookieUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/utils/JsonUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/utils/JsonUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/utils/Md5Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/utils/Md5Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/utils/MsgResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/utils/MsgResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/utils/RedisUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/utils/RedisUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/utils/SchedulerUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/utils/SchedulerUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/utils/TelMessageUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/utils/TelMessageUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/utils/UploadUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/utils/UploadUtils.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,32 +124,99 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/AdminController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1078">
+              <caret line="69" column="4" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="44" />
+              <folding>
+                <element signature="e#1210#1211#0" expanded="true" />
+                <element signature="e#1266#1267#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="AdviseController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/AdviseController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="902">
-              <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+              <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PropertyApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/PropertyApplication.java">
+      <file leaf-file-name="ApplyController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/ApplyController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="1298">
+              <caret line="74" column="52" selection-start-line="74" selection-start-column="52" selection-end-line="74" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatisticsController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/StatisticsController.java">
+      <file leaf-file-name="RegisterServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/service/impl/RegisterServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+            <state relative-caret-position="418">
+              <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReplyController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/ReplyController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4972">
+              <caret line="226" column="21" selection-start-line="226" selection-start-column="21" selection-end-line="226" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="422" column="5" lean-forward="true" selection-start-line="422" selection-start-column="5" selection-end-line="422" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UploadUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/utils/UploadUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="770">
+              <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControllerLogAopAspect.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/aop/ControllerLogAopAspect.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1034">
+              <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/AccountController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -50,6 +226,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -71,6 +248,12 @@
         <option value="$PROJECT_DIR$/src/test/java/com/qf/testData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qf/service/impl/BackstageServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qf/controller/StatisticsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qf/controller/ImportHouseController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/import.html" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qf/service/TypeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qf/service/impl/TypeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qf/controller/ReplyController.java" />
       </list>
     </option>
   </component>
@@ -79,6 +262,14 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="E:/apache-maven-3.5.0" />
+        <option name="userSettingsFile" value="E:\apache-maven-3.5.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -105,9 +296,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="48" />
+    <option name="x" value="6" />
     <option name="y" value="63" />
-    <option name="width" value="1848" />
+    <option name="width" value="1344" />
     <option name="height" value="930" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -116,9 +307,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -239,6 +427,27 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="qf" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="property-item" type="b2602c69:ProjectViewProjectNode" />
+              <item name="property-item" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="qf" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="property-item" type="b2602c69:ProjectViewProjectNode" />
+              <item name="property-item" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="qf" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -255,6 +464,14 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="property-item" type="b2602c69:ProjectViewProjectNode" />
+              <item name="property-item" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="property-item" type="b2602c69:ProjectViewProjectNode" />
@@ -290,7 +507,22 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.qf.service.impl" />
+      <recent name="com.qf.service" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -396,14 +628,17 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f57b4f71-ebc3-49fc-8127-938bae6983c0" name="Default" comment="" />
+      <changelist id="08612a71-11d8-4ea9-bd92-0c1cf24478b1" name="Default" comment="" />
       <created>1574152785573</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574152785573</updated>
       <workItem from="1574152786868" duration="8139000" />
       <workItem from="1574215277358" duration="9641000" />
-      <workItem from="1574299989237" duration="23676000" />
+      <workItem from="1574299989237" duration="30275000" />
+      <workItem from="1574345052628" duration="505000" />
+      <workItem from="1574345581688" duration="2518000" />
+      <workItem from="1574386458276" duration="705000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/luanqi77/property-item&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;pom.xml&#10;#&#9;property-item.iml&#10;#&#9;src/main/java/com/qf/dao/UserResponsitory.java&#10;#&#9;src/main/java/com/qf/service/impl/UserServiceImpl.java">
       <created>1574152875949</created>
@@ -510,7 +745,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574335857817</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Merge branch 'master' of https://github.com/luanqi77/property-item&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <created>1574336714016</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1574336714016</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -528,14 +770,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16866000" />
+    <option name="totallyTimeSpent" value="27193000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.502021" side_tool="true" weight="0.30851063" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.502021" side_tool="true" weight="0.39539006" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32902184" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
@@ -546,17 +787,17 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4326241" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32978722" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.33333334" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4987874" weight="0.53014183" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.497979" visible="true" weight="0.35460994" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.497979" weight="0.16312057" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.497979" visible="true" weight="0.07801419" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34357315" />
-      <window_info anchor="right" id="Bean Validation" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29830235" />
+      <window_info anchor="right" id="Bean Validation" order="3" weight="0.32983023" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -567,6 +808,9 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -584,112 +828,11 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/service/impl/UserSolrServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/dao/UserResponsitory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/dao/StaffRoleMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/dao/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ApplyMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1565">
-          <caret line="167" column="9" lean-forward="true" selection-start-line="167" selection-start-column="9" selection-end-line="167" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/utils/AlipayUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="38" column="23" lean-forward="true" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/service/AcountService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/service/impl/AcountServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/dao/AccountMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/InformationMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-567" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AccountMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="113" column="11" lean-forward="true" selection-start-line="113" selection-start-column="11" selection-end-line="113" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-243">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/InformationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-819">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/BoardController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-252">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/PropertyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-264" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/ParkingController.java">
@@ -724,9 +867,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
           <caret line="120" column="5" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
-          <folding>
-            <element signature="e#3162#3163#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -739,9 +879,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
           <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -749,10 +886,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-          <folding>
-            <element signature="e#1003#1004#0" expanded="true" />
-            <element signature="e#1045#1046#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -763,24 +896,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/ApplyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="889">
-          <caret line="74" column="52" selection-start-line="74" selection-start-column="52" selection-end-line="74" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/config/ExceptionController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="19" column="20" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/ReplyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="61" column="35" lean-forward="true" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -795,31 +914,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1254">
           <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
-          <folding>
-            <element signature="e#2372#2373#0" expanded="true" />
-            <element signature="e#2440#2441#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-112">
-          <caret line="399" column="12" selection-start-line="399" selection-start-column="12" selection-end-line="399" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="109" column="36" selection-start-line="109" selection-start-column="36" selection-end-line="109" selection-end-column="36" />
-          <folding>
-            <element signature="e#1210#1211#0" expanded="true" />
-            <element signature="e#1266#1267#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -834,12 +928,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
           <caret line="34" column="48" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
-          <folding>
-            <element signature="e#772#773#0" expanded="true" />
-            <element signature="e#799#800#0" expanded="true" />
-            <element signature="e#866#867#0" expanded="true" />
-            <element signature="e#893#894#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -847,9 +935,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="16" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -874,13 +959,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/BackstageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="60" column="45" lean-forward="true" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/service/BackstageService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
@@ -902,45 +980,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
           <caret line="78" column="62" selection-start-line="78" selection-start-column="62" selection-end-line="78" selection-end-column="62" />
-          <folding>
-            <element signature="e#4338#4339#0" expanded="true" />
-            <element signature="e#4392#4393#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/utils/TelMessageUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-79">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="100" column="29" selection-start-line="100" selection-start-column="22" selection-end-line="100" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/cronJobs/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/cronJobs/warnJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/cronJobs/PayJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -951,13 +990,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/AdviseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="902">
-          <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/PropertyApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -965,10 +997,172 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/loginError.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/import.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/service/impl/TypeServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/service/TypeService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/ImportHouseController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/StatisticsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        <state relative-caret-position="49">
+          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/utils/SchedulerUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-687">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/cronJobs/PayJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/cronJobs/warnJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/cronJobs/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/BackstageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="60" column="45" lean-forward="true" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/HouseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/PropertyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="100" column="29" selection-start-line="100" selection-start-column="22" selection-end-line="100" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/service/RegisterService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/aop/SystemControllerLog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/aop/ControllerLogAopAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1034">
+          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/AccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/AdviseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="902">
+          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/utils/TelMessageUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/service/impl/RegisterServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/ApplyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1298">
+          <caret line="74" column="52" selection-start-line="74" selection-start-column="52" selection-end-line="74" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1078">
+          <caret line="69" column="4" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="44" />
+          <folding>
+            <element signature="e#1210#1211#0" expanded="true" />
+            <element signature="e#1266#1267#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/ReplyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4972">
+          <caret line="226" column="21" selection-start-line="226" selection-start-column="21" selection-end-line="226" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/utils/UploadUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="422" column="5" lean-forward="true" selection-start-line="422" selection-start-column="5" selection-end-line="422" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
