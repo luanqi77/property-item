@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08612a71-11d8-4ea9-bd92-0c1cf24478b1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qf/controller/ReplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qf/controller/ReplyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/PropertyApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/PropertyApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/aop/ControllerLogAopAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/aop/ControllerLogAopAspect.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/bean/PageBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/bean/PageBean.class" afterDir="false" />
@@ -22,6 +19,7 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/config/RedisUtilsSerializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/config/RedisUtilsSerializer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/config/ShiroConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/config/ShiroConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/controller/AdviseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/AdviseController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/controller/ApplyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/ApplyController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/controller/BackstageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/BackstageController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/controller/BoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/BoardController.class" afterDir="false" />
@@ -32,9 +30,13 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/controller/PropertyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/PropertyController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/controller/ReplyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/ReplyController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/controller/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/TestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/AccountMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/AccountMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/AdviseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/AdviseMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/AdviseRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/AdviseRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/ApplyMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/ApplyMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/DeductMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/DeductMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/HouseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/HouseMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/InformationMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/InformationMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/LogInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/LogInfoMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/dao/ParkingMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/dao/ParkingMapper.class" afterDir="false" />
@@ -73,10 +75,13 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/entity/WechatUserUnionID.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/entity/WechatUserUnionID.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/response/ResponseUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/response/ResponseUser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/response/ResponseUserAndError.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/response/ResponseUserAndError.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/AcountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/AcountService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/AdminService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/AdviseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/AdviseService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/ApplyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/ApplyService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/BackstageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/BackstageService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/BoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/BoardService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/HouseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/HouseService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/InformationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/InformationService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/ParkingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/ParkingService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/ParkingSpacesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/ParkingSpacesService.class" afterDir="false" />
@@ -86,14 +91,19 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/UserSolrService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/UserSolrService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/WeixinLoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/WeixinLoginService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/AcountServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/AcountServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/AdminServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/AdviseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/AdviseServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/ApplyServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/ApplyServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/BackstageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/BackstageServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/BoardServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/BoardServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/HouseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/HouseServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/InformationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/InformationServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/ParkingServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/ParkingServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/RegisterServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/RegisterServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/ReplyServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/ReplyServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/StaffServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/StaffServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/UserSolrServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/UserSolrServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/WeixinLoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/WeixinLoginServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/qf/service/impl/parkingSpacesServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qf/service/impl/parkingSpacesServiceImpl.class" afterDir="false" />
@@ -185,8 +195,8 @@
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="422" column="5" lean-forward="true" selection-start-line="422" selection-start-column="5" selection-end-line="422" selection-end-column="5" />
+            <state relative-caret-position="3633">
+              <caret line="422" column="5" selection-start-line="422" selection-start-column="5" selection-end-line="422" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -313,6 +323,11 @@
             <path>
               <item name="property-item" type="b2602c69:ProjectViewProjectNode" />
               <item name="property-item" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="property-item" type="b2602c69:ProjectViewProjectNode" />
+              <item name="property-item" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="property-item" type="b2602c69:ProjectViewProjectNode" />
@@ -638,7 +653,7 @@
       <workItem from="1574299989237" duration="30275000" />
       <workItem from="1574345052628" duration="505000" />
       <workItem from="1574345581688" duration="2518000" />
-      <workItem from="1574386458276" duration="705000" />
+      <workItem from="1574386458276" duration="961000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/luanqi77/property-item&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;pom.xml&#10;#&#9;property-item.iml&#10;#&#9;src/main/java/com/qf/dao/UserResponsitory.java&#10;#&#9;src/main/java/com/qf/service/impl/UserServiceImpl.java">
       <created>1574152875949</created>
@@ -752,7 +767,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574336714016</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Merge branch 'master' of https://github.com/luanqi77/property-item&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <created>1574413653199</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1574413653199</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -770,14 +792,14 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27193000" />
+    <option name="totallyTimeSpent" value="27449000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.502021" side_tool="true" weight="0.39539006" />
-      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32902184" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50282943" side_tool="true" visible="true" weight="0.31382978" />
+      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.32902184" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -792,11 +814,11 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.497979" weight="0.16312057" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.497979" visible="true" weight="0.07801419" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.7922393" weight="0.26595744" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49717057" visible="true" weight="0.31382978" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29830235" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29830235" />
       <window_info anchor="right" id="Bean Validation" order="3" weight="0.32983023" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -1161,8 +1183,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qf/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="422" column="5" lean-forward="true" selection-start-line="422" selection-start-column="5" selection-end-line="422" selection-end-column="5" />
+        <state relative-caret-position="3633">
+          <caret line="422" column="5" selection-start-line="422" selection-start-column="5" selection-end-line="422" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
